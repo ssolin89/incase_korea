@@ -1,0 +1,1325 @@
+<!DOCTYPE html>
+<html lang="ko">
+ <head>
+  <meta charset="utf-8"/>
+  <title>hardshell_case</title>
+  <link rel="shortcut" href="../img/incase_leaf.png"/>
+  <link rel="icon" href="../img/incase_leaf.png"/>
+  <link rel="apple=touch-icon" href="../img/incase_leaf.png"/>
+  <link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+  <link rel="stylesheet" type="text/css" href="../css/header.css"/>
+  <link rel="stylesheet" type="text/css" href="../css/footer_01.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"/>
+  <script src="../js/jquery-1.12.4.min.js"></script>
+  <script src="../js/jquery-ui.min.js"></script>
+  <style>
+		/* ############### wrap 영역 #################### */
+			#wrap{max-width:1920px; width:100%; margin:0 auto;}
+			body{font-family:'Helvetica Neue', Helvetica, 'Noto Sans KR', 'Apple SD Gothic Neo', 'Malgun Gothic', San-serif, Gulim}
+		/* ################# container ##################*/
+			#container{width:100%; margin:0 auto;}
+
+		/* ################### visual #####################*/
+			#container .visual{width:100%; height:900px; color:#fff; padding-top:100px;
+			background-image:url("../img/hardshell_case/hardshells_banner_section_1.jpg");
+			background-repeat:no-repeat;
+			background-position:center center;
+			position:relative;}
+
+			#container .visual_text{width:472px; font-weight:600; padding:30px 60px;
+			position:absolute; left:0; bottom:32px;}
+
+			#container .visual_logo{display:none; width:120px; height:24px;}
+			#container .visual_logo img{width:100%; height:100%;}
+			
+			#container .visual_text h2{display:inline-block; font-size:30px; padding-right:10px;}
+			#container .visual_text span{display:inline-block; font-size:13px; margin-top:10px;}
+			
+
+
+		/* ################## sect0 ##################### */
+			#sect0{width:100%; background-color:#E6E6E6;}
+			#sect0 .sect0_inner{width:100%; height:1071px; margin:0 auto; position:relative;
+			background-color:#E6E6E6;} 
+
+			#sect0 .sect0_imgArea{width:1903px; height:1071px;}
+
+			#sect0 .sect0_imgArea .imgs{width:100%; height:100%;}
+			#sect0 .sect0_imgArea iframe{width:100%; height:100%;}
+
+			#sect0 .sect0_textArea{display:none; width:480px; height:195px; color:#333;
+			position:absolute; right:220px; top:344px;}
+			
+			#sect0 .textArea_title{width:100%; font-size:25px;  font-weight:900; margin-bottom:15px;}
+			#sect0 .textArea_desc{width:100%; font-size:15px;  font-weight:600;}
+
+
+		/* ###################### sect2 ######################*/
+			#sect2{width:100%; background-color:#E6E6E6;}
+			#sect2 .sect2_inner{width:100%; height:900px; margin:0 auto; position:relative;} 
+
+			#sect2 .sect2_imgArea{width:100%; height:100%;}
+			#sect2 .sect2_imgArea .imgs{width:100%; height:100%;}
+			#sect2 .sect2_imgArea img{width:100%; height:100%;}
+
+			#sect2 .sect2_textArea{width:560px;  position:absolute; right:250px; top:360px;
+			color:#333;}
+			
+			#sect2 .textArea_title{width:100%; font-size:25px;  font-weight:900; margin-bottom:15px;}
+			#sect2 .textArea_desc{width:100%; font-size:15px;  font-weight:600;}
+
+
+		/* ####################### sect3 ######################*/
+			#sect3{width:100%; background-color:#87888A;}
+			#sect3 .sect3_inner{width:100%; height:900px; margin:0 auto; position:relative;} 
+
+			#sect3 .sect3_imgArea{width:941px; height:100%;
+			position:absolute; right:0; top:0;}
+
+			#sect3 .sect3_imgArea .imgs{width:941px; height:100%;}
+			#sect3 .sect3_imgArea img{width:100%; height:100%;}
+
+			#sect3 .sect3_textArea{width:560px; color:#fff;
+			position:absolute; left:220px; top:340px;}
+			
+			#sect3 .textArea_title{width:100%; font-size:25px;  font-weight:900; margin-bottom:15px;}
+			#sect3 .textArea_desc{width:100%; font-size:15px;  font-weight:600;}
+
+		/* ####################### sect4 ######################*/
+			#sect4{width:100%; background-color:#D5D5D5;}
+			#sect4 .sect4_inner{width:100%; height:900px; margin:0 auto; position:relative;} 
+
+			#sect4 .sect4_imgArea{width:100%; height:100%;}
+
+			#sect4 .sect4_imgArea .imgs{width:100%; height:100%;}
+			#sect4 .sect4_imgArea img{width:100%; height:100%;}
+
+			#sect4 .sect4_textArea{width:480px; position:absolute; right:280px; top:330px;}
+			
+			#sect4 .textArea_title{width:100%; font-size:25px;  font-weight:900; margin-bottom:15px;}
+			#sect4 .textArea_desc{width:100%; font-size:14px;  font-weight:600;}
+
+		/* ####################### sect5 ######################*/
+			#sect5 {width:100%;}
+			#sect5 .sect5_inner{width:1905px; height:635px;}
+			#sect5 .sect5_imgArea{width:635px; height:635px; float:left;}
+
+			#sect5 .imgs{width:100%; height:100%;}
+			#sect5 .imgs img{width:100%; height:100%;}
+
+			#sect5:after{content:""; display:block; clear:both;}
+
+
+		/* #################### product_Area ######################## */
+			#product_Area{width:100%; overflow:hidden;}
+			#product_Area ul{width:1240px; overflow:hidden; margin:40px auto 20px;}
+			#product_Area ul li{width:300px; height:420px; margin-right:10px; margin-bottom:10px; float:left;}
+			#product_Area .product_box{width:100%; height:100%;}
+
+			/* ########### product_imgs 영역 #############*/
+			#product_Area .product_imgs{width:300px; height:300px;}
+
+			#product_Area .product_imgs a{display:block; width:300px; height:300px;
+			position:relative;}
+
+			/* span 공통 */
+			#product_Area .product_imgs a span{display:block; width:100%; height:100%;}
+			#product_Area .product_imgs a span img{width:100%; height:100%;}
+
+			/* span의 개별설정 */
+			#product_Area .product_imgs a .pro_af{display:none; position:absolute; left:0; top:0;}
+
+			/* ++++ 기능영역 ++++ */
+			/* li에 마우스 올렸을때 이미지 바꾸기*/
+			#product_Area ul li:hover .pro_af{display:block;}
+
+		/* ########### product_info 영역 #############*/
+			#product_Area .product_info{width:200px; margin:0 auto; }
+			
+			#product_Area .product_info .porduct_name{font-size:13px; font-weight:600; color:#333;}
+			#product_Area .product_info .product_desc{font-size:13px; font-weight:300; color:#828282}
+			#product_Area .product_info .product_price{font-size:12px; color:#787878;}
+
+		/* 목차숨기기 */
+			#content h3{position:absolute; left:-9999px; width:1px; height:1px;
+			font-size:1px; line-height:0; overflow:hidden;}
+  </style>
+  <script>
+		/* 두번째 문법 사용하기 */
+		/* 선택한 문서가 준비가 되면 기능 구현해주세요 */
+		jQuery(document).ready(function(){
+
+
+			jQuery("#mob_footer .menu_ul").hide();
+			
+			/*
+				대상 : #mob_footer .menu
+				이벤트 : 클릭
+				이벤트 대상 : 클릭했을때 menu_ul (class명) 슬라이드다운, 업
+			*/
+			jQuery("#mob_footer .menu").click(function(){
+				jQuery("#mob_footer .menu_ul").slideUp(500,"linear");
+				jQuery(this).children().next().slideDown(500,"linear");
+
+				//jQuery(".main_contact").css({"marginTop":$("menu_ul").height()});
+			});
+
+			/*
+				대상 :  #mo_inc_gnb
+				이벤트 : 클릭
+				이벤트 대상 : .menu_active (class명) 나타나기
+			*/
+			jQuery(".ham2").hide();
+
+			jQuery(".ham1").click(function(){
+				jQuery(".menu_active").show(500,"linear");
+				jQuery(".ham2").show();
+				jQuery(".ham1").hide();
+			});
+
+			jQuery(".ham2").click(function(){
+				jQuery(".menu_active").hide(500,"linear");
+				jQuery(".ham1").show();
+				jQuery(".ham2").hide();
+			});
+
+			
+			
+		/* #################### header 영역 ######################## */
+			
+			/* 자녀요소인 .gnb_div 먼저 숨기기*/
+			jQuery(".gnb_div").hide();
+			
+			/* 
+				[기능만들기]
+				gnb_menu_li 에 마우스올리면 gnb_div (div) 보여지기
+			*/
+			jQuery(".gnb_menu_li0").mouseover(function(){
+				jQuery(".gnb_div0").stop().show();
+			}).mouseout(function(){
+				jQuery(".gnb_div0").stop().hide();
+			});
+
+			jQuery(".gnb_menu_li1").mouseover(function(){
+				jQuery(".gnb_div1").stop().show();
+			}).mouseout(function(){
+				jQuery(".gnb_div1").stop().hide();
+			});
+
+			jQuery(".gnb_menu_li2").mouseover(function(){
+				jQuery(".gnb_div2").stop().show();
+			}).mouseout(function(){
+				jQuery(".gnb_div2").stop().hide();
+			});
+
+			jQuery(".gnb_menu_li5").mouseover(function(){
+				jQuery(".gnb_div3").stop().show();
+			}).mouseout(function(){
+				jQuery(".gnb_div3").stop().hide();
+			});
+
+			jQuery(".gnb_menu_li6").mouseover(function(){
+				jQuery(".gnb_div4").stop().show();
+			}).mouseout(function(){
+				jQuery(".gnb_div4").stop().hide();
+			});
+
+			jQuery(".product_ul2 li a").mouseover(function(){
+				$(this).css({"color":"#ccc"});
+			}).mouseout(function(){
+				jQuery(this).css({"color":"#fff"});
+			});
+
+
+
+		});
+	
+  </script>
+ </head>
+
+ <body>
+	<div id="wrap">
+		<header id="inc_header">
+			<h3>인케이스 헤더</h3>
+			<div id="header_inner">
+				<div id="inc_topbar">
+					<!--<div class="social">
+						<ul>
+							<li></li>
+						</ul>
+					</div>-->
+				</div>
+
+				<div id="inc_logo">
+					<div id="logo_area">
+						<h1>
+							<a href="../index.html" title="인케이스 사이트">
+								<img src="../img/header/incase_logo.png" alt="인케이스 로고"/>
+							</a>
+						</h1>
+					</div>
+					<div id="inc_extra">
+						<ul>
+							<li>
+								<div>
+									<a href="../login/login.html" title="profile">
+										<img src="../img/header/profile.png" alt="profile"/>
+									</a>
+								</div>
+							</li>
+							<li>
+								<div>
+									<a href="#" title="wishlist">
+										<img src="../img/header/wishlist.png" alt="wishlist" onclick="confirm('회원에게만 제공이 되는 서비스입니다. 우선 로그인을 하여 주시기 바랍니다.');"/>
+									</a>
+								</div>
+							</li>
+							<li>
+								<div>
+									<a href="#" title="cart">
+										<img src="../img/header/cart.png" alt="cart"/>
+									</a>
+								</div>
+							</li>
+							<li>
+								<div>
+									<a href="#" title="search">
+										<img src="../img/header/search.png" alt="search"/>
+									</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div id="mo_inc_extra">
+						<ul>
+							<li class="profile_li">
+								<div class="profile_div">
+									<a href="login/login.html" title="profile">
+										<img src="../img/header/profile.png" alt="profile"/>
+									</a>
+									<div class="account_container">
+										<p class="account_title">Log In</p>
+										<form action="#none" method="post">
+											<ul class="form_ul">
+												<li>
+													<label>아이디</label>
+													<input id="userid" type="text" name="userid"
+													maxlength="20" autocomplete="off"/>
+												</li>
+												<li>
+													<label>비밀번호</label>
+													<input id="userpw" type="password" name="userpw"
+													maxlength="20" autocomplete="off"/>
+												</li>
+												<li class="login_extras">
+													<a href="#none" title="아이디/비밀번호찾기">아이디/비밀번호 찾기</a>
+													<a href="#none" title="비회원 주문조회">비회원 주문조회</a>
+												</li>
+												<li>
+													<a class="login_btn" href="#none" title="로그인">로그인</a>
+												</li>
+												<li class="social_login">
+													<a class="so_facebook" href="#none" title="facebook">
+														<img src="../img/mobile/social_facebook.png" alt="페이스북 아이콘"/>
+													</a>
+													<a class="so_naver" href="#none" title="naver">
+														<img src="../img/mobile/social_naver.png" alt="네이버 아이콘"/>
+													</a>
+													<a class="so_kakao" href="#none" title="kakao">
+														<img src="../img/mobile/social_kakao.png" alt="카카오 아이콘"/>
+													</a>
+												</li>
+											</ul>
+											<div class="account_register">
+												<a href="login/login.html" title="회원가입">회원가입</a>
+											</div>
+										</form>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div>
+									<a href="#" title="search">
+										<img src="../img/header/search.png" alt="search"/>
+									</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<nav id="inc_gnb">
+					<ul id="gnb_menu">
+						<li class="gnb_menu_li gnb_menu_li0">
+							<a class="pro_a" href="../sub/sub0_product.html" title="Product"><strong>Product</strong></a>
+							<div class="gnb_div gnb_div0">
+								<ul class="product_ul2 product_ul2_1">
+									<li><a class="tit" href="#none" title="Bags">Bags</a></li>
+									<li><a href="#none" title="백팩">백팩</a></li>
+									<li><a href="#none" title="숄더백/메신저백">숄더백/메신저백</a></li>
+									<li><a href="#none" title="슬링백">슬링백</a></li>
+									<li><a href="#none" title="액티브백">액티브백</a></li>
+								</ul>
+							
+								<ul class="product_ul2">
+									<li><a class="tit" href="#" title="Travel">Travel</a></li>
+									<li><a href="#none" title="더플백">더플백</a></li>
+									<li><a href="#none" title="여행용 백팩">여행용 백팩</a></li>
+									<li><a href="#none" title="여행용 액세서리">여행용 액세서리</a></li>
+								</ul>
+									
+								<ul class="product_ul2">
+									<li><a class="tit" href="#none" title="Protection">Protection</a></li>
+									<li><a href="#none" title="맥북 슬리브">맥북 슬리브</a></li>
+									<li><a href="#none" title="맥북 브리프">맥북 브리프</a></li>
+									<li><a href="#none" title="아이폰 케이스">아이폰 케이스</a></li>
+									<li><a href="#none" title="아이패드 슬리브">아이패드 슬리브</a></li>
+									<li><a href="#none" title="아이패드 케이스">아이패드 케이스</a></li>
+								</ul>
+								
+								<ul class="product_ul2">
+									<li><a class="tit" href="#none" title="Camera">Camera</a></li>
+									<li><a href="#none" title="DSLR 카메라">DSLR 카메라</a></li>
+									<li><a href="#none" title="드론">드론</a></li>
+									<li><a href="#none" title="고프로">고프로</a></li>
+									<li><a href="#none" title="액션카메라">액션카메라</a></li>
+								</ul>
+							
+								<ul class="product_ul2">
+									<li><a class="tit" href="#none" title="Accessories">Accessories</a></li>
+									<li><a href="#none" title="충전기">충전기</a></li>
+									<li><a href="#none" title="애플워치">애플워치</a></li>
+									<li><a href="#none" title="에어팟">에어팟</a></li>
+								</ul>
+							</div>
+						</li>
+
+						<li class="gnb_menu_li gnb_menu_li1">
+							<a href="../sub/sub1_device.html" title="device"><strong>device</strong></a>
+							<div class="gnb_div gnb_div1">
+								<ul class="product_ul2 product_ul2_1">
+									<li><a class="tit" href="#none" title="MacBook">MacBook</a></li>
+									<li><a href="#none" title="맥북 프로 16형(USB-C)">맥북 프로 16형(USB-C)</a></li>
+									<li><a href="#none" title="맥북 프로 15형(USB-C)">맥북 프로 15형(USB-C)</a></li>
+									<li><a href="#none" title="맥북 프로 13형(USB-C)">맥북 프로 13형(USB-C)</a></li>
+									<li><a href="#none" title="맥북 에어 13형(USB-C)">맥북 에어 13형(USB-C)</a></li>
+									<li><a href="#none" title="맥북 12형(USB-C)">맥북 12형(USB-C)</a></li>
+									<li><a href="#none" title="맥북 프로 레티나 15형">맥북 프로 레티나 15형</a></li>
+									<li><a href="#none" title="맥북 프로 레티나 13형">맥북 프로 레티나 13형</a></li>
+									<li><a href="#none" title="맥북 프로 15형">맥북 프로 15형</a></li>
+									<li><a href="#none" title="맥북 프로 13형">맥북 프로 13형</a></li>
+									<li><a href="#none" title="맥북 에어 13형">맥북 에어 13형</a></li>
+									<li><a href="#none" title="맥북 에어 11형">맥북 에어 11형</a></li>
+								</ul>
+									
+								<ul class="product_ul2">
+									<li><a class="tit" href="#none" title="iPhone">iPhone</a></li>
+									<li><a href="#none" title="아이폰 Xs 맥스">아이폰 Xs 맥스</a></li>
+									<li><a href="#none" title="아이폰 Xs">아이폰 Xs</a></li>
+									<li><a href="#none" title="아이폰 XR">아이폰 XR</a></li>
+									<li><a href="#none" title="아이폰 X">아이폰 X</a></li>
+									<li><a href="#none" title="아이폰 8 플러스">아이폰 8 플러스</a></li>
+									<li><a href="#none" title="아이폰 8">아이폰 8</a></li>
+									<li><a href="#none" title="아이폰 7 플러스">아이폰 7 플러스</a></li>
+									<li><a href="#none" title="아이폰 7">아이폰 7</a></li>
+									<li><a href="#none" title="아이폰 6 플러스">아이폰 6 플러스</a></li>
+									<li><a href="#none" title="아이폰 6s">아이폰 6s</a></li>
+									<li><a href="#none" title="아이폰 6s 플러스">아이폰 6s 플러스</a></li>
+									<li><a href="#none" title="아이폰 6">아이폰 6</a></li>
+									<li><a href="#none" title="아이폰 SE">아이폰 SE</a></li>
+								</ul>
+									
+								<ul class="product_ul2">
+									<li><a class="tit" href="#none" title="iPad">iPad</a></li>
+									<li><a href="#none" title="프로 12.5형(USB-C)">프로 12.5형(USB-C)</a></li>
+									<li><a href="#none" title="프로 11형(USB-C)">프로 11형(USB-C)</a></li>
+									<li><a href="#none" title="프로 12.9형">프로 12.9형</a></li>
+									<li><a href="#none" title="프로 10.5형">프로 10.5형</a></li>
+									<li><a href="#none" title="프로 9.7형">프로 9.7형</a></li>
+									<li><a href="#none" title="9.7형">9.7형</a></li>
+									<li><a href="#none" title="에어 2">에어 2</a></li>
+									<li><a href="#none" title="에어">에어</a></li>
+									<li><a href="#none" title="미니 3">미니 3</a></li>
+									<li><a href="#none" title="미니 2">미니 2</a></li>
+									<li><a href="#none" title="미니">미니</a></li>
+								</ul>
+									
+								<ul class="product_ul2">
+									<li><a class="tit" href="#none" title="Camera">Camera</a></li>
+									<li><a href="#none" title="DSLR 카메라">DSLR 카메라</a></li>
+									<li><a href="#none" title="드론">드론</a></li>
+									<li><a href="#none" title="고프로">고프로</a></li>
+									<li><a href="#none" title="액션카메라">액션카메라</a></li>
+								</ul>
+								
+								<ul class="product_ul2">
+									<li><a class="tit" href="#none" title="Apple Watch">Apple Watch</a></li>
+									<li><a href="#none" title="42/44mm">42/44mm</a></li>
+								</ul>
+									
+								<ul class="product_ul2">
+									<li><a class="tit" href="#none" title="AirPods">AirPods</a></li>
+									<li><a href="#none" title="38mm">38mm</a></li>
+								</ul>
+							</div>
+						</li>
+					
+						<li class="gnb_menu_li gnb_menu_li2">
+							<a class="tit" href="../sub/sub2_collection.html" title="Collection"><strong>Collection</strong></a>
+							<div class="gnb_div gnb_div2">
+								<ul class="product_ul2 product_ul2_1">
+									<li><a class="tit" href="#none" title="신상품">신상품</a></li>
+									<li><a href="#none" title="온라인 독점 상품">온라인 독점 상품</a></li>
+									<li><a href="#none" title="콤파스">콤파스</a></li>
+									<li><a href="#none" title="가방">가방</a></li>
+									<li><a href="#none" title="슬리브/케이스">슬리브/케이스</a></li>
+								</ul>
+									
+								<ul class="product_ul2">
+									<li><a class="tit" href="#none" title="컬렉션">컬렉션</a></li>
+									<li><a href="#none" title="Case for Airpods">Case for Airpods</a></li>
+									<li><a href="#none" title="City Backpack">City Backpacks</a></li>
+									<li><a href="#none" title="Via Backpack">Via Backpack</a></li>
+									<li><a href="#none" title="EO Travel Backpack">EO Travel Backpack</a></li>
+									<li><a href="#none" title="Diamond Ripstop">Diamond Ripstop</a></li>
+									<li><a href="#none" title="Nylon Organizers">Nylon Organizers</a></li>
+									<li><a href="#none" title="Compact Sleeve">Compact Sleeve</a></li>
+								</ul>
+										
+								<ul class="product_ul2">
+									<li><a class="tit" href="#none" title="콜라보레이션">콜라보레이션</a></li>
+									<li><a href="#none" title="Incase x Carbon">Incase x Carbon</a></li>
+									<li><a href="#none" title="Kelly Slater">Kelly Slater</a></li>
+									<li><a href="#none" title="Ari Marcopoulos">Ari Marcopoulos</a></li>
+								</ul>
+										
+								<ul class="product_ul2">
+									<li><a class="tit" href="#none" title="혁신 기술">혁신 기술</a></li>
+									<li><a href="#none" title="Flight Nylon">Flight Nylon</a></li>
+									<li><a href="#none" title="Honeycomb Ripstop">Honeycomb Ripstop</a></li>
+									<li><a href="#none" title="Diamond Ripstop">Diamond Ripstop</a></li>
+									<li><a href="#none" title="Woolenex">Woolenex</a></li>
+									<li><a href="#none" title="Ecoya®">Ecoya®</a></li>
+									<li><a href="#none" title="Tensaerlite™">Tensaerlite™</a></li>
+									<li><a href="#none" title="Ariaprene™">Ariaprene™</a></li>
+								</ul>
+									
+								<ul class="product_ul2">
+									<li><a class="tit" href="#none" title="추천 상품">추천 상품</a></li>
+									<li><a href="#none" title="MEN">MEN</a></li>
+									<li><a href="#none" title="WOMEN">WOMEN</a></li>
+									<li><a href="#none" title="단기여행용 백">단기여행용 백</a></li>
+									<li><a href="#none" title="장기여행용 백">장기여행용 백</a></li>
+									<li><a href="#none" title="자전거/운동 백">자전거/운동 백</a></li>
+									<li><a href="#none" title="출사용 백">출사용 백</a></li>
+									<li><a href="#none" title="1인 미디어">1인 미디어</a></li>
+								</ul>
+							</div>
+						</li>
+
+						<li class="gnb_menu_li gnb_menu_li3">
+							<a href="../sub/sub3_brand.html" title="Brand"><strong>Brand</strong></a>
+						</li>
+
+						<li class="gnb_menu_li gnb_menu_li4">
+							<a href="../sub/sub4_CaseStudies.html" title="CaseStudies"><strong>CaseStudies</strong></a>
+						</li>
+
+						<li class="gnb_menu_li gnb_menu_li5">
+							<a href="../sub/sub7_The_Leaf.html" title="The LEAF"><strong>The LEAF</strong></a>
+							<div class="gnb_div gnb_div3">
+								<ul class="product_ul2 product_ul2_1">
+									<li class="ul2a_li0"><a href="#none" title="The LEAF">The LEAF</a></li>
+									<li class="ul2a_li0"><a href="#none" title="Smart Living">Smart Living</a></li>
+									<li class="ul2a_li0"><a href="#none" title="Photo Diary">Photo Diary</a></li>
+								</ul>
+							</div>
+						</li>
+
+						<li class="gnb_menu_li gnb_menu_li6">
+							<a href="../sub/sub6_Incase_Store.html" title="Store"><strong>Store</strong></a>
+							<div class="gnb_div gnb_div4">
+								<ul class="product_ul2 product_ul2_1">
+									<li class="ul2b_li1"><a href="#none" title="직영매장">직영매장</a></li>
+									<li class="ul2b_li1"><a href="#none" title="공식딜러">공식딜러</a></li>
+								</ul>
+							</div>
+						</li>
+
+						<li class="gnb_menu_li gnb_menu_li7">
+							<a href="../sub/sub8_outlet.html" title="Outlet"><strong>Outlet</strong></a>
+						</li>
+					</ul>
+				</nav>
+
+				<nav id="mo_inc_gnb">
+					<div class="menu">
+						<a class="ham1" href="#none" title="hamburger">
+							<span class="hamburger_box">
+								<span class="hamburger_inner inner1"></span>
+								<span class="hamburger_inner inner2"></span>
+								<span class="hamburger_inner inner3"></span>
+							</span>
+						</a>
+						<a class="ham2" href="#none" title="hamburger">
+							<span class="hamburger_box2">
+								<span class="hamburger_inner2">
+									<span class="hamburger_inner inner4"></span>
+									<span class="hamburger_inner inner5"></span>
+								</span>
+							</span>
+						</a>
+						<ul class="menu_active">
+							<li class="drop_down">
+								<a href="../sub/sub0_product.html" title="product">
+									<em>Product</em>
+									<span>+</span>
+								</a>
+							</li>
+							<li class="drop_down">
+								<a href="../sub/sub1_device.html" title="Device">
+									<em>Device</em>
+									<span>+</span>
+								</a>
+							</li>
+							<li class="drop_down">
+								<a href="../sub/sub2_collection.html" title="Collection">
+									<em>Collection</em>
+									<span>+</span>
+								</a>
+							</li>
+							<li class="drop_down level0">
+								<a href="../sub/sub3_brand.html" title="Brand">
+									<em>Brand</em>
+								</a>
+							</li>
+							<li class="drop_down level0">
+								<a href="../sub/sub4_CaseStudies.html" title="CaseStudies">
+									<em>CaseStudies</em>
+								</a>
+							</li>
+							<li class="drop_down">
+								<a href="../sub/sub7_The_Leaf.html" title="The LEAF">
+									<em>The LEAF</em>
+									<span>+</span>
+								</a>
+							</li>
+							<li class="drop_down">
+								<a href="../sub/sub6_Incase_Store.html" title="Store">
+									<em>Store</em>
+									<span>+</span>
+								</a>
+							</li>
+							<li class="drop_down level0">
+								<a href="../sub/sub8_outlet.html" title="Outlet">
+									<em>Outlet</em>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</header>
+		<div id="container">
+			<div class="visual">
+				<div class="visual_text">
+					<p class="visual_logo">
+					</p>
+					<h2>The original MacBook hardshell.</h2>
+					<span>
+						맥북 보호 솔루션을 위한 지난 10년 동안의 노력
+					</span>
+				</div>
+			</div>
+			<div id="sect0">
+				<div class="sect0_inner">
+					<div class="sect0_imgArea">
+						<p class="imgs">
+							<iframe src="https://www.youtube.com/embed/lDhUpl8p8r0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						</p>
+					</div>
+					<div class="sect0_textArea">
+						<div class="textArea_title">
+							<strong>VIA Backpack.</strong>
+						</div>
+						<div class="textArea_desc">
+							<p>
+								기기 수납부는 쉬운 통관 절차를 위해 활짝 열리는 구조이며, 필수품에 빠른 접근을 위한 앞쪽 전면 포켓으로 구성되어 있고, 지퍼 조절로 기존 메인 수납부에 약 9cm 추가 확장가능합니다.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="sect2">
+				<div class="sect2_inner">
+					<div class="sect2_imgArea">
+						<p class="imgs">
+							<img src="../img/hardshell_case/hardshells_section_3.jpg" alt="section2"/>
+						</p>
+					</div>
+					<div class="sect2_textArea">
+						<div class="textArea_title">
+							<strong>지난 10년동안 맥북을 완벽하게 보호해 왔습니다.</strong>
+						</div>
+						<div class="textArea_desc">
+							<p>
+								2009년, MacBook을 위해 최초의 하드쉘(Hardshell) 케이스를 만들었습니다. 우리의 혁신적인 디자인과 설계는 MacBooK 보호를 위한 제품들 가운데 10년 연속 선두를 달리고 있습니다.<br/><br/>
+
+								뛰어난 내구성의 프리미엄 소재인 바이엘의 마크로론(Markrolon) 폴리카보네이트를 부드럽게 마감하여 세련된 터치감을 선사하며, 도트무늬 디자인으로 스타일리쉬함을 더합니다. 많은 부분이 개선 되었지만, MacBook을 보호하는 기본 기능은 전혀 변함이 없습니다. 새로운 MacBook Air Retina 모델을 위한 Hardshell 또한 새롭게 출시 되었습니다.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="sect3">
+				<div class="sect3_inner">
+					<div class="sect3_imgArea">
+						<p class="imgs">
+							<img src="../img/hardshell_case/hardshells_section_4.png" alt="section2"/>
+						</p>
+					</div>
+					<div class="sect3_textArea">
+						<div class="textArea_title">
+							<strong>뛰어난 내구성의 프리미엄 소재 바이엘의 마크로론 (Markrolon)</strong>
+						</div>
+						<div class="textArea_desc">
+							<p>
+								일반적인 Hardshell은 ABS 플라스틱 소재를 사용합니다. 프리미엄 소재 바이엘의 마크로론 (Makrolon) 폴리카보네이트 소재는 최고의 내구성을 자랑하며, 무게 또한 비교할 수 없을 만큼 가볍습니다. 또한 흠집과 충격으로부터 MacBook을 완벽하게 보호합니다. 또한 유리처럼 투명도가 높아 어떠한 색상도 MacBook의 아름다운 디자인을 그대로 보여줄 수 있습니다.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="sect4">
+				<div class="sect4_inner">
+					<div class="sect4_imgArea">
+						<p class="imgs">
+							<img src="../img/hardshell_case/hardshells_section_3.jpg" alt="section2"/>
+						</p>
+					</div>
+					<div class="sect4_textArea">
+						<div class="textArea_title">
+							<strong>세심한 부분까지 생각한 디테일.</strong>
+						</div>
+						<div class="textArea_desc">
+							<p>
+								항상 디자인을 통해 선보였 듯이, MacBook을 위한 완벽한 핏의 맞춤 옷과 같이 각 포트, 버튼, 라이트 등 완벽한 핏을 위한 정교한 디자인과 새롭게 선보이는 도트 디자인은 기능과 디자인 모두를 위한 고민이 담겨 있습니다. 슬림한 도트 디자인의 패드는 MacBook의 발열 또한 효과적으로 배출 할 수 있도록 합니다.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="sect5">
+				<div class="sect5_inner">
+					<div class="sect5_imgArea">
+						<p class="imgs">
+							<img src="../img/hardshell_case/hand0.jpg" alt="hand0"/>
+						</p>
+					</div>
+					<div class="sect5_imgArea">
+						<p class="imgs">
+							<img src="../img/hardshell_case/hand1.jpg" alt="hand1"/>
+						</p>
+					</div>
+					<div class="sect5_imgArea">
+						<p class="imgs">
+							<img src="../img/hardshell_case/hand2.jpg" alt="hand2"/>
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div id="product_Area">
+				<ul class="product_ul">
+					<li>
+						<div class="product_box">
+							<div class="product_imgs">
+								<a href="#none" title="product_imgs">
+									<span class="pro_be">
+										<img src="../img/hardshell_case/h0.jpg" alt="소스이미지s0"/>
+									</span>
+									<span class="pro_af">
+										<img src="../img/hardshell_case/h1.jpg" alt="소스이미지s1"/>
+									</span>
+								</a>
+							</div>
+							<div class="product_info">
+								<a href="#none" title="product_info">
+									<strong class="porduct_name">
+										Textured Hardshell in Woolenex for MacBook Air 13" W/ Retina Display - Blush Pink
+									</strong><br/>
+									<span class="product_desc">13" MacBook Air Retina</span><br/>
+									<span class="product_price">
+										69,000원
+									</span>
+								</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="product_box">
+							<div class="product_imgs">
+								<a href="#none" title="product_imgs">
+									<span class="pro_be">
+										<img src="../img/hardshell_case/h2.jpg" alt="소스이미지s2"/>
+									</span>
+									<span class="pro_af">
+										<img src="../img/hardshell_case/h3.jpg" alt="소스이미지s3"/>
+									</span>
+								</a>
+							</div>
+							<div class="product_info">
+								<a href="#none" title="product_info">
+									<strong class="porduct_name">
+										Textured Hardshell in Woolenex for MacBook Air 13" W/ Retina Display - Graphite
+									</strong><br/>
+									<span class="product_desc">13" MacBook Air Retina</span><br/>
+									<span class="product_price">
+										69,000원
+									</span>
+								</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="product_box">
+							<div class="product_imgs">
+								<a href="#none" title="product_imgs">
+									<span class="pro_be">
+										<img src="../img/hardshell_case/h4.jpg" alt="소스이미지s4"/>
+									</span>
+									<span class="pro_af">
+										<img src="../img/hardshell_case/h5.jpg" alt="소스이미지s5"/>
+									</span>
+								</a>
+							</div>
+							<div class="product_info">
+								<a href="#none" title="product_info">
+									<strong class="porduct_name">
+										Textured Hardshell in Woolenex for MacBook Air 13" W/ Retina Display - Heather Navy
+									</strong><br/>
+									<span class="product_desc">13" MacBook Air Retina</span><br/>
+									<span class="product_price">
+										69,000원
+									</span>
+								</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="product_box">
+							<div class="product_imgs">
+								<a href="#none" title="product_imgs">
+									<span class="pro_be">
+										<img src="../img/hardshell_case/h6.jpg" alt="소스이미지s6"/>
+									</span>
+									<span class="pro_af">
+										<img src="../img/hardshell_case/h7.jpg" alt="소스이미지s7"/>
+									</span>
+								</a>
+							</div>
+							<div class="product_info">
+								<a href="#none" title="product_info">
+									<strong class="porduct_name">
+										Textured Hardshell in Woolenex for 13" MacBook Pro - Thunderbolt (USB-C) - Graphite
+									</strong><br/>
+									<span class="product_desc">13" MacBook Air Retina</span><br/>
+									<span class="product_price">
+										69,000원
+									</span>
+								</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="product_box">
+							<div class="product_imgs">
+								<a href="#none" title="product_imgs">
+									<span class="pro_be">
+										<img src="../img/hardshell_case/h6.jpg" alt="소스이미지s6"/>
+									</span>
+									<span class="pro_af">
+										<img src="../img/hardshell_case/h7.jpg" alt="소스이미지s7"/>
+									</span>
+								</a>
+							</div>
+							<div class="product_info">
+								<a href="#none" title="product_info">
+									<strong class="porduct_name">
+										Textured Hardshell in Woolenex for 15" MacBook Pro - Thunderbolt (USB-C) - Graphite
+									</strong><br/>
+									<span class="product_desc">15" MacBook Pro USB-C</span><br/>
+									<span class="product_price">
+										69,000원
+									</span>
+								</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="product_box">
+							<div class="product_imgs">
+								<a href="#none" title="product_imgs">
+									<span class="pro_be">
+										<img src="../img/hardshell_case/h10.jpg" alt="소스이미지s10"/>
+									</span>
+									<span class="pro_af">
+										<img src="../img/hardshell_case/h11.jpg" alt="소스이미지s11"/>
+									</span>
+								</a>
+							</div>
+							<div class="product_info">
+								<a href="#none" title="product_info">
+									<strong class="porduct_name">
+										Textured Hardshell in Woolenex for 13" MacBook Pro - Thunderbolt (USB-C) - Blush Pink
+									</strong><br/>
+									<span class="product_desc">13" MacBook Pro USB-C</span><br/>
+									<span class="product_price">
+										69,000원
+									</span>
+								</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="product_box">
+							<div class="product_imgs">
+								<a href="#none" title="product_imgs">
+									<span class="pro_be">
+										<img src="../img/hardshell_case/h12.jpg" alt="소스이미지s12"/>
+									</span>
+									<span class="pro_af">
+										<img src="../img/hardshell_case/h13.jpg" alt="소스이미지s13"/>
+									</span>
+								</a>
+							</div>
+							<div class="product_info">
+								<a href="#none" title="product_info">
+									<strong class="porduct_name">
+										Incase Hardshell Case for 13-inch MacBook Air with Retina Display Dots - Blush Pink
+									</strong><br/>
+									<span class="product_desc">13" MacBook Pro USB-C</span><br/>
+									<span class="product_price">
+										59,000원
+									</span>
+								</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="product_box">
+							<div class="product_imgs">
+								<a href="#none" title="product_imgs">
+									<span class="pro_be">
+										<img src="../img/hardshell_case/h14.jpg" alt="소스이미지s14"/>
+									</span>
+									<span class="pro_af">
+										<img src="../img/hardshell_case/h15.jpg" alt="소스이미지s15"/>
+									</span>
+								</a>
+							</div>
+							<div class="product_info">
+								<a href="#none" title="product_info">
+									<strong class="porduct_name">
+										Incase Hardshell Case for 13-inch MacBook Air with Retina Display Dots - Black Frost
+									</strong><br/>
+									<span class="product_desc">13" MacBook Pro USB-C</span><br/>
+									<span class="product_price">
+										59,000원
+									</span>
+								</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="product_box">
+							<div class="product_imgs">
+								<a href="#none" title="product_imgs">
+									<span class="pro_be">
+										<img src="../img/hardshell_case/h16.jpg" alt="소스이미지s16"/>
+									</span>
+									<span class="pro_af">
+										<img src="../img/hardshell_case/h17.jpg" alt="소스이미지s17"/>
+									</span>
+								</a>
+							</div>
+							<div class="product_info">
+								<a href="#none" title="product_info">
+									<strong class="porduct_name">
+										Incase Hardshell Case for 13-inch MacBook Pro - Thunderbolt 3 (USB-C) Dots - Blue Smoke
+									</strong><br/>
+									<span class="product_desc">13" MacBook Pro USB-C</span><br/>
+									<span class="product_price">
+										Soldout
+									</span>
+								</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="product_box">
+							<div class="product_imgs">
+								<a href="#none" title="product_imgs">
+									<span class="pro_be">
+										<img src="../img/hardshell_case/h18.jpg" alt="소스이미지s18"/>
+									</span>
+									<span class="pro_af">
+										<img src="../img/hardshell_case/h19.jpg" alt="소스이미지s19"/>
+									</span>
+								</a>
+							</div>
+							<div class="product_info">
+								<a href="#none" title="product_info">
+									<strong class="porduct_name">
+										Incase Hardshell Case for 13-inch MacBook Pro - Thunderbolt 3 (USB-C) Dots - Black Frost
+									</strong><br/>
+									<span class="product_desc">13" MacBook Pro USB-C</span><br/>
+									<span class="product_price">
+										Soldout
+									</span>
+								</a>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<footer id="inc_footerWrap">
+			<div id="goTop">
+				<p>
+					<a href="#" title="Btn_top">
+						<img src="../img/footer/BtnTop_.png" alt="BtnTop 이미지"/>
+					</a>
+				</p>
+			</div>
+			<div id="footer">
+				<div id="footer_main">
+					<div class="main_menu">
+						<ul class="main_ul">
+							<li class="menu">
+								<h4>
+									<a href="#none" title="about">
+										<span class="menu_tit">About</span>
+										<span class="ico">+</span>
+									</a>
+								</h4>
+								<ul class="menu_ul">
+									<li><a href="#none" title="소개">소개</a></li>
+									<li><a href="#none" title="타임라인">타임라인</a></li>
+									<li><a href="#none" title="사회공헌">사회공헌</a></li>
+									<li><a href="#none" title="인재채용">인재채용</a></li>
+									<li><a href="#none" title="프레스">프레스</a></li>
+									<li><a href="#none" title="제휴문의">제휴문의</a></li>
+								</ul>
+							</li>
+							<li class="menu">
+								<h4>
+									<a href="#none" title="brand">
+										<span class="menu_tit">Brand</span>
+										<span class="ico">+</span>
+									</a>
+								</h4>
+								<ul class="menu_ul">
+									<li><a href="#none" title="콜라보레이션">콜라보레이션</a></li>
+									<li><a href="#none" title="The LEAF">The LEAF</a></li>
+									<li><a href="#none" title="스마트리빙">스마트리빙</a></li>
+									<li><a href="#none" title="스마트리빙 모집">스마트리빙 모집</a></li>
+									<li><a href="#none" title="Photo Diary">Photo Diary</a></li>
+									<li><a href="#none" title="기업 대량주문">기업 대량주문</a></li>
+									<li><a href="#none" title="Brand Ambassadors">Brand Ambassadors</a></li>
+								</ul>
+							</li>
+							<li class="menu">
+								<h4>
+									<a href="#none" title="매장안내">
+										<span class="menu_tit">매장안내</span>
+										<span class="ico">+</span>
+									</a>
+								</h4>
+								<ul class="menu_ul">
+									<li><a href="#none" title="직영 매장">직영 매장</a></li>
+									<li><a href="#none" title="공식 딜러">공식 딜러</a></li>
+								</ul>
+							</li>
+							<li class="menu">
+								<h4>
+									<a href="#none" title="shop">
+										<span class="menu_tit">Shop</span>
+										<span class="ico">+</span>
+									</a>
+								</h4>
+								<ul class="menu_ul">
+									<li><a href="#none" title="가방">가방</a></li>
+									<li><a href="#none" title="여행">여행</a></li>
+									<li><a href="#none" title="보호">보호</a></li>
+									<li><a href="#none" title="카메라">카메라</a></li>
+									<li><a href="#none" title="악세사리">악세사리</a></li>
+									<li><a href="#none" title="아울렛">아울렛</a></li>
+									<li><a href="#none" title="보호">이벤트</a></li>
+								</ul>
+							</li>
+							<li class="menu">
+								<h4>
+									<a href="#none" title="support">
+										<span class="menu_tit">Support</span>
+										<span class="ico">+</span>
+									</a>
+								</h4>
+								<ul class="menu_ul">
+									<li><a href="#none" title="정품 등록">정품 등록</a></li>
+									<li><a href="#none" title="AS 접수">AS 접수</a></li>
+									<li><a href="#none" title="자주묻는질문">자주묻는질문</a></li>
+									<li><a href="#none" title="약관">약관</a></li>
+									<li><a href="#none" title="개인정보 취급방침">개인정보 취급방침</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<div class="main_contact">
+						<div class="main_div">
+							<div class="helpDesk">
+								<strong>HELP DESK</strong>
+								<p>02. 544. 1510( A/S 4번)</p>
+							</div>
+							<div class="time">
+								<p>평일 AM 10:00 ~ PM 06:00</p>
+								<p>점심 AM 12:00 ~ PM 01:00</p>
+								<p>휴무 토, 일, 공휴일</p>
+							</div>
+							<div class="newsLetter">
+								<p>
+									인케이스의 가장 최신 뉴스를 받아보세요.<br/>
+									처음 뉴스레터를 구독하시는 분들께 10% 할인 쿠폰을 드립니다.
+								</p>
+							</div>
+							<div class="emailArea">
+								<form action="#none" method="post">
+									<fieldset>
+										<legend>이메일</legend>
+										<p class="e">
+											<label for="email0">email</label><input id="email0" type="text" name="email0" title="이메일주소를 입력하세요"
+											placeholder="이메일 주소" autocomplete="off"/>
+											<input id="apply" type="submit" value="신청" title="신청하기 버튼"/>
+										</p>
+										<p class="agree">
+											<span>개인정보 취급방침에 동의합니다.</span>
+											<input id="chk0" type="checkbox" name="chk0"/><label for="chk0">동의</label>
+										</p>
+									</fieldset>
+								</form>
+							</div>
+
+							<div class="socialstyles">
+								<a href="#none" title="facebook_icon">
+									<img src="../img/footer/facebook.png" alt="facebook_icon"/>
+								</a>
+								<a href="#none" title="instagram_icon">
+									<img src="../img/footer/instagram.png" alt="instagram_icon"/>
+								</a>
+								<a href="#none" title="twitter_icon">
+									<img src="../img/footer/twitter.png" alt="twitter_icon"/>
+								</a>
+								<a href="#none" title="youtube_icon">
+									<img src="../img/footer/youtube.png" alt="youtube_icon"/>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="footer_comp">
+					<div class="comp_info">
+						<div class="company_info">
+							<span>인케이스코리아</span><br/>
+							<span>
+								개인정보취급방침 프리즘디스트리뷰션(주)<i>|</i>대표 양준무<i>|</i>서울시 강남구 논현동 111-37 N빌딩 5층<i>|</i>(우) 135-010
+							</span><br/>
+							<span>
+								사업자등록번호 <a href="#" title="사업자등록번호"><span class="numb">211-88-37764</span></a> <i>|</i> 통신판매업번호 제2010-서울강남-00658호 <i>|</i> 호스팅사업자 : 메이크샵 이메일 문의 : <a href="#" title=""><span class="numb">help@pr1zm.com</span></a>
+							</span>
+						</div>
+						<div class="escrow_mark">
+							<p>
+								<img src="../img/footer/escrow.png" alt="escrow 이미지"/>
+							</p>
+						</div>
+					</div>
+					<div class="comp_copyright">
+						<p>
+							<a href="#none" title="GJ_HONG">&copy; 2020 GJ_HONG</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<footer id="mob_inc_footerWrap">
+			<div id="mob_goTop">
+				<p>
+					<a href="#" title="Btn_top">
+						<img src="../img/footer/BtnTop_.png" alt="BtnTop 이미지"/>
+					</a>
+				</p>
+			</div>
+			<div id="mob_footer">
+				<div id="mob_footer_main">
+					<div class="main_menu">
+						<ul class="main_ul">
+							<li class="menu">
+								<h4>
+									<a href="#none" title="about">
+										<span class="menu_tit">About</span>
+										<span class="ico">+</span>
+									</a>
+								</h4>
+								<ul class="menu_ul">
+									<li><a href="#none" title="소개">소개</a></li>
+									<li><a href="#none" title="타임라인">타임라인</a></li>
+									<li><a href="#none" title="사회공헌">사회공헌</a></li>
+									<li><a href="#none" title="인재채용">인재채용</a></li>
+									<li><a href="#none" title="프레스">프레스</a></li>
+									<li><a href="#none" title="제휴문의">제휴문의</a></li>
+								</ul>
+							</li>
+							<li class="menu">
+								<h4>
+									<a href="#none" title="brand">
+										<span class="menu_tit">Brand</span>
+										<span class="ico">+</span>
+									</a>
+								</h4>
+								<ul class="menu_ul">
+									<li><a href="#none" title="콜라보레이션">콜라보레이션</a></li>
+									<li><a href="#none" title="The LEAF">The LEAF</a></li>
+									<li><a href="#none" title="스마트리빙">스마트리빙</a></li>
+									<li><a href="#none" title="스마트리빙 모집">스마트리빙 모집</a></li>
+									<li><a href="#none" title="Photo Diary">Photo Diary</a></li>
+									<li><a href="#none" title="기업 대량주문">기업 대량주문</a></li>
+									<li><a href="#none" title="Brand Ambassadors">Brand Ambassadors</a></li>
+								</ul>
+							</li>
+							<li class="menu">
+								<h4>
+									<a href="#none" title="매장안내">
+										<span class="menu_tit">매장안내</span>
+										<span class="ico">+</span>
+									</a>
+								</h4>
+								<ul class="menu_ul">
+									<li><a href="#none" title="직영 매장">직영 매장</a></li>
+									<li><a href="#none" title="공식 딜러">공식 딜러</a></li>
+								</ul>
+							</li>
+							<li class="menu">
+								<h4>
+									<a href="#none" title="shop">
+										<span class="menu_tit">Shop</span>
+										<span class="ico">+</span>
+									</a>
+								</h4>
+								<ul class="menu_ul">
+									<li><a href="#none" title="가방">가방</a></li>
+									<li><a href="#none" title="여행">여행</a></li>
+									<li><a href="#none" title="보호">보호</a></li>
+									<li><a href="#none" title="카메라">카메라</a></li>
+									<li><a href="#none" title="악세사리">악세사리</a></li>
+									<li><a href="#none" title="아울렛">아울렛</a></li>
+									<li><a href="#none" title="보호">이벤트</a></li>
+								</ul>
+							</li>
+							<li class="menu">
+								<h4>
+									<a href="#none" title="support">
+										<span class="menu_tit">Support</span>
+										<span class="ico">+</span>
+									</a>
+								</h4>
+								<ul class="menu_ul">
+									<li><a href="#none" title="정품 등록">정품 등록</a></li>
+									<li><a href="#none" title="AS 접수">AS 접수</a></li>
+									<li><a href="#none" title="자주묻는질문">자주묻는질문</a></li>
+									<li><a href="#none" title="약관">약관</a></li>
+									<li><a href="#none" title="개인정보 취급방침">개인정보 취급방침</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<div class="main_contact">
+						<div class="main_div">
+							<div class="helpDesk">
+								<strong>HELP DESK</strong>
+								<p>02. 544. 1510( A/S 4번)</p>
+							</div>
+							<div class="time">
+								<p>평일 AM 10:00 ~ PM 06:00</p>
+								<p>점심 AM 12:00 ~ PM 01:00</p>
+								<p>휴무 토, 일, 공휴일</p>
+							</div>
+							<div class="newsLetter">
+								<p>
+									인케이스의 가장 최신 뉴스를 받아보세요.<br/>
+									처음 뉴스레터를 구독하시는 분들께 10% 할인 쿠폰을 드립니다.
+								</p>
+							</div>
+							<div class="emailArea">
+								<form action="#none" method="post">
+									<fieldset>
+										<legend>이메일</legend>
+										<p class="e">
+											<label for="mo_email">email</label><input id="mo_email" type="text" name="mo_email" title="이메일주소를 입력하세요"
+											placeholder="이메일 주소" autocomplete="off"/>
+											<input id="mo_apply" type="submit" value="신청" title="신청하기 버튼"/>
+										</p>
+										<p class="agree">
+											<span>개인정보 취급방침에 동의합니다.</span>
+											<input id="mo_chk" type="checkbox" name="mo_chk"/><label for="mo_chk">동의</label>
+										</p>
+									</fieldset>
+								</form>
+							</div>
+							<div class="socialstyles">
+								<a href="#none" title="facebook_icon">
+									<img src="../img/footer/facebook.png" alt="facebook_icon"/>
+								</a>
+								<a href="#none" title="instagram_icon">
+									<img src="../img/footer/instagram.png" alt="instagram_icon"/>
+								</a>
+								<a href="#none" title="twitter_icon">
+									<img src="../img/footer/twitter.png" alt="twitter_icon"/>
+								</a>
+								<a href="#none" title="youtube_icon">
+									<img src="../img/footer/youtube.png" alt="youtube_icon"/>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="mob_footer_comp">
+					<div class="comp_info">
+						<div class="company_info">
+							<span>인케이스코리아</span><br/>
+							<span>
+								개인정보취급방침 프리즘디스트리뷰션(주)<i>|</i>대표 양준무<i>|</i>서울시 강남구 논현동 111-37 N빌딩 5층<i>|</i>(우) 135-010
+							</span><br/>
+							<span>
+								사업자등록번호 <a href="#none" title="사업자등록번호"><span class="numb">211-88-37764</span></a> <i>|</i> 통신판매업번호 제2010-서울강남-00658호 <i>|</i> 호스팅사업자 : 메이크샵 이메일 문의 : <a href="#" title=""><span class="numb">help@pr1zm.com</span></a>
+							</span>
+						</div>
+						<div class="escrow_mark">
+							<p>
+								<img src="img/footer/escrow.png" alt="escrow 이미지"/>
+							</p>
+						</div>
+					</div>
+					<div class="comp_copyright">
+						<p>
+							<a href="#none" title="GJ_HONG">&copy; 2020 GJ_HONG</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+ </body>
+</html>

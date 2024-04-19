@@ -1,0 +1,262 @@
+/*#################### inc_footerWrap 영역 ######################*/
+	/*pc해상도에서 모바일용 숨김*/
+	#mob_inc_footerWrap{display:none;}
+
+	/* inc_footer 1차영역*/
+	#inc_footerWrap{width:100%; overflow:hidden; background-color: #727171; position:relative;}
+	#inc_footerWrap:before{content:""; display:block; clear:both;
+	width:100%; height:5px; background-color:#E8F100;}
+		
+	/*### 실제사용 영역*/
+	#footer{width:1120px; margin:30px auto;}
+		
+	/*########## goTop 영역 ############*/
+	#goTop{width:44px; height:40px; position:fixed; right:60px; bottom:60px;}
+	#goTop p{width:100%; height:100%;}
+	#goTop p a{display:block; width:100%; height:100%;}
+	#goTop p img{width:100%; height:100%;}
+
+
+	/*########## footer_main ############*/
+	#footer_main{width:100%; height:260px; display:block;}
+
+	/*########## footer_main / main_menu ############*/
+	#footer_main .main_menu{width:650px; height:100%; float:left;}
+		
+	#footer_main .main_menu .main_ul{width:100%; height:250px;  padding-top:10px; }
+	/* 
+		li의 크기 정하기 
+		전체너비 : 650px
+
+		650px / 5 == 130px
+		li 하나당 130px 사용	
+	*/
+	#footer_main .main_menu .menu{width:130px; float:left;}
+	#footer_main .main_menu ul li h4{line-height:30px; font-size:15px; color:#fff;}
+	#footer_main .main_menu .menu a{color:#fff; text-decoration:none;}
+		
+	/*############### footer_main 의 ul li 속의 ul (.menu) ############*/
+	#footer_main .menu ul{width:100%;}
+	#footer_main .menu li{width:100%; height:26px; line-height:26px;
+	font-size:13px; color:#999;}
+	#footer_main .menu li a{color:#d5d5d5;}
+
+	/* ++++ 기능영역 ++++ */
+	#footer_main .menu li a:hover{color:#333;}
+
+	/*########## footer_main / .main_contact ############*/
+	#footer_main .main_contact{width:470px; height:260px; float:left;}
+
+	#footer_main .main_contact .main_div{width:392px; height:250px;
+	padding-top:10px; padding-left:78px;}
+
+	/*########## main_contact 의 .helpDesk (div) ############*/
+	#footer_main .helpDesk{width:55%;color:#fff; margin-bottom:10px; float:left;}
+	#footer_main .helpDesk strong{font-size:30px;}
+	#footer_main .helpDesk p{font-size:20px;}
+
+	/*########## main_contact 의 .time (div) ############*/
+	#footer_main .time{width:40%; height:67px; font-size:12px;
+	color:#d5d5d5; margin-top:14px; margin-left:18px; float:left;}
+
+	/*########## main_contact 의 .newsLetter (div) ############*/
+	#footer_main .newsLetter{width:100%; height:53px; font-size:13px; color:#fff;
+	clear:both;}
+	#footer_main .newsLetter p{width:100%; height:36px; padding-top:17px;}
+
+	/*########## main_contact 의 .emailArea (div) ############*/
+	#footer_main .emailArea{width:100%; height:71px; margin-top:8px;}
+
+	#footer_main .emailArea form{width:100%;}
+	#footer_main .emailArea fieldset{border:none;}
+	#footer_main .emailArea legend{display:none;}
+
+	#footer_main .emailArea p{width:100%; height:50px; font-size:13px; color:#efefef;}
+
+	#footer_main .emailArea .agree{width:435px; height:21px;}
+	#footer_main .emailArea .agree #chk{vertical-align:middle;}
+	#footer_main .emailArea .agree label{padding-left:5px;}
+
+	/*######### p태그안의 input (#email) ###########*/
+	#footer_main #email0{border:3px solid #333;
+	width:300px; height:40px; text-indent:10px;}
+
+	/*############### .apply 신청버튼 영역 #############*/
+	#footer_main .emailArea #apply{
+	width:80px; height:45px; background-color:#222; color:#fff;
+	border:1px solid #222; cursor:pointer;
+	}
+
+	/* ++++ 기능영역  ++++ */
+	#footer_main .emailArea #apply:hover{background-color:#333;}
+
+	/*######### p태그안의 label ###########*/
+	#footer_main .emailArea p.e label{display:none;}
+
+
+
+	/*########## main_contact 의 .socialstyles (div) ############*/
+	#footer_main .socialstyles{width:200px; height:18px; margin-top:10px;}
+	#footer_main .socialstyles a{display:block; width:18px; height:18px; float:left;
+	margin-right:20px;}
+	#footer_main .socialstyles a img{width:100%; height:100%;}
+		
+	/*################# footer_comp 영역  #####################*/
+	#footer_comp{width:100%; height:107px;}
+
+	/* ############## footer_comp 의 div (company_info) #################*/
+	#footer_comp .comp_info{width:820px; font-size:14px; float:left; }
+
+
+	#footer_comp .comp_info span{font-size:13px; color:#fff; line-height:20px; }
+	#footer_comp .comp_info span i{font-style:normal;}
+	#footer_comp .comp_info .numb{text-decoration:underline; font-weight:600;}
+
+	/* ############## footer_comp 의 div (escrow_mark) #################*/
+	#footer_comp .escrow_mark{width:874px; height:37px; margin-top:10px;}
+	#footer_comp .escrow_mark p{width:37px; height:37px;}
+	#footer_comp .escrow_mark img{width:100%; height:100%;}
+
+
+
+	/*########## comp_copyright  ############*/
+	#footer_comp .comp_copyright{width:300px; height:100%; font-size:14px; float:left;}
+	#footer_comp .comp_copyright p{width:100%; height:20px; color:#fff;
+	margin-top:42px;}
+	#footer_comp .comp_copyright p a{color:#fff;}
+
+	/* +++ 기능영역 ++++ */
+	/* 마우스 올렸을때 글자색 변화 */
+	#footer_comp .comp_copyright p a:hover{color:#E8F100;}
+
+
+
+
+	/* ########################### 모바일 ############################ */
+
+	/*#################### inc_footerWrap 영역 ######################*/
+	/* inc_footer 1차영역*/
+	#mob_inc_footerWrap{width:100%; overflow:hidden; background-color: #727171; position:relative;}
+	#mob_inc_footerWrap:before{content:""; display:block; clear:both;
+	width:100%; height:5px; background-color:#E8F100;}
+		
+	/*### 실제사용 영역*/
+	#mob_footer{width:1120px; margin:30px auto;}
+		
+	/*########## goTop 영역 ############*/
+	#goTop{width:44px; height:40px; position:fixed; right:60px; bottom:60px;}
+	#goTop p{width:100%; height:100%;}
+	#goTop p a{display:block; width:100%; height:100%;}
+	#goTop p img{width:100%; height:100%;}
+
+	/*########## footer_main ############*/
+	#mob_footer_main{width:100%; /* height:260px;*/ }
+
+	/*########## footer_main / main_menu ############*/
+	#mob_footer_main .main_menu{width:650px; height:100%; float:left;}
+		
+	#mob_footer_main .main_menu .main_ul{width:100%; /*height:250px;*/  padding-top:10px; }
+	/* 
+		li의 크기 정하기 
+		전체너비 : 650px
+
+		650px / 5 == 130px
+		li 하나당 130px 사용	
+	*/
+	#mob_footer_main .main_menu .menu{width:130px; float:left;}
+	#mob_footer_main .main_menu ul li h4{line-height:30px; font-size:15px; color:#fff;}
+	#mob_footer_main .main_menu .menu a{color:#fff; text-decoration:none;}
+		
+	/*############### footer_main 의 ul li 속의 ul (.menu) ############*/
+	#mob_footer_main .menu ul{width:100%;}
+	#mob_footer_main .menu li{width:100%; height:26px; line-height:26px;
+	font-size:13px; color:#999;}
+	#footer_main .menu li a{color:#d5d5d5;}
+
+	/* ++++ 기능영역 ++++ */
+	#mob_footer_main .menu li a:hover{color:#333;}
+
+	/*########## footer_main / .main_contact ############*/
+	#mob_footer_main .main_contact{width:470px; height:260px; float:left;}
+
+	#mob_footer_main .main_contact .main_div{width:392px; height:250px;
+	padding-top:10px; padding-left:78px;}
+
+	/*########## main_contact 의 .helpDesk (div) ############*/
+	#mob_footer_main .helpDesk{width:55%;color:#fff; margin-bottom:10px; float:left;}
+	#mob_footer_main .helpDesk strong{font-size:30px;}
+	#mob_footer_main .helpDesk p{font-size:20px;}
+
+	/*########## main_contact 의 .time (div) ############*/
+	#mob_footer_main .time{width:40%; height:67px; font-size:12px;
+	color:#d5d5d5; margin-top:14px; margin-left:18px; float:left;}
+
+	/*########## main_contact 의 .newsLetter (div) ############*/
+	#mob_footer_main .newsLetter{width:100%; height:53px; font-size:13px; color:#fff;
+	clear:both;}
+	#mob_footer_main .newsLetter p{width:100%; height:36px; padding-top:17px;}
+
+	/*########## main_contact 의 .emailArea (div) ############*/
+	#mob_footer_main .emailArea{width:100%; height:71px; margin-top:8px;}
+
+	#mob_footer_main .emailArea form{width:100%;}
+	#mob_footer_main .emailArea fieldset{border:none;}
+	#mob_footer_main .emailArea legend{display:none;}
+
+	#mob_footer_main .emailArea p{width:100%; height:50px; font-size:13px; color:#efefef;}
+
+	#mob_footer_main .emailArea .agree{width:435px; height:21px;}
+	#mob_footer_main .emailArea .agree #chk{vertical-align:middle;}
+	#mob_footer_main .emailArea .agree label{padding-left:5px;}
+
+	/*######### p태그안의 input (#email) ###########*/
+	#mob_footer_main #email{border:3px solid #333;
+	width:300px; height:40px; text-indent:10px;}
+
+	/*############### .apply 신청버튼 영역 #############*/
+	#mob_footer_main .emailArea #apply{
+	width:80px; height:45px; background-color:#222; color:#fff;
+	border:1px solid #222; cursor:pointer;
+	}
+
+	/* ++++ 기능영역  ++++ */
+	#mob_footer_main .emailArea #apply:hover{background-color:#333;}
+
+	/*######### p태그안의 label ###########*/
+	#mob_footer_main .emailArea p.e label{display:none;}
+
+
+
+	/*########## main_contact 의 .socialstyles (div) ############*/
+	#mob_footer_main .socialstyles{width:200px; height:18px; margin-top:10px;}
+	#mob_footer_main .socialstyles a{display:block; width:18px; height:18px; float:left;
+	margin-right:20px;}
+	#mob_footer_main .socialstyles a img{width:100%; height:100%;}
+		
+	/*################# footer_comp 영역  #####################*/
+	#footer_comp{width:100%; height:107px;}
+
+	/* ############## footer_comp 의 div (company_info) #################*/
+	#footer_comp .comp_info{width:820px; font-size:14px; float:left; }
+
+
+	#footer_comp .comp_info span{font-size:13px; color:#fff; line-height:20px; }
+	#footer_comp .comp_info span i{font-style:normal;}
+	#footer_comp .comp_info .numb{text-decoration:underline; font-weight:600;}
+
+	/* ############## footer_comp 의 div (escrow_mark) #################*/
+	#footer_comp .escrow_mark{width:874px; height:37px; margin-top:10px;}
+	#footer_comp .escrow_mark p{width:37px; height:37px;}
+	#footer_comp .escrow_mark img{width:100%; height:100%;}
+
+
+
+	/*########## comp_copyright  ############*/
+	#footer_comp .comp_copyright{width:300px; height:100%; font-size:14px; float:left;}
+	#footer_comp .comp_copyright p{width:100%; height:20px; color:#fff;
+	margin-top:42px;}
+	#footer_comp .comp_copyright p a{color:#fff;}
+
+	/* +++ 기능영역 ++++ */
+	/* 마우스 올렸을때 글자색 변화 */
+	#footer_comp .comp_copyright p a:hover{color:#E8F100;}

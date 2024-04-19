@@ -1,0 +1,17 @@
+*{margin:0; padding:0;}
+		body{margin:0; padding:0;}	
+		li{list-style-type:none;}
+		a:link, a:visited{text-decoration:none; color:#333;}
+		a:hover, a:focus{text-decoration:underline;}
+		/*
+			익스플로러 9버전 이하 버전 , 8, 7버전의 경우
+			이미지 자체에 border가 생성됨
+
+			+ img에 직접 적으로 border:none
+		*/
+		img{border:none;}
+		header,section,nav,footer{display:block;}
+		img{border:none;}
+
+		h3{position:absolute; left:-9999px; width:1px; height:1px;
+		font-size:1px; line-height:0; overflow:hidden;}

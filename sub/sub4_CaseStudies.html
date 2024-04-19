@@ -1,0 +1,1317 @@
+<!DOCTYPE html>
+<html lang="ko">
+ <head>
+  <meta charset="utf-8"/>
+  <title>CaseStudies</title>
+  <link rel="shortcut" href="../img/incase_leaf.png"/>
+  <link rel="icon" href="../img/incase_leaf.png"/>
+  <link rel="apple=touch-icon" href="../img/incase_leaf.png"/>
+  <link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+  <link rel="stylesheet" type="text/css" href="../css/header.css"/>
+  <link rel="stylesheet" type="text/css" href="../css/footer_01.css"/>
+  <script src="../js/jquery-1.12.4.min.js"></script>
+  <script src="../js/jquery-ui.min.js"></script>
+  <style>
+		/* ################### wrap #################### */
+			#wrap{max-width:1920px; width:100%; margin:0 auto;}
+
+		/* ################ container ###################*/
+			#container{width:100%; padding-top:100px;}
+
+			/* 목차숨기기 */
+			#container h3{position:absolute; left:-9999px; width:1px; height:1px;
+			font-size:1px; line-height:0; overflow:hidden;}
+
+		/* ################ visual ###################*/
+			#visual{width:100%; height:1000px; position:relative; overflow:hidden;
+
+			background-image:url("../img/casestudies/seoul_background.jpg");
+			background-position:center center;
+			background-repeat:no-repeat;
+			background-size:100%;}
+			
+		/* ################ visual / visual_copy (div)  ###################*/
+			#visual .visual_copy{width:360px; height:244px; margin:0 auto;}
+
+			#visual .case_logo{width:288px; height:126px;margin:0 36px;}
+			#visual .case_logo img{width:100%; height:100%;}
+			
+			#visual .visual_copy h2{font-size:30px; font-weight:700; text-align:center;}
+			#visual .visual_copy p{font-size:14px; text-align:center; margin-bottom:10px;}
+
+		/* ################ visual / member (div)  ###################*/
+			#visual .member{width:1200px; height:880px;
+			margin:0 auto; transform:scale(0.8, 0.8); transition:transform 1s linear;
+			background-image:url("../img/casestudies/member.png");
+			background-size:100%;
+			background-position:top center;
+			background-repeat:no-repeat;}
+
+			#visual .member img{width:100%; height:100%;}
+			
+			/* 기능영역 */
+			#visual:hover .member{transform:scale(1);}
+
+		/* ################ visual / member_label (div)  ###################*/
+			#visual .member_label{width:800px; height:40px; font-size:14px;
+			transform:scale(0.6, 0.6); transition:transform 1s linear;
+			position:absolute; left:570px; bottom:110px; color:#fff;}
+
+			#visual .member_label .label{width:250px; height:100%; text-align:center; float:left;}
+			#visual .member_label .label p{font-size:12px;}
+
+			
+			/* 기능영역 */
+			#visual:hover .member_label{transform:scale(1,1);}
+
+
+		/* ################ about_caseStudies ###################*/
+			#about_caseStudies{width:1360px; margin:0 auto;
+			padding:90px 0; border-bottom:1px solid #e2e2e2; }
+
+			#about_caseStudies h2{width:1340px; height:48px; text-indent:20px;
+			font-size:30px; font-weight:700; margin-bottom:20px;}
+			#about_caseStudies p{width:100%; font-size:14px; margin-bottom:10px;}
+
+			#about_caseStudies p.about_text{width:1320px; padding:0 20px;}
+
+		/* ################ about_caseStudies / sessions ###################*/
+			#about_caseStudies .sessions{width:1360px; height:1640px; 
+			margin-top:80px;}
+		
+		/* ################ about_caseStudies / session ###################*/
+			#about_caseStudies .session{width:640px; color:#333; float:left; 
+			padding:20px; box-shadow:1px 1px 4px #BDBDBD;}
+			#about_caseStudies .session .session_imgs{width:100%; height:426px; margin-bottom:30px;
+			overflow:hidden;}
+			#about_caseStudies .session .session_imgs img{width:100%; height:100%;
+			transform:scale(1); transition:transform 1s linear;}
+
+			#about_caseStudies .session h2{width:100%; font-size:20px; font-weight:700;
+			margin-bottom:20px; transition:color 0.2s linear;}
+
+			#about_caseStudies .session .session_sbtit{color:#000; margin-bottom:10px;}
+			#about_caseStudies .session .social_links{width:100%; height:35px; margin-top:20px;}
+			#about_caseStudies .session .social_links .social_box{width:100%; height:100%;}
+			#about_caseStudies .session .social_links a{display:block; width:35px; height:35px; float:left;
+			margin-right:5px;}
+			#about_caseStudies .session .social_links a img{width:100%; height:100%;}
+
+			/* ++++ 기능 영역 ++++ */
+			#about_caseStudies .session:hover .session_imgs img{transform:scale(1.1);}
+			
+			#about_caseStudies  .session:hover h2{color:#FF7F27;}
+		/* ############# event_schedule ############## */
+			#event_schedule{width:100%;}
+			#event_schedule .event_schedule_box{width:1320px;
+			padding:90px 0 ; margin:0 auto; border-bottom:1px solid #e2e2e2;}
+
+			#event_schedule .event_schedule_box h2{width:100%; height:42px; font-size:30px;
+			font-weight:700; margin-bottom:20px;}
+
+		/* ############## event_schedule / .event_timeline ############# */
+			#event_schedule .event_timeline{width:100%; height:912px; position:relative;}
+			#event_schedule .timeline_bar{width:4px; height:calc(100% - 30px); background-color:#000;
+			position:absolute; left:50%; top:15px;}
+
+			#event_schedule .time_block{width:100%; height:114px; position:relative;}
+			
+			#event_schedule .block_content{width:600px; height:94px; padding:10px 30px;
+			text-align:right; float:left; }
+			#event_schedule .block_content h4{width:100%; height:50px; margin-bottom:10px; }
+			#event_schedule .block_content p{width:100%; height:24px; margin-bottom:10px;}
+			
+			#event_schedule .block_content:after{content:""; width:12px; height:12px;
+			border-radius:8px;
+			background-color:#000; border:2px solid #fff; 
+			position:absolute; left:654px; top:13px;}
+
+			#event_schedule .block_content1{width:600px; height:94px;padding:10px 30px; text-align:left; float:right;}
+			
+			
+		/* ############## event_info / .event_info ################ */
+			#event_schedule .event_info{width:100%; height:138px;}
+			#event_schedule .event_info h2{height:33px; font-size:20px; font-weight:700; color:#000; margin-bottom:0;}
+			#event_schedule .event_info a{font-size:14px; text-decoration:none; color:#C8EFD4;}
+			#event_schedule .event_info p{font-weight:700; margin:20px 0 10px;}
+		
+		/* ################# meet ##################*/
+			#meet{width:100%; height:1624px;}
+		
+		/* ################# meet_box ##################*/
+			#meet .meet_box{width:1320px; overflow:hidden;
+			margin:0 auto; padding:90px 0;
+			border-bottom:1px solid #e2e2e2;}
+		
+			/* ########### meet_tit (h2) ###########*/
+			#meet .meet_tit{font-size:30px; font-weight:700; margin-bottom:20px;}
+			
+			/* ################# interview ####################*/
+			#meet .interview{width:100%; height:1362px; margin-top:80px;}
+
+			/* ############# interview_box ###############*/
+			/* interview_box 원래 사이즈 660px */
+			#meet .interview_box{width:600px; height:636px; 
+			margin:20px; padding:10px; float:left; transition:box-shadow 0.5s linear;}
+
+			#meet .interview_imgs{width:100%; height:426px; margin-bottom:30px; overflow:hidden;}
+			#meet .interview_imgs img{width:100%; height:100%; transform:scale(1.1);
+			transition:transform 1s linear;}
+			
+			#meet .interview_tit{width:100%; font-size:20px; font-weight:700; margin-bottom:20px;}
+			#meet .interview_text{width:100%; font-size:14px; margin-bottom:10px; opacity:0.8;
+			transition:opacity 0.5s linear;}
+
+			/* ########## interview_box / .btn ############# */
+			#meet .btn{width:110px; height:40px; line-height:40px; font-size:13px;
+			text-align:center; margin-top:20px;
+			background-color:#000;}
+			
+			#meet .btn0{margin-top:38px;}
+			#meet .btn a{display:block; width:100%; height:100%; color:#fff; text-decoration:none;}
+
+
+			/* +++++++++ 기능영역 +++++++++ */
+			/* interview_box에 마우스 오버했을때, 이미지 스케일 작아지기 */
+			#meet .interview_box:hover .interview_imgs img{transform:scale(1);}
+
+			/* interview_box에에 마우스 오버했을때, box-shadow 생성*/
+			#meet .interview_box:hover{box-shadow:0 1px 10px rgba(60,60,60,0.8);}
+
+			/* interview_box에에 마우스 오버했을때, interview_text 나타나기*/	
+			#meet .interview_box:hover .interview_text{opacity:1;}
+
+			/* 자세히 보기 버튼에 마우스 올렸을때  버튼 색상톤 변화 */
+			#meet .btn:hover{background-color:rgba(20,20,20,0.5);}
+
+		/* ############# share ################## */
+			#share{width:100%; height:525px;}
+
+			#share .share_box{width:1320px; height:345px; margin:0 auto;
+			padding:90px 0;}
+
+		/* ################# share / .share_event #################### */
+			#share .share_event{width:100%; height:85px;}
+
+			#share .share_event h2{width:250px; height:35px; line-height:35px; font-size:20px; float:left;
+			margin-bottom:50px;}
+
+			#share .event_icon{width:1070px; height:35px; margin-bottom:50px; 
+			float:right;}
+			#share .event_icon a{display:inline-block; width:35px; height:35px; margin:0 10px; color:#787878;}
+			#share .event_icon a img{width:100%;}
+
+		/* ################# share / .share_sponsors #################### */
+			#share .share_sponsors{width:100%; height:80px;}
+			#share .share_sponsors h2{width:250px; height:60px; line-height:60px; font-size:20px; float:left;
+			margin-bottom:20px; }
+
+			#share .spon_icon{width:1070px; height:60px; float:right; margin-bottom:20px;}
+			#share .spon_icon span{display:inline-block; height:60px; margin-right:60px;}
+			#share .spon_icon span img{height:100%}
+
+		
+  </style>
+  <script>
+		/* 두번째 문법 사용하기 */
+		/* 선택한 문서가 준비가 되면 기능 구현해주세요 */
+		jQuery(document).ready(function(){
+
+
+			jQuery("#mob_footer .menu_ul").hide();
+			
+			/*
+				대상 : #mob_footer .menu
+				이벤트 : 클릭
+				이벤트 대상 : 클릭했을때 menu_ul (class명) 슬라이드다운, 업
+			*/
+			jQuery("#mob_footer .menu").click(function(){
+				jQuery("#mob_footer .menu_ul").slideUp(500,"linear");
+				jQuery(this).children().next().slideDown(500,"linear");
+
+				//jQuery(".main_contact").css({"marginTop":$("menu_ul").height()});
+			});
+
+			/*
+				대상 :  #mo_inc_gnb
+				이벤트 : 클릭
+				이벤트 대상 : .menu_active (class명) 나타나기
+			*/
+			jQuery(".ham2").hide();
+
+			jQuery(".ham1").click(function(){
+				jQuery(".menu_active").show(500,"linear");
+				jQuery(".ham2").show();
+				jQuery(".ham1").hide();
+			});
+
+			jQuery(".ham2").click(function(){
+				jQuery(".menu_active").hide(500,"linear");
+				jQuery(".ham1").show();
+				jQuery(".ham2").hide();
+			});
+
+			
+			
+		/* #################### header 영역 ######################## */
+			
+			/* 자녀요소인 .gnb_div 먼저 숨기기*/
+			jQuery(".gnb_div").hide();
+			
+			/* 
+				[기능만들기]
+				gnb_menu_li 에 마우스올리면 gnb_div (div) 보여지기
+			*/
+			jQuery(".gnb_menu_li0").mouseover(function(){
+				jQuery(".gnb_div0").stop().show();
+			}).mouseout(function(){
+				jQuery(".gnb_div0").stop().hide();
+			});
+
+			jQuery(".gnb_menu_li1").mouseover(function(){
+				jQuery(".gnb_div1").stop().show();
+			}).mouseout(function(){
+				jQuery(".gnb_div1").stop().hide();
+			});
+
+			jQuery(".gnb_menu_li2").mouseover(function(){
+				jQuery(".gnb_div2").stop().show();
+			}).mouseout(function(){
+				jQuery(".gnb_div2").stop().hide();
+			});
+
+			jQuery(".gnb_menu_li5").mouseover(function(){
+				jQuery(".gnb_div3").stop().show();
+			}).mouseout(function(){
+				jQuery(".gnb_div3").stop().hide();
+			});
+
+			jQuery(".gnb_menu_li6").mouseover(function(){
+				jQuery(".gnb_div4").stop().show();
+			}).mouseout(function(){
+				jQuery(".gnb_div4").stop().hide();
+			});
+
+			jQuery(".product_ul2 li a").mouseover(function(){
+				$(this).css({"color":"#ccc"});
+			}).mouseout(function(){
+				jQuery(this).css({"color":"#fff"});
+			});
+
+		});
+	
+  </script>
+ </head>
+
+ <body>
+	<div id="wrap">
+		<header id="inc_header">
+			<h3>인케이스 헤더</h3>
+			<div id="header_inner">
+				<div id="inc_topbar">
+					<!--<div class="social">
+						<ul>
+							<li></li>
+						</ul>
+					</div>-->
+				</div>
+
+				<div id="inc_logo">
+					<div id="logo_area">
+						<h1>
+							<a href="../index.html" title="인케이스 사이트">
+								<img src="../img/header/incase_logo.png" alt="인케이스 로고"/>
+							</a>
+						</h1>
+					</div>
+					<div id="inc_extra">
+						<ul>
+							<li>
+								<div>
+									<a href="../login/login.html" title="profile">
+										<img src="../img/header/profile.png" alt="profile"/>
+									</a>
+								</div>
+							</li>
+							<li>
+								<div>
+									<a href="#" title="wishlist">
+										<img src="../img/header/wishlist.png" alt="wishlist" onclick="confirm('회원에게만 제공이 되는 서비스입니다. 우선 로그인을 하여 주시기 바랍니다.');"/>
+									</a>
+								</div>
+							</li>
+							<li>
+								<div>
+									<a href="#" title="cart">
+										<img src="../img/header/cart.png" alt="cart"/>
+									</a>
+								</div>
+							</li>
+							<li>
+								<div>
+									<a href="#" title="search">
+										<img src="../img/header/search.png" alt="search"/>
+									</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div id="mo_inc_extra">
+						<ul>
+							<li class="profile_li">
+								<div class="profile_div">
+									<a href="login/login.html" title="profile">
+										<img src="../img/header/profile.png" alt="profile"/>
+									</a>
+									<div class="account_container">
+										<p class="account_title">Log In</p>
+										<form action="#none" method="post">
+											<ul class="form_ul">
+												<li>
+													<label>아이디</label>
+													<input id="userid" type="text" name="userid"
+													maxlength="20" autocomplete="off"/>
+												</li>
+												<li>
+													<label>비밀번호</label>
+													<input id="userpw" type="password" name="userpw"
+													maxlength="20" autocomplete="off"/>
+												</li>
+												<li class="login_extras">
+													<a href="#none" title="아이디/비밀번호찾기">아이디/비밀번호 찾기</a>
+													<a href="#none" title="비회원 주문조회">비회원 주문조회</a>
+												</li>
+												<li>
+													<a class="login_btn" href="#none" title="로그인">로그인</a>
+												</li>
+												<li class="social_login">
+													<a class="so_facebook" href="#none" title="facebook">
+														<img src="../img/mobile/social_facebook.png" alt="페이스북 아이콘"/>
+													</a>
+													<a class="so_naver" href="#none" title="naver">
+														<img src="../img/mobile/social_naver.png" alt="네이버 아이콘"/>
+													</a>
+													<a class="so_kakao" href="#none" title="kakao">
+														<img src="../img/mobile/social_kakao.png" alt="카카오 아이콘"/>
+													</a>
+												</li>
+											</ul>
+											<div class="account_register">
+												<a href="login/login.html" title="회원가입">회원가입</a>
+											</div>
+										</form>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div>
+									<a href="#" title="search">
+										<img src="../img/header/search.png" alt="search"/>
+									</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<nav id="inc_gnb">
+					<ul id="gnb_menu">
+						<li class="gnb_menu_li gnb_menu_li0">
+							<a class="pro_a" href="../sub/sub0_product.html" title="Product"><strong>Product</strong></a>
+							<div class="gnb_div gnb_div0">
+								<ul class="product_ul2 product_ul2_1">
+									<li><a class="tit" href="#none" title="Bags">Bags</a></li>
+									<li><a href="#none" title="백팩">백팩</a></li>
+									<li><a href="#none" title="숄더백/메신저백">숄더백/메신저백</a></li>
+									<li><a href="#none" title="슬링백">슬링백</a></li>
+									<li><a href="#none" title="액티브백">액티브백</a></li>
+								</ul>
+							
+								<ul class="product_ul2">
+									<li><a class="tit" href="#" title="Travel">Travel</a></li>
+									<li><a href="#none" title="더플백">더플백</a></li>
+									<li><a href="#none" title="여행용 백팩">여행용 백팩</a></li>
+									<li><a href="#none" title="여행용 액세서리">여행용 액세서리</a></li>
+								</ul>
+									
+								<ul class="product_ul2">
+									<li><a class="tit" href="#none" title="Protection">Protection</a></li>
+									<li><a href="#none" title="맥북 슬리브">맥북 슬리브</a></li>
+									<li><a href="#none" title="맥북 브리프">맥북 브리프</a></li>
+									<li><a href="#none" title="아이폰 케이스">아이폰 케이스</a></li>
+									<li><a href="#none" title="아이패드 슬리브">아이패드 슬리브</a></li>
+									<li><a href="#none" title="아이패드 케이스">아이패드 케이스</a></li>
+								</ul>
+								
+								<ul class="product_ul2">
+									<li><a class="tit" href="#none" title="Camera">Camera</a></li>
+									<li><a href="#none" title="DSLR 카메라">DSLR 카메라</a></li>
+									<li><a href="#none" title="드론">드론</a></li>
+									<li><a href="#none" title="고프로">고프로</a></li>
+									<li><a href="#none" title="액션카메라">액션카메라</a></li>
+								</ul>
+							
+								<ul class="product_ul2">
+									<li><a class="tit" href="#none" title="Accessories">Accessories</a></li>
+									<li><a href="#none" title="충전기">충전기</a></li>
+									<li><a href="#none" title="애플워치">애플워치</a></li>
+									<li><a href="#none" title="에어팟">에어팟</a></li>
+								</ul>
+							</div>
+						</li>
+
+						<li class="gnb_menu_li gnb_menu_li1">
+							<a href="../sub/sub1_device.html" title="device"><strong>device</strong></a>
+							<div class="gnb_div gnb_div1">
+								<ul class="product_ul2 product_ul2_1">
+									<li><a class="tit" href="#none" title="MacBook">MacBook</a></li>
+									<li><a href="#none" title="맥북 프로 16형(USB-C)">맥북 프로 16형(USB-C)</a></li>
+									<li><a href="#none" title="맥북 프로 15형(USB-C)">맥북 프로 15형(USB-C)</a></li>
+									<li><a href="#none" title="맥북 프로 13형(USB-C)">맥북 프로 13형(USB-C)</a></li>
+									<li><a href="#none" title="맥북 에어 13형(USB-C)">맥북 에어 13형(USB-C)</a></li>
+									<li><a href="#none" title="맥북 12형(USB-C)">맥북 12형(USB-C)</a></li>
+									<li><a href="#none" title="맥북 프로 레티나 15형">맥북 프로 레티나 15형</a></li>
+									<li><a href="#none" title="맥북 프로 레티나 13형">맥북 프로 레티나 13형</a></li>
+									<li><a href="#none" title="맥북 프로 15형">맥북 프로 15형</a></li>
+									<li><a href="#none" title="맥북 프로 13형">맥북 프로 13형</a></li>
+									<li><a href="#none" title="맥북 에어 13형">맥북 에어 13형</a></li>
+									<li><a href="#none" title="맥북 에어 11형">맥북 에어 11형</a></li>
+								</ul>
+									
+								<ul class="product_ul2">
+									<li><a class="tit" href="#none" title="iPhone">iPhone</a></li>
+									<li><a href="#none" title="아이폰 Xs 맥스">아이폰 Xs 맥스</a></li>
+									<li><a href="#none" title="아이폰 Xs">아이폰 Xs</a></li>
+									<li><a href="#none" title="아이폰 XR">아이폰 XR</a></li>
+									<li><a href="#none" title="아이폰 X">아이폰 X</a></li>
+									<li><a href="#none" title="아이폰 8 플러스">아이폰 8 플러스</a></li>
+									<li><a href="#none" title="아이폰 8">아이폰 8</a></li>
+									<li><a href="#none" title="아이폰 7 플러스">아이폰 7 플러스</a></li>
+									<li><a href="#none" title="아이폰 7">아이폰 7</a></li>
+									<li><a href="#none" title="아이폰 6 플러스">아이폰 6 플러스</a></li>
+									<li><a href="#none" title="아이폰 6s">아이폰 6s</a></li>
+									<li><a href="#none" title="아이폰 6s 플러스">아이폰 6s 플러스</a></li>
+									<li><a href="#none" title="아이폰 6">아이폰 6</a></li>
+									<li><a href="#none" title="아이폰 SE">아이폰 SE</a></li>
+								</ul>
+									
+								<ul class="product_ul2">
+									<li><a class="tit" href="#none" title="iPad">iPad</a></li>
+									<li><a href="#none" title="프로 12.5형(USB-C)">프로 12.5형(USB-C)</a></li>
+									<li><a href="#none" title="프로 11형(USB-C)">프로 11형(USB-C)</a></li>
+									<li><a href="#none" title="프로 12.9형">프로 12.9형</a></li>
+									<li><a href="#none" title="프로 10.5형">프로 10.5형</a></li>
+									<li><a href="#none" title="프로 9.7형">프로 9.7형</a></li>
+									<li><a href="#none" title="9.7형">9.7형</a></li>
+									<li><a href="#none" title="에어 2">에어 2</a></li>
+									<li><a href="#none" title="에어">에어</a></li>
+									<li><a href="#none" title="미니 3">미니 3</a></li>
+									<li><a href="#none" title="미니 2">미니 2</a></li>
+									<li><a href="#none" title="미니">미니</a></li>
+								</ul>
+									
+								<ul class="product_ul2">
+									<li><a class="tit" href="#none" title="Camera">Camera</a></li>
+									<li><a href="#none" title="DSLR 카메라">DSLR 카메라</a></li>
+									<li><a href="#none" title="드론">드론</a></li>
+									<li><a href="#none" title="고프로">고프로</a></li>
+									<li><a href="#none" title="액션카메라">액션카메라</a></li>
+								</ul>
+								
+								<ul class="product_ul2">
+									<li><a class="tit" href="#none" title="Apple Watch">Apple Watch</a></li>
+									<li><a href="#none" title="42/44mm">42/44mm</a></li>
+								</ul>
+									
+								<ul class="product_ul2">
+									<li><a class="tit" href="#none" title="AirPods">AirPods</a></li>
+									<li><a href="#none" title="38mm">38mm</a></li>
+								</ul>
+							</div>
+						</li>
+					
+						<li class="gnb_menu_li gnb_menu_li2">
+							<a class="tit" href="../sub/sub2_collection.html" title="Collection"><strong>Collection</strong></a>
+							<div class="gnb_div gnb_div2">
+								<ul class="product_ul2 product_ul2_1">
+									<li><a class="tit" href="#none" title="신상품">신상품</a></li>
+									<li><a href="#none" title="온라인 독점 상품">온라인 독점 상품</a></li>
+									<li><a href="#none" title="콤파스">콤파스</a></li>
+									<li><a href="#none" title="가방">가방</a></li>
+									<li><a href="#none" title="슬리브/케이스">슬리브/케이스</a></li>
+								</ul>
+									
+								<ul class="product_ul2">
+									<li><a class="tit" href="#none" title="컬렉션">컬렉션</a></li>
+									<li><a href="#none" title="Case for Airpods">Case for Airpods</a></li>
+									<li><a href="#none" title="City Backpack">City Backpacks</a></li>
+									<li><a href="#none" title="Via Backpack">Via Backpack</a></li>
+									<li><a href="#none" title="EO Travel Backpack">EO Travel Backpack</a></li>
+									<li><a href="#none" title="Diamond Ripstop">Diamond Ripstop</a></li>
+									<li><a href="#none" title="Nylon Organizers">Nylon Organizers</a></li>
+									<li><a href="#none" title="Compact Sleeve">Compact Sleeve</a></li>
+								</ul>
+										
+								<ul class="product_ul2">
+									<li><a class="tit" href="#none" title="콜라보레이션">콜라보레이션</a></li>
+									<li><a href="#none" title="Incase x Carbon">Incase x Carbon</a></li>
+									<li><a href="#none" title="Kelly Slater">Kelly Slater</a></li>
+									<li><a href="#none" title="Ari Marcopoulos">Ari Marcopoulos</a></li>
+								</ul>
+										
+								<ul class="product_ul2">
+									<li><a class="tit" href="#none" title="혁신 기술">혁신 기술</a></li>
+									<li><a href="#none" title="Flight Nylon">Flight Nylon</a></li>
+									<li><a href="#none" title="Honeycomb Ripstop">Honeycomb Ripstop</a></li>
+									<li><a href="#none" title="Diamond Ripstop">Diamond Ripstop</a></li>
+									<li><a href="#none" title="Woolenex">Woolenex</a></li>
+									<li><a href="#none" title="Ecoya®">Ecoya®</a></li>
+									<li><a href="#none" title="Tensaerlite™">Tensaerlite™</a></li>
+									<li><a href="#none" title="Ariaprene™">Ariaprene™</a></li>
+								</ul>
+									
+								<ul class="product_ul2">
+									<li><a class="tit" href="#none" title="추천 상품">추천 상품</a></li>
+									<li><a href="#none" title="MEN">MEN</a></li>
+									<li><a href="#none" title="WOMEN">WOMEN</a></li>
+									<li><a href="#none" title="단기여행용 백">단기여행용 백</a></li>
+									<li><a href="#none" title="장기여행용 백">장기여행용 백</a></li>
+									<li><a href="#none" title="자전거/운동 백">자전거/운동 백</a></li>
+									<li><a href="#none" title="출사용 백">출사용 백</a></li>
+									<li><a href="#none" title="1인 미디어">1인 미디어</a></li>
+								</ul>
+							</div>
+						</li>
+
+						<li class="gnb_menu_li gnb_menu_li3">
+							<a href="../sub/sub3_brand.html" title="Brand"><strong>Brand</strong></a>
+						</li>
+
+						<li class="gnb_menu_li gnb_menu_li4">
+							<a href="../sub/sub4_CaseStudies.html" title="CaseStudies"><strong>CaseStudies</strong></a>
+						</li>
+
+						<li class="gnb_menu_li gnb_menu_li5">
+							<a href="../sub/sub7_The_Leaf.html" title="The LEAF"><strong>The LEAF</strong></a>
+							<div class="gnb_div gnb_div3">
+								<ul class="product_ul2 product_ul2_1">
+									<li class="ul2a_li0"><a href="#none" title="The LEAF">The LEAF</a></li>
+									<li class="ul2a_li0"><a href="#none" title="Smart Living">Smart Living</a></li>
+									<li class="ul2a_li0"><a href="#none" title="Photo Diary">Photo Diary</a></li>
+								</ul>
+							</div>
+						</li>
+
+						<li class="gnb_menu_li gnb_menu_li6">
+							<a href="../sub/sub6_Incase_Store.html" title="Store"><strong>Store</strong></a>
+							<div class="gnb_div gnb_div4">
+								<ul class="product_ul2 product_ul2_1">
+									<li class="ul2b_li1"><a href="#none" title="직영매장">직영매장</a></li>
+									<li class="ul2b_li1"><a href="#none" title="공식딜러">공식딜러</a></li>
+								</ul>
+							</div>
+						</li>
+
+						<li class="gnb_menu_li gnb_menu_li7">
+							<a href="../sub/sub8_outlet.html" title="Outlet"><strong>Outlet</strong></a>
+						</li>
+					</ul>
+				</nav>
+
+				<nav id="mo_inc_gnb">
+					<div class="menu">
+						<a class="ham1" href="#none" title="hamburger">
+							<span class="hamburger_box">
+								<span class="hamburger_inner inner1"></span>
+								<span class="hamburger_inner inner2"></span>
+								<span class="hamburger_inner inner3"></span>
+							</span>
+						</a>
+						<a class="ham2" href="#none" title="hamburger">
+							<span class="hamburger_box2">
+								<span class="hamburger_inner2">
+									<span class="hamburger_inner inner4"></span>
+									<span class="hamburger_inner inner5"></span>
+								</span>
+							</span>
+						</a>
+						<ul class="menu_active">
+							<li class="drop_down">
+								<a href="../sub/sub0_product.html" title="product">
+									<em>Product</em>
+									<span>+</span>
+								</a>
+							</li>
+							<li class="drop_down">
+								<a href="../sub/sub1_device.html" title="Device">
+									<em>Device</em>
+									<span>+</span>
+								</a>
+							</li>
+							<li class="drop_down">
+								<a href="../sub/sub2_collection.html" title="Collection">
+									<em>Collection</em>
+									<span>+</span>
+								</a>
+							</li>
+							<li class="drop_down level0">
+								<a href="../sub/sub3_brand.html" title="Brand">
+									<em>Brand</em>
+								</a>
+							</li>
+							<li class="drop_down level0">
+								<a href="../sub/sub4_CaseStudies.html" title="CaseStudies">
+									<em>CaseStudies</em>
+								</a>
+							</li>
+							<li class="drop_down">
+								<a href="../sub/sub7_The_Leaf.html" title="The LEAF">
+									<em>The LEAF</em>
+									<span>+</span>
+								</a>
+							</li>
+							<li class="drop_down">
+								<a href="../sub/sub6_Incase_Store.html" title="Store">
+									<em>Store</em>
+									<span>+</span>
+								</a>
+							</li>
+							<li class="drop_down level0">
+								<a href="../sub/sub8_outlet.html" title="Outlet">
+									<em>Outlet</em>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</header>
+		<div id="container">
+			<div id="visual">
+				<div class="visual_copy">
+					<p class="case_logo">
+						<img src="../img/casestudies/casestudies_logo.png" alt="로고 이미지"/>
+					</p>
+					<h2>The world as inspiration :</h2>
+					<p>3명의 크리에이터의 이야기를 직접 듣고 경험해보세요.</p>
+				</div>
+				<div class="member">
+					<img src="../img/casestudies/shadow.png" alt="그림자"/>
+				</div>
+				<div class="member_label">
+					<div class="label">
+						<strong>임수민</strong>
+						<p>포토그래퍼</p>
+					</div>
+					<div class="label">
+						<strong>김지윤</strong>
+						<p>산업 디자이너</p>
+					</div>
+					<div class="label">
+						<strong>조준기</strong>
+						<p>여행에미치다 대표</p>
+					</div>
+				</div>
+			</div>
+			<section id="about_caseStudies">
+				<h2 class="about_tit">About CaseStudies™.</h2>
+				<p class="about_text">
+					CaseStudies™는 모든 매체의 디자이너, 포토그래퍼 및 차세대 크리에이터에게 영감과 용기를 실어주기 위해 업계 리더가 모이는 새로운 플랫폼입니다. 오프라인 이벤트에서는 창의력을 촉진하고, 차세대 커뮤니티와 크리에이터에게 영감을 불어 넣어주는 대화형 캐주얼 강연이 포함됩니다.
+				</p>
+				<p class="about_text">
+					<strong>2019년 6월 28일, 인케이스 CaseStudies™가 서울에서 진행됩니다.</strong>
+				</p>
+				<div class="sessions">
+					<div class="session">
+						<p class="session_imgs">
+							<img src="../img/casestudies/soomin.jpg" alt="임수민 이미지"/>
+						</p>
+						<h2>임수민, 포토그래퍼</h2>
+						<p class="session_sbtit"><strong>"내가 나이기를 포기하지 않는 이유"</strong></p>
+						<p class="session_desc">
+							스트리트 포토그래퍼 임수민은 길거리에서 사람들이 잊고 사는 순간과 존재들을 흑백 필름으로 담는다. 그러다 문득 어느 날 길이 없는 태평양을 요트를 타고 건넜고, 어느덧 본인의 배의 선주이자 캡틴쑤가 되었다.
+						</p>
+						<p>
+							그녀는 '사회가 제시한 성공의 기준을 따르기 위해 자기 삶을 희생하지 마라, 대신 내가 가치 있게 생각하는 일을 하면서 살라'고 말한다. 청년들은 성공의 기준을 좋은 직장을 얻는 것이라고 믿으며 자신을 희생하는 삶을 살아가고 있다.
+						</p>
+						<p>
+							좋은 직장, 고액 연봉을 추구하는 삶이 나쁜 것은 아니지만 우리는 그것이 정말 자신에게 행복한 삶인지 스스로에게 질문해야 한다. 그녀는 각종 모험을 하며 얻은 교훈과 경험을 통해 얻은 것들을 소개하고자 한다.
+						</p>
+						<div class="social_links">
+							<p class="social_box">
+								<a href="#none" title="유튜브">
+									<img src="../img/casestudies/youtube.png" alt="유튜브 아이콘"/>
+								</a>
+								<a href="#none" title="인스타그램">
+									<img src="../img/casestudies/insta.png" alt="인스타그램 아이콘"/>
+								</a>
+							</p>
+						</div>
+					</div>
+					<div class="session">
+						<p class="session_imgs">
+							<img src="../img/casestudies/jiyoun.jpg" alt="김지윤 이미지"/>
+						</p>
+						<h2>김지윤, 산업 디자이너</h2>
+						<p><strong>"디자이너 김지윤이 세상을 바라보는 방법"</strong></p>
+						<p>
+							디자이너 김지윤은 제품 디자인을 비롯해 가구, 오브젝트, 공간, 브랜딩, 어플리케이션 등 분야를 가리지 않는 다양하고 왕성한 디자인 활동을 보여주고 있다.
+						</p>
+						<p>
+							그는 팬텍을 거쳐, LG그룹 종합 광고대행사 HSAD 내 브랜드 컨설팅 조직 OTR(Over the Rainbow)에 디자인 디렉터이자 파운더로 합류하여 다양한 분야의 제품과 서비스 기획을 포함한 디자인, 브랜딩, 마케팅 전략 컨설팅을 수행해왔다. 또한, 레드닷, iF를 포함한 여러 국내외 권위 있는 디자인 어워드에서 꾸준히 수상해 그 가치를 입증해왔다.
+						</p>
+						<p>
+							이제는 10년 간의 회사 생활을 마무리하고, 본격적으로 ‘김지윤 스튜디오’를 오픈한 지 1년이 지났다. 그는 CaseStudies를 통해 다양한 경험으로부터 얻은 본인만의 시각, 다르게 세상을 바라보는 방법에 대해 소개하고자 한다.
+						</p>
+						<div class="social_links">
+							<p class="social_box">
+								<a href="#none" title="유튜브">
+									<img src="../img/casestudies/link.png" alt="유튜브 아이콘"/>
+								</a>
+								<a href="#none" title="인스타그램">
+									<img src="../img/casestudies/insta.png" alt="인스타그램 아이콘"/>
+								</a>
+							</p>
+						</div>
+					</div>
+					<div class="session">
+						<p class="session_imgs">
+							<img src="../img/casestudies/joUnki.jpg" alt="조윤기 이미지"/>
+						</p>
+						<h2>조준기, 여행에미치다 대표</h2>
+						<p><strong>"그럼에도 불구하고, 여행"</strong></p>
+						<p>
+							조준기는 300만 명의 구독자를 거느리고 있는 국내 최대 여행 콘텐츠 기업 ‘여행에미치다’ 대표다. 2014년 3월에 시작하여 실시간 여행 정보, 여행 이야기, 여행 팁 등을 전하고 있다.
+						</p>
+						<p>
+							‘여행에 미치다’는 여행을 좋아하던 한 청년의 겁 없는 도전에서부터 시작됐다. 그는 취준생 시절, 여느 대학생처럼 스펙 쌓고, 자격증을 따는 과정에 상당한 괴리감을 느꼈다고 한다. 그는 그 때부터 ‘내가 행복하려면 어떤 일을 해야 할까?’ 진지하게 고민 했다.
+						</p>
+						<p>
+							여행이 좋아서, 여행하는 것에 행복을 느껴 시작한 일이 벌써 5년이 넘었다. 조준기 대표는 여행을 떠나게 되고, 일을 시작했다. 그리고 계속 여행하는 이유에 대하여 솔직 담백하게 이야기를 전하고자 한다.
+						</p>
+						<div class="social_links">
+							<p class="social_box">
+								<a href="#none" title="인스타그램">
+									<img src="../img/casestudies/insta.png" alt="인스타그램 아이콘"/>
+								</a>
+								<a href="#none" title="유튜브">
+									<img src="../img/casestudies/facebook.png" alt="유튜브 아이콘"/>
+								</a>
+								<a href="#none" title="인스타그램">
+									<img src="../img/casestudies/youtube.png" alt="인스타그램 아이콘"/>
+								</a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="event_schedule">
+				<div class="event_schedule_box">
+					<h2>Event Schedule.</h2>
+					<div class="event_timeline">
+						<div class="timeline_bar"></div>
+						<div class="time_block">
+							<div class="block_content">
+								<h4>
+									515pm - 615pm<br/>
+									Incase VIP, Influencers, Press Look around
+								</h4>
+								<p>인케이스 VIP 대상 신상품 소개</p>
+							</div>
+						</div>
+						<div class="time_block">
+							<div class="block_content block_content1">
+								<h4>
+									615pm - 640pm<br/>
+									Brand & Product Presentation
+								</h4>
+								<p>
+									인케이스 총괄 디렉터 Mike와 제품 디자이너 Byron의 브랜드 프레젠테이션
+								</p>
+							</div>
+						</div>
+						<div class="time_block">
+							<div class="block_content">
+								<h4>
+									7pm - 720pm<br/>
+									CaseStudies Live Session
+								</h4>
+								<p>
+									#1 스트리트 포토그래퍼 임수민 강연
+								</p>
+							</div>
+						</div>
+						<div class="time_block">
+							<div class="block_content block_content1">
+								<h4>
+									730pm - 750pm<br/>
+									CaseStudies Live Session
+								</h4>
+								<p>
+									#2 산업디자이너 김지윤 강연
+								</p>
+							</div>
+						</div>
+						<div class="time_block">
+							<div class="block_content">
+								<h4>
+									8pm - 820pm<br/>
+									CaseStudies Live Session
+								</h4>
+								<p>
+									#3 여행에미치다 대표 조준기 강연
+								</p>
+							</div>
+						</div>
+						<div class="time_block">
+							<div class="block_content block_content1">
+								<h4>
+									820pm - 830pm<br/>
+									CaseStudies Live Session
+								</h4>
+								<p>
+									크리에이터와의 Q&amp;A
+								</p>
+							</div>
+						</div>
+						<div class="time_block">
+							<div class="block_content">
+								<h4>
+									840pm - 9pm<br/>
+									Live Art Show
+								</h4>
+								<p>
+									Incase with workshopX 라이브 아트쇼
+								</p>
+							</div>
+						</div>
+						<div class="time_block">
+							<div class="block_content block_content1">
+								<h4>
+									9pm - 10pm<br/>
+									Incase Lucky Draw
+								</h4>
+								<p>
+									맥북과 인케이스 신상품 패키지를 받을 수 있는 기회
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="event_info">
+						<h2>2019년 6월 28일, 금요일</h2>
+						<a href="#none" title="주소">
+							<h2>서울 강남구 선릉로 153길 37, 8D Seoul Cafe</h2>
+						</a>
+						<p>
+							Doors open 5:15pm / Event 6:15-10:00pm<br/>
+							*Pop-up store: 6월 29일(Sat) - 7월 5일(Fri) 12pm - 7pm
+						</p>
+					</div>
+				</div>
+			</section>
+			<section id="meet">
+				<div class="meet_box">
+					<h2 class="meet_tit">Meet the influencers.</h2>
+					<div class="interview">
+						<div class="interview_box">
+							<p class="interview_imgs">
+								<img src="../img/casestudies/theleaf_soomin.jpg" alt="임수민 인터뷰 이미지"/>
+							</p>
+							<h2 class="interview_tit">Interview: 임수민</h2>
+							<p class="interview_text">
+								흑백 필름으로 다시 오지 않을 순간들을 기록하는 스트리트 포토그래퍼가 있습니다. 스트리트 포토그래퍼로서의 삶, 세일러로서의 삶, 다큐멘터리 감독의 삶, 작가의 삶 그리고 임수민의 삶, 그녀는 어떻게 이러한 도전을 하게 된 것일까요?
+							</p>
+							<p class="btn btn0">
+								<a href="#none" title="자세히보기">자세히 보기</a>
+							</p>
+						</div>
+						<div class="interview_box">
+							<p class="interview_imgs">
+								<img src="../img/casestudies/theleaf_jiyoun.jpg" alt="김지윤 인터뷰 이미지"/>
+							</p>
+							<h2 class="interview_tit">Interview: 김지윤</h2>
+							<p class="interview_text">
+								예술과 과학이 공존하는 산업 디자인의 시장이 점차 확대되고 있습니다. 다채로운 수상 경력을 지니고 있으며, KT&amp;G Lil, 도깨비 스툴을 비롯한 여러 제품들에 대한 디자인 컨셉 기획, 제품 디자인, 양산 등의 업무를 맡아오며 산업 디자인 업계에서 이름을 알리고 있는 산업 디자이너 ‘김지윤' 을 만났습니다.
+							</p>
+							<p class="btn">
+								<a href="#none" title="자세히보기">자세히 보기</a>
+							</p>
+						</div>
+						<div class="interview_box">
+							<p class="interview_imgs">
+								<img src="../img/casestudies/theleaf_junki.jpg" alt=" 조준기 인터뷰 이미지"/>
+							</p>
+							<h2 class="interview_tit">Interview: 조준기</h2>
+							<p class="interview_text">
+								우리는 반복된 일상을 살아가는 것 같지만 매일 다른 날씨와 사람들을 만나고, 또 다른 새로운 나를 마주합니다. 지루하게 느껴지는 일상도 어떻게 받아들이냐에 따라 달라질 수 있고, 일상도 여행처럼 살아갈 수 있음을 알려주는 대한민국 NO.1 여행 커뮤니티 ‘여행에 미치다’ 조준기 대표를 만났습니다.
+							</p>
+							<p class="btn">
+								<a href="#none" title="자세히보기">자세히 보기</a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="share">
+				<div class="share_box">
+					<div class="share_event">
+						<h2>Share event.</h2>
+						<div class="event_icon">
+							<a href="#none" title="페이스북"><img src="../img/casestudies/share-facebook.png" alt="페이스북"/></a>
+							<a href="#none" title="카카오톡"><img src="../img/casestudies/share-kakaotalk.png" alt="카카오톡"/></a>
+							<a href="#none" title="쉐어링크"><img src="../img/casestudies/share-link.png" alt="쉐어링크"/></a>
+						</div>
+					</div>
+					<div class="share_sponsors">
+						<h2>Sponsors.</h2>
+						<div class="spon_icon">
+							<span><img src="../img/casestudies/gabangpop.png" alt="가방팝"/></span>
+							<span><img src="../img/casestudies/willys.png" alt="윌리스"/></span>
+							<span><img src="../img/casestudies/handandmalt.png" alt="handandmalt"/></span>
+							<span><img src="../img/casestudies/eightd.png" alt="eightd"/></span>
+							<span><img src="../img/casestudies/1300k.png" alt="1300k"/></span>
+							<span><img src="../img/casestudies/outdoor-story.png" alt="아웃도어스토리"/></span>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+		<footer id="inc_footerWrap">
+			<div id="goTop">
+				<p>
+					<a href="#" title="Btn_top">
+						<img src="../img/footer/BtnTop_.png" alt="BtnTop 이미지"/>
+					</a>
+				</p>
+			</div>
+			<div id="footer">
+				<div id="footer_main">
+					<div class="main_menu">
+						<ul class="main_ul">
+							<li class="menu">
+								<h4>
+									<a href="#none" title="about">
+										<span class="menu_tit">About</span>
+										<span class="ico">+</span>
+									</a>
+								</h4>
+								<ul class="menu_ul">
+									<li><a href="#none" title="소개">소개</a></li>
+									<li><a href="#none" title="타임라인">타임라인</a></li>
+									<li><a href="#none" title="사회공헌">사회공헌</a></li>
+									<li><a href="#none" title="인재채용">인재채용</a></li>
+									<li><a href="#none" title="프레스">프레스</a></li>
+									<li><a href="#none" title="제휴문의">제휴문의</a></li>
+								</ul>
+							</li>
+							<li class="menu">
+								<h4>
+									<a href="#none" title="brand">
+										<span class="menu_tit">Brand</span>
+										<span class="ico">+</span>
+									</a>
+								</h4>
+								<ul class="menu_ul">
+									<li><a href="#none" title="콜라보레이션">콜라보레이션</a></li>
+									<li><a href="#none" title="The LEAF">The LEAF</a></li>
+									<li><a href="#none" title="스마트리빙">스마트리빙</a></li>
+									<li><a href="#none" title="스마트리빙 모집">스마트리빙 모집</a></li>
+									<li><a href="#none" title="Photo Diary">Photo Diary</a></li>
+									<li><a href="#none" title="기업 대량주문">기업 대량주문</a></li>
+									<li><a href="#none" title="Brand Ambassadors">Brand Ambassadors</a></li>
+								</ul>
+							</li>
+							<li class="menu">
+								<h4>
+									<a href="#none" title="매장안내">
+										<span class="menu_tit">매장안내</span>
+										<span class="ico">+</span>
+									</a>
+								</h4>
+								<ul class="menu_ul">
+									<li><a href="#none" title="직영 매장">직영 매장</a></li>
+									<li><a href="#none" title="공식 딜러">공식 딜러</a></li>
+								</ul>
+							</li>
+							<li class="menu">
+								<h4>
+									<a href="#none" title="shop">
+										<span class="menu_tit">Shop</span>
+										<span class="ico">+</span>
+									</a>
+								</h4>
+								<ul class="menu_ul">
+									<li><a href="#none" title="가방">가방</a></li>
+									<li><a href="#none" title="여행">여행</a></li>
+									<li><a href="#none" title="보호">보호</a></li>
+									<li><a href="#none" title="카메라">카메라</a></li>
+									<li><a href="#none" title="악세사리">악세사리</a></li>
+									<li><a href="#none" title="아울렛">아울렛</a></li>
+									<li><a href="#none" title="보호">이벤트</a></li>
+								</ul>
+							</li>
+							<li class="menu">
+								<h4>
+									<a href="#none" title="support">
+										<span class="menu_tit">Support</span>
+										<span class="ico">+</span>
+									</a>
+								</h4>
+								<ul class="menu_ul">
+									<li><a href="#none" title="정품 등록">정품 등록</a></li>
+									<li><a href="#none" title="AS 접수">AS 접수</a></li>
+									<li><a href="#none" title="자주묻는질문">자주묻는질문</a></li>
+									<li><a href="#none" title="약관">약관</a></li>
+									<li><a href="#none" title="개인정보 취급방침">개인정보 취급방침</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<div class="main_contact">
+						<div class="main_div">
+							<div class="helpDesk">
+								<strong>HELP DESK</strong>
+								<p>02. 544. 1510( A/S 4번)</p>
+							</div>
+							<div class="time">
+								<p>평일 AM 10:00 ~ PM 06:00</p>
+								<p>점심 AM 12:00 ~ PM 01:00</p>
+								<p>휴무 토, 일, 공휴일</p>
+							</div>
+							<div class="newsLetter">
+								<p>
+									인케이스의 가장 최신 뉴스를 받아보세요.<br/>
+									처음 뉴스레터를 구독하시는 분들께 10% 할인 쿠폰을 드립니다.
+								</p>
+							</div>
+							<div class="emailArea">
+								<form action="#none" method="post">
+									<fieldset>
+										<legend>이메일</legend>
+										<p class="e">
+											<label for="email0">email</label><input id="email0" type="text" name="email0" title="이메일주소를 입력하세요"
+											placeholder="이메일 주소" autocomplete="off"/>
+											<input id="apply" type="submit" value="신청" title="신청하기 버튼"/>
+										</p>
+										<p class="agree">
+											<span>개인정보 취급방침에 동의합니다.</span>
+											<input id="chk0" type="checkbox" name="chk0"/><label for="chk0">동의</label>
+										</p>
+									</fieldset>
+								</form>
+							</div>
+
+							<div class="socialstyles">
+								<a href="#none" title="facebook_icon">
+									<img src="../img/footer/facebook.png" alt="facebook_icon"/>
+								</a>
+								<a href="#none" title="instagram_icon">
+									<img src="../img/footer/instagram.png" alt="instagram_icon"/>
+								</a>
+								<a href="#none" title="twitter_icon">
+									<img src="../img/footer/twitter.png" alt="twitter_icon"/>
+								</a>
+								<a href="#none" title="youtube_icon">
+									<img src="../img/footer/youtube.png" alt="youtube_icon"/>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="footer_comp">
+					<div class="comp_info">
+						<div class="company_info">
+							<span>인케이스코리아</span><br/>
+							<span>
+								개인정보취급방침 프리즘디스트리뷰션(주)<i>|</i>대표 양준무<i>|</i>서울시 강남구 논현동 111-37 N빌딩 5층<i>|</i>(우) 135-010
+							</span><br/>
+							<span>
+								사업자등록번호 <a href="#" title="사업자등록번호"><span class="numb">211-88-37764</span></a> <i>|</i> 통신판매업번호 제2010-서울강남-00658호 <i>|</i> 호스팅사업자 : 메이크샵 이메일 문의 : <a href="#" title=""><span class="numb">help@pr1zm.com</span></a>
+							</span>
+						</div>
+						<div class="escrow_mark">
+							<p>
+								<img src="../img/footer/escrow.png" alt="escrow 이미지"/>
+							</p>
+						</div>
+					</div>
+					<div class="comp_copyright">
+						<p>
+							<a href="#none" title="GJ_HONG">&copy; 2020 GJ_HONG</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<footer id="mob_inc_footerWrap">
+			<div id="mob_goTop">
+				<p>
+					<a href="#" title="Btn_top">
+						<img src="../img/footer/BtnTop_.png" alt="BtnTop 이미지"/>
+					</a>
+				</p>
+			</div>
+			<div id="mob_footer">
+				<div id="mob_footer_main">
+					<div class="main_menu">
+						<ul class="main_ul">
+							<li class="menu">
+								<h4>
+									<a href="#none" title="about">
+										<span class="menu_tit">About</span>
+										<span class="ico">+</span>
+									</a>
+								</h4>
+								<ul class="menu_ul">
+									<li><a href="#none" title="소개">소개</a></li>
+									<li><a href="#none" title="타임라인">타임라인</a></li>
+									<li><a href="#none" title="사회공헌">사회공헌</a></li>
+									<li><a href="#none" title="인재채용">인재채용</a></li>
+									<li><a href="#none" title="프레스">프레스</a></li>
+									<li><a href="#none" title="제휴문의">제휴문의</a></li>
+								</ul>
+							</li>
+							<li class="menu">
+								<h4>
+									<a href="#none" title="brand">
+										<span class="menu_tit">Brand</span>
+										<span class="ico">+</span>
+									</a>
+								</h4>
+								<ul class="menu_ul">
+									<li><a href="#none" title="콜라보레이션">콜라보레이션</a></li>
+									<li><a href="#none" title="The LEAF">The LEAF</a></li>
+									<li><a href="#none" title="스마트리빙">스마트리빙</a></li>
+									<li><a href="#none" title="스마트리빙 모집">스마트리빙 모집</a></li>
+									<li><a href="#none" title="Photo Diary">Photo Diary</a></li>
+									<li><a href="#none" title="기업 대량주문">기업 대량주문</a></li>
+									<li><a href="#none" title="Brand Ambassadors">Brand Ambassadors</a></li>
+								</ul>
+							</li>
+							<li class="menu">
+								<h4>
+									<a href="#none" title="매장안내">
+										<span class="menu_tit">매장안내</span>
+										<span class="ico">+</span>
+									</a>
+								</h4>
+								<ul class="menu_ul">
+									<li><a href="#none" title="직영 매장">직영 매장</a></li>
+									<li><a href="#none" title="공식 딜러">공식 딜러</a></li>
+								</ul>
+							</li>
+							<li class="menu">
+								<h4>
+									<a href="#none" title="shop">
+										<span class="menu_tit">Shop</span>
+										<span class="ico">+</span>
+									</a>
+								</h4>
+								<ul class="menu_ul">
+									<li><a href="#none" title="가방">가방</a></li>
+									<li><a href="#none" title="여행">여행</a></li>
+									<li><a href="#none" title="보호">보호</a></li>
+									<li><a href="#none" title="카메라">카메라</a></li>
+									<li><a href="#none" title="악세사리">악세사리</a></li>
+									<li><a href="#none" title="아울렛">아울렛</a></li>
+									<li><a href="#none" title="보호">이벤트</a></li>
+								</ul>
+							</li>
+							<li class="menu">
+								<h4>
+									<a href="#none" title="support">
+										<span class="menu_tit">Support</span>
+										<span class="ico">+</span>
+									</a>
+								</h4>
+								<ul class="menu_ul">
+									<li><a href="#none" title="정품 등록">정품 등록</a></li>
+									<li><a href="#none" title="AS 접수">AS 접수</a></li>
+									<li><a href="#none" title="자주묻는질문">자주묻는질문</a></li>
+									<li><a href="#none" title="약관">약관</a></li>
+									<li><a href="#none" title="개인정보 취급방침">개인정보 취급방침</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<div class="main_contact">
+						<div class="main_div">
+							<div class="helpDesk">
+								<strong>HELP DESK</strong>
+								<p>02. 544. 1510( A/S 4번)</p>
+							</div>
+							<div class="time">
+								<p>평일 AM 10:00 ~ PM 06:00</p>
+								<p>점심 AM 12:00 ~ PM 01:00</p>
+								<p>휴무 토, 일, 공휴일</p>
+							</div>
+							<div class="newsLetter">
+								<p>
+									인케이스의 가장 최신 뉴스를 받아보세요.<br/>
+									처음 뉴스레터를 구독하시는 분들께 10% 할인 쿠폰을 드립니다.
+								</p>
+							</div>
+							<div class="emailArea">
+								<form action="#none" method="post">
+									<fieldset>
+										<legend>이메일</legend>
+										<p class="e">
+											<label for="mo_email">email</label><input id="mo_email" type="text" name="mo_email" title="이메일주소를 입력하세요"
+											placeholder="이메일 주소" autocomplete="off"/>
+											<input id="mo_apply" type="submit" value="신청" title="신청하기 버튼"/>
+										</p>
+										<p class="agree">
+											<span>개인정보 취급방침에 동의합니다.</span>
+											<input id="mo_chk" type="checkbox" name="mo_chk"/><label for="mo_chk">동의</label>
+										</p>
+									</fieldset>
+								</form>
+							</div>
+							<div class="socialstyles">
+								<a href="#none" title="facebook_icon">
+									<img src="../img/footer/facebook.png" alt="facebook_icon"/>
+								</a>
+								<a href="#none" title="instagram_icon">
+									<img src="../img/footer/instagram.png" alt="instagram_icon"/>
+								</a>
+								<a href="#none" title="twitter_icon">
+									<img src="../img/footer/twitter.png" alt="twitter_icon"/>
+								</a>
+								<a href="#none" title="youtube_icon">
+									<img src="../img/footer/youtube.png" alt="youtube_icon"/>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="mob_footer_comp">
+					<div class="comp_info">
+						<div class="company_info">
+							<span>인케이스코리아</span><br/>
+							<span>
+								개인정보취급방침 프리즘디스트리뷰션(주)<i>|</i>대표 양준무<i>|</i>서울시 강남구 논현동 111-37 N빌딩 5층<i>|</i>(우) 135-010
+							</span><br/>
+							<span>
+								사업자등록번호 <a href="#none" title="사업자등록번호"><span class="numb">211-88-37764</span></a> <i>|</i> 통신판매업번호 제2010-서울강남-00658호 <i>|</i> 호스팅사업자 : 메이크샵 이메일 문의 : <a href="#" title=""><span class="numb">help@pr1zm.com</span></a>
+							</span>
+						</div>
+						<div class="escrow_mark">
+							<p>
+								<img src="img/footer/escrow.png" alt="escrow 이미지"/>
+							</p>
+						</div>
+					</div>
+					<div class="comp_copyright">
+						<p>
+							<a href="#none" title="GJ_HONG">&copy; 2020 GJ_HONG</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+ </body>
+</html>

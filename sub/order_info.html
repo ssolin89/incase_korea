@@ -1,0 +1,1379 @@
+<!DOCTYPE html>
+<html lang="ko">
+ <head>
+  <meta charset="utf-8"/>
+  <title>order_info</title>
+  <link rel="shortcut" href="../img/incase_leaf.png"/>
+  <link rel="icon" href="../img/incase_leaf.png"/>
+  <link rel="apple=touch-icon" href="../img/incase_leaf.png"/>
+  <link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+  <link rel="stylesheet" type="text/css" href="../css/header.css"/>
+  <link rel="stylesheet" type="text/css" href="../css/footer_01.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"/>
+  <script src="../js/jquery-1.12.4.min.js"></script>
+  <script src="../js/jquery-ui.min.js"></script>
+  <style>
+		/* ###################### wrap ####################### */
+			#wrap{max-width:1920px; width:100%; margin:0 auto;}
+		
+		/* ################ container ################### */
+			#container{width:100%; overflow:hidden; padding-top:100px; }
+		
+		/* ################# #container / item_top 영역 ################### */
+			#container .item_top{width:100%; margin:100px 0;}
+
+			#container .item_info{width:1280px; margin:0 auto;}
+			#container .item_info:after{content:""; display:block; clear:both;}
+		
+		/* ################ #container / .info_left (div) 영역 ################### */
+			#container .info_left{width:560px; height:703px; float:left;
+			padding:0 50px;}
+			
+			#container .img_slider{width:560px; height:560px;}
+			#container .img_slider div{width:100%; height:100%;}
+			#container .img_slider div img{width:100%; height:100%;}
+
+			#container .review{width:100%; height:58px; margin-top:80px;}
+
+			#container .point_board{display:inline-block; width:400px; height:58px; color:#555;}
+			#container .point_board p{display:inline-block; height:58px; line-height:58px; font-size:30px; margin:0 15px 0 0;}
+
+			#container .star_point0{display:inline-block; width:248px; height:58px; vertical-align:middle; margin:0 0 0 auto;}
+			#container .star_point0 span{display:inline-block; width:100%; height:58px;  font-size:28px;}
+			
+			#container .review_more{display:inline-block; height:58px; }
+			#container .review_more a{display:block; width:100%; height:100%; 
+			text-decoration:none;
+			font-size:25px; line-height:58px;}
+
+			#container .review_more a strong{padding-right:10px;}
+
+			#container .slider_dots{width:140px; height:20px; margin:10px auto;}
+
+			#container .slider_dots li{width:20px; height:20px; float:left;}
+			#container .slider_dots li button{position:relative; border-radius:4px;
+			width:20px; height:20px; padding:5px;
+			font-size:0; line-height:0; display:block;
+			cursor:pointer; border:0; outline:none; 
+			color:transparent; background-color:transparent;}
+
+			#container .slider_dots .d_bt{display:block; box-sizing:border-box;
+			width:8px; height:8px; border-radius:4px; text-align:center;
+			background-color:#ccc; font-size:6px;
+			position:absolute; left:6px; top:6px;}
+
+		
+		/* ############### #container / .info_right (div) 영역 ################*/
+			
+			#container .info_right{width:580px; float:left;}
+
+			#container .item_name{width:100%; font-size:36px; line-height:1.2em;
+			font-weight:600; color:#333;
+			margin:0 0 6px;}
+
+			#container .iteam_desc{width:100%; font-size:18px; color:#656565;
+			margin:0 0 30px;}
+			
+
+			#container .iteam_specs{width:100%;}
+			#container .iteam_specs h2{font-size:16px; color:#333; margin-bottom:10px;}
+			#container .iteam_specs ul{width:100%; margin-bottom:10px;}
+			#container .iteam_specs ul li{width:100%; color:#888; font-size:14px; font-weight:300;
+			line-height:1.8em; }
+
+			#container .iteam_specs ul li strong{color:#666; font-weight:600; padding-right:5px;}
+
+			#container .price_tag{width:100%; text-align:right; color:#7b7b7b; font-size:26px;
+			padding:10px 0;
+			border-bottom:1px solid #ccc;}
+			#container .price_tag span{color:#000; font-weight:600; font-size:28px;}
+
+			#container .order_count{width:560px; height:61px; 
+			padding:0 10px; margin:10px 0;
+			background-color:#F8F9FB;
+			outline:1px solid #ccc;}
+			#container .order_count_name{width:470px; height:61px; line-height:61px;
+			font-size:18px; text-align:left; color:#505051; float:left;}
+
+			#container .amount{height:61px; line-height:61px;  float:left;}
+			#container .amount a{display:inline-block; width:24px; height:24px; line-height:24px;
+			text-align:center;}
+			#container .amount a span{font-size:22px;}
+
+			#container .nob{font-size:22px;}
+
+			#container .order_count:after{content:""; display:block; clear:both;}
+
+			#container .value_amount{width:100%; height:46px; line-height:46px;
+			margin-top:40px;}
+			#container .value_title{font-size:28px; color:#6c801a; font-weight:600; float:left;}
+			#container .value{font-size:28px; color:#6c801a; float:right;}
+
+			#container .paymentArea{width:100%;}
+			#container .payment_button{width:100%; height:70px;}
+			#container .payment_button_box{width:100%; height:60px;
+			padding:10px 0 0;}
+			#container .payment_button_box a{display:block; float:left; 
+			text-decoration:none; font-size:20px; text-align:center;}
+
+			#container .btn_present{width:135px; height:58px; line-height:58px;
+			border:1px solid #313131; color:#313131; text-align:center; 
+			margin-right:5px;}
+
+			#container .btn_cart{width:150px; height:60px; line-height:60px;
+			color:#fff; text-align:center;
+			background-color:#313131; }
+			#container .btn_pay{width:288px; height:60px; line-height:60px;
+			color:#fff; text-align:center; 
+			background-color:#6c801a;}
+
+		/* ################# #container / item_main 영역 ################### */
+
+			#container .item_main{width:100%;}
+			#container .main_tab{width:100%; height:68px; margin-bottom:40px;}
+			#container .main_tab_fixed{width:732px; height:100%; margin:0 auto;}
+
+			#container .main_tab_fixed a{display:inline-block; width:120px; height:45px; line-height:45px; font-weight:600; text-align:center; font-size:20px; 
+			padding-top:20px; margin:0 60px;
+			border-bottom:3px solid #6c801a;
+			text-decoration:none;}
+
+			#container .main_tab_fixed a em{font-style:normal; color:#FD705C; padding-left:5px;}
+			
+
+		/* #################### main_box 영역 ###################### */
+			#container .main_box{width:100%;}
+			#container .cate{width:100%; height:700px;}
+
+			#container .cate_inner{width:1903px; height:100%; margin:0 auto; position:relative;}
+			
+
+			#container .cate_text{width:500px; height:40px; font-size:30px; font-weight:600;
+			position:absolute;}
+
+			#container .cate_imgs{position:absolute; right:0; top:0;}
+			
+			#container .cate0{background-color:#DFDFE1;}
+			#container .cate0 .cate_text{left:430px; top:330px;}
+			#container .cate0 .cate_imgs{width:800px; height:410px; top:134px;}
+			#container .cate0 .cate_imgs img{width:100%; height:100%;}
+
+			#container .cate1 .cate_text{right:430px; top:330px;}
+			#container .cate1 .cate_imgs{width:740px; height:566px; left:0; top:134px;}
+			#container .cate1 .cate_imgs img{width:100%; height:100%;}
+
+			#container .cate2{background-color:#DFDFE1;}
+			#container .cate2 .cate_text{left:430px; top:330px;}
+			#container .cate2 .cate_imgs{width:800px; height:566px; top:134px;}
+			#container .cate2 .cate_imgs img{width:100%; height:100%;}
+
+			#container .cate3 .cate_text{right:430px; top:330px;}
+			#container .cate3 .cate_imgs{width:740px; height:566px; left:0; top:134px;}
+			#container .cate3 .cate_imgs img{width:100%; height:100%;}
+	
+			#container .cate4{background-color:#DFDFE1;}
+			#container .cate4 .cate_text{left:430px; top:330px;}
+			#container .cate4 .cate_imgs{width:770px; height:700px;}
+			#container .cate4 .cate_imgs img{width:100%; height:100%;}
+
+			#container .cate5 .cate_text{width:533px; right:430px; top:330px;}
+			#container .cate5 .cate_imgs{width:550px; height:700px; left:180px;}
+			#container .cate5 .cate_imgs img{width:100%; height:100%;}
+			
+			#container .cate6{height:1000px;}
+			#container .cate6 .cate_imgs{width:1081px; height:578px; 
+			left:50%; top:50%; transform:translate(-540px,-289px); }
+			#container .cate6 .cate_imgs img{width:100%; height:100%;}
+			
+			#container .cate7{width:100%; height:3000px;}
+			#container .cate7 .cate_imgs{position:static; width:100%; height:100%;}
+			#container .cate7 .cate_imgs img{width:100%; height:100%;}
+		
+		/* ####################### .review_Area (section) 영역 ########################*/
+			#container .review_Area{width:100%; overflow:hidden;}
+			#container .review_bar{width:100%; height:68px; text-align:center;
+			margin:20px 0 50px; padding:0 30px;
+			border-bottom:2px solid #ECECEC;}
+
+			#container .review_bar a{display:inline-block; width:117px; height:45px;
+			font-size:22px; text-align:center; text-decoration:none;
+			margin:0 60px; padding:20px 0 0 0; 
+			border-bottom:3px solid #6c801a; color:#6c801a;}
+
+			#container .gray{font-style:normal; color:#666; padding-left:5px;}
+
+		/* ############### .review_Area의 / .review_contents (div)  영역 ################ */
+			
+			#container .review_contents{width:100%;}
+			#container .review_list{width:1148px; margin:0 auto;}
+			#container .review_box{width:100%; height:116px; padding:30px 0 20px;
+			border-bottom:1px solid #eaeaea;}
+
+			#container .c1{width:132px; height:65px; padding-left:20px; float:left;}
+			#container .star_point{width:107px; height:19px; margin:13px 0 0;}
+
+			#container .c2{width:906px; height:65px; padding:0 70px 0 20px; float:left;}
+			#container .c2 em{font-style:normal;}
+
+			#container .star_point{width:100%; height:21px;}
+			#container .review_text{margin:10px 0 0; color:#7e7e7e; font-size:17px; line-height:1.8em;}
+
+		/* #################### product_notice (section) ##################### */
+			#container .product_notice{width:100%;}
+			#container .notice_box{width:1148px; margin:0 auto; font-size:14px; padding:50px 0;}
+			#container .notice_box table{margin-top:35px;}
+
+			#container .notice_box h4{font-size:16px;}
+		
+			#container .notice_box th{width:267px; text-align:left; padding:5px 0;}
+  </style>
+  <script>
+		/* 두번째 문법 사용하기 */
+		/* 선택한 문서가 준비가 되면 기능 구현해주세요 */
+		jQuery(document).ready(function(){
+
+
+			jQuery("#mob_footer .menu_ul").hide();
+			
+			/*
+				대상 : #mob_footer .menu
+				이벤트 : 클릭
+				이벤트 대상 : 클릭했을때 menu_ul (class명) 슬라이드다운, 업
+			*/
+			jQuery("#mob_footer .menu").click(function(){
+				jQuery("#mob_footer .menu_ul").slideUp(500,"linear");
+				jQuery(this).children().next().slideDown(500,"linear");
+
+				//jQuery(".main_contact").css({"marginTop":$("menu_ul").height()});
+			});
+
+			/*
+				대상 :  #mo_inc_gnb
+				이벤트 : 클릭
+				이벤트 대상 : .menu_active (class명) 나타나기
+			*/
+			jQuery(".ham2").hide();
+
+			jQuery(".ham1").click(function(){
+				jQuery(".menu_active").show(500,"linear");
+				jQuery(".ham2").show();
+				jQuery(".ham1").hide();
+			});
+
+			jQuery(".ham2").click(function(){
+				jQuery(".menu_active").hide(500,"linear");
+				jQuery(".ham1").show();
+				jQuery(".ham2").hide();
+			});
+
+			
+			
+		/* #################### header 영역 ######################## */
+			
+			/* 자녀요소인 .gnb_div 먼저 숨기기*/
+			jQuery(".gnb_div").hide();
+			
+			/* 
+				[기능만들기]
+				gnb_menu_li 에 마우스올리면 gnb_div (div) 보여지기
+			*/
+			jQuery(".gnb_menu_li0").mouseover(function(){
+				jQuery(".gnb_div0").stop().show();
+			}).mouseout(function(){
+				jQuery(".gnb_div0").stop().hide();
+			});
+
+			jQuery(".gnb_menu_li1").mouseover(function(){
+				jQuery(".gnb_div1").stop().show();
+			}).mouseout(function(){
+				jQuery(".gnb_div1").stop().hide();
+			});
+
+			jQuery(".gnb_menu_li2").mouseover(function(){
+				jQuery(".gnb_div2").stop().show();
+			}).mouseout(function(){
+				jQuery(".gnb_div2").stop().hide();
+			});
+
+			jQuery(".gnb_menu_li5").mouseover(function(){
+				jQuery(".gnb_div3").stop().show();
+			}).mouseout(function(){
+				jQuery(".gnb_div3").stop().hide();
+			});
+
+			jQuery(".gnb_menu_li6").mouseover(function(){
+				jQuery(".gnb_div4").stop().show();
+			}).mouseout(function(){
+				jQuery(".gnb_div4").stop().hide();
+			});
+
+			jQuery(".product_ul2 li a").mouseover(function(){
+				$(this).css({"color":"#ccc"});
+			}).mouseout(function(){
+				jQuery(this).css({"color":"#fff"});
+			});
+
+			/* ################# container ################## */
+				/*
+					[기능만들기]
+					도트를 클릭했을때 이미지들이 바뀌기 
+				*/
+				jQuery(".img_slider div").hide();
+				jQuery(".img_slider_imgs0").show();
+				
+
+				jQuery(".slider_dots li:eq(0)").click(function(){
+					jQuery(".d_bt").css({"backgroundColor":"#ccc"});
+					jQuery(".d_bt:eq(0)").css({"backgroundColor":"#333"});
+					jQuery(".img_slider div").hide();
+					jQuery(".img_slider_imgs0").show();
+				});
+				jQuery(".slider_dots li:eq(1)").click(function(){
+					jQuery(".d_bt").css({"backgroundColor":"#ccc"});
+					jQuery(".d_bt:eq(1)").css({"backgroundColor":"#333"});
+					jQuery(".img_slider div").hide();
+					jQuery(".img_slider_imgs1").show();
+				});
+				jQuery(".slider_dots li:eq(2)").click(function(){
+					jQuery(".d_bt").css({"backgroundColor":"#ccc"});
+					jQuery(".d_bt:eq(2)").css({"backgroundColor":"#333"});
+					jQuery(".img_slider div").hide();
+					jQuery(".img_slider_imgs2").show();
+				});
+				jQuery(".slider_dots li:eq(3)").click(function(){
+					jQuery(".d_bt").css({"backgroundColor":"#ccc"});
+					jQuery(".d_bt:eq(3)").css({"backgroundColor":"#333"});
+					jQuery(".img_slider div").hide();
+					jQuery(".img_slider_imgs3").show();
+				});
+				jQuery(".slider_dots li:eq(4)").click(function(){
+					jQuery(".d_bt").css({"backgroundColor":"#ccc"});
+					jQuery(".d_bt:eq(4)").css({"backgroundColor":"#333"});
+					jQuery(".img_slider div").hide();
+					jQuery(".img_slider_imgs4").show();
+				});
+				jQuery(".slider_dots li:eq(5)").click(function(){
+					jQuery(".d_bt").css({"backgroundColor":"#ccc"});
+					jQuery(".d_bt:eq(5)").css({"backgroundColor":"#333"});
+					jQuery(".img_slider div").hide();
+					jQuery(".img_slider_imgs5").show();
+				});
+				jQuery(".slider_dots li:eq(6)").click(function(){
+					jQuery(".d_bt").css({"backgroundColor":"#ccc"});
+					jQuery(".d_bt:eq(6)").css({"backgroundColor":"#333"});
+					jQuery(".img_slider div").hide();
+					jQuery(".img_slider_imgs6").show();
+				});
+		});
+	
+  </script>
+ </head>
+
+ <body>
+	<div id="wrap">
+		<header id="inc_header">
+			<h3>인케이스 헤더</h3>
+			<div id="header_inner">
+				<div id="inc_topbar">
+					<!--<div class="social">
+						<ul>
+							<li></li>
+						</ul>
+					</div>-->
+				</div>
+
+				<div id="inc_logo">
+					<div id="logo_area">
+						<h1>
+							<a href="../index.html" title="인케이스 사이트">
+								<img src="../img/header/incase_logo.png" alt="인케이스 로고"/>
+							</a>
+						</h1>
+					</div>
+					<div id="inc_extra">
+						<ul>
+							<li>
+								<div>
+									<a href="../login/login.html" title="profile">
+										<img src="../img/header/profile.png" alt="profile"/>
+									</a>
+								</div>
+							</li>
+							<li>
+								<div>
+									<a href="#" title="wishlist">
+										<img src="../img/header/wishlist.png" alt="wishlist" onclick="confirm('회원에게만 제공이 되는 서비스입니다. 우선 로그인을 하여 주시기 바랍니다.');"/>
+									</a>
+								</div>
+							</li>
+							<li>
+								<div>
+									<a href="#" title="cart">
+										<img src="../img/header/cart.png" alt="cart"/>
+									</a>
+								</div>
+							</li>
+							<li>
+								<div>
+									<a href="#" title="search">
+										<img src="../img/header/search.png" alt="search"/>
+									</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div id="mo_inc_extra">
+						<ul>
+							<li class="profile_li">
+								<div class="profile_div">
+									<a href="login/login.html" title="profile">
+										<img src="../img/header/profile.png" alt="profile"/>
+									</a>
+									<div class="account_container">
+										<p class="account_title">Log In</p>
+										<form action="#none" method="post">
+											<ul class="form_ul">
+												<li>
+													<label>아이디</label>
+													<input id="userid" type="text" name="userid"
+													maxlength="20" autocomplete="off"/>
+												</li>
+												<li>
+													<label>비밀번호</label>
+													<input id="userpw" type="password" name="userpw"
+													maxlength="20" autocomplete="off"/>
+												</li>
+												<li class="login_extras">
+													<a href="#none" title="아이디/비밀번호찾기">아이디/비밀번호 찾기</a>
+													<a href="#none" title="비회원 주문조회">비회원 주문조회</a>
+												</li>
+												<li>
+													<a class="login_btn" href="#none" title="로그인">로그인</a>
+												</li>
+												<li class="social_login">
+													<a class="so_facebook" href="#none" title="facebook">
+														<img src="../img/mobile/social_facebook.png" alt="페이스북 아이콘"/>
+													</a>
+													<a class="so_naver" href="#none" title="naver">
+														<img src="../img/mobile/social_naver.png" alt="네이버 아이콘"/>
+													</a>
+													<a class="so_kakao" href="#none" title="kakao">
+														<img src="../img/mobile/social_kakao.png" alt="카카오 아이콘"/>
+													</a>
+												</li>
+											</ul>
+											<div class="account_register">
+												<a href="login/login.html" title="회원가입">회원가입</a>
+											</div>
+										</form>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div>
+									<a href="#" title="search">
+										<img src="../img/header/search.png" alt="search"/>
+									</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<nav id="inc_gnb">
+					<ul id="gnb_menu">
+						<li class="gnb_menu_li gnb_menu_li0">
+							<a class="pro_a" href="../sub/sub0_product.html" title="Product"><strong>Product</strong></a>
+							<div class="gnb_div gnb_div0">
+								<ul class="product_ul2 product_ul2_1">
+									<li><a class="tit" href="#none" title="Bags">Bags</a></li>
+									<li><a href="#none" title="백팩">백팩</a></li>
+									<li><a href="#none" title="숄더백/메신저백">숄더백/메신저백</a></li>
+									<li><a href="#none" title="슬링백">슬링백</a></li>
+									<li><a href="#none" title="액티브백">액티브백</a></li>
+								</ul>
+							
+								<ul class="product_ul2">
+									<li><a class="tit" href="#" title="Travel">Travel</a></li>
+									<li><a href="#none" title="더플백">더플백</a></li>
+									<li><a href="#none" title="여행용 백팩">여행용 백팩</a></li>
+									<li><a href="#none" title="여행용 액세서리">여행용 액세서리</a></li>
+								</ul>
+									
+								<ul class="product_ul2">
+									<li><a class="tit" href="#none" title="Protection">Protection</a></li>
+									<li><a href="#none" title="맥북 슬리브">맥북 슬리브</a></li>
+									<li><a href="#none" title="맥북 브리프">맥북 브리프</a></li>
+									<li><a href="#none" title="아이폰 케이스">아이폰 케이스</a></li>
+									<li><a href="#none" title="아이패드 슬리브">아이패드 슬리브</a></li>
+									<li><a href="#none" title="아이패드 케이스">아이패드 케이스</a></li>
+								</ul>
+								
+								<ul class="product_ul2">
+									<li><a class="tit" href="#none" title="Camera">Camera</a></li>
+									<li><a href="#none" title="DSLR 카메라">DSLR 카메라</a></li>
+									<li><a href="#none" title="드론">드론</a></li>
+									<li><a href="#none" title="고프로">고프로</a></li>
+									<li><a href="#none" title="액션카메라">액션카메라</a></li>
+								</ul>
+							
+								<ul class="product_ul2">
+									<li><a class="tit" href="#none" title="Accessories">Accessories</a></li>
+									<li><a href="#none" title="충전기">충전기</a></li>
+									<li><a href="#none" title="애플워치">애플워치</a></li>
+									<li><a href="#none" title="에어팟">에어팟</a></li>
+								</ul>
+							</div>
+						</li>
+
+						<li class="gnb_menu_li gnb_menu_li1">
+							<a href="../sub/sub1_device.html" title="device"><strong>device</strong></a>
+							<div class="gnb_div gnb_div1">
+								<ul class="product_ul2 product_ul2_1">
+									<li><a class="tit" href="#none" title="MacBook">MacBook</a></li>
+									<li><a href="#none" title="맥북 프로 16형(USB-C)">맥북 프로 16형(USB-C)</a></li>
+									<li><a href="#none" title="맥북 프로 15형(USB-C)">맥북 프로 15형(USB-C)</a></li>
+									<li><a href="#none" title="맥북 프로 13형(USB-C)">맥북 프로 13형(USB-C)</a></li>
+									<li><a href="#none" title="맥북 에어 13형(USB-C)">맥북 에어 13형(USB-C)</a></li>
+									<li><a href="#none" title="맥북 12형(USB-C)">맥북 12형(USB-C)</a></li>
+									<li><a href="#none" title="맥북 프로 레티나 15형">맥북 프로 레티나 15형</a></li>
+									<li><a href="#none" title="맥북 프로 레티나 13형">맥북 프로 레티나 13형</a></li>
+									<li><a href="#none" title="맥북 프로 15형">맥북 프로 15형</a></li>
+									<li><a href="#none" title="맥북 프로 13형">맥북 프로 13형</a></li>
+									<li><a href="#none" title="맥북 에어 13형">맥북 에어 13형</a></li>
+									<li><a href="#none" title="맥북 에어 11형">맥북 에어 11형</a></li>
+								</ul>
+									
+								<ul class="product_ul2">
+									<li><a class="tit" href="#none" title="iPhone">iPhone</a></li>
+									<li><a href="#none" title="아이폰 Xs 맥스">아이폰 Xs 맥스</a></li>
+									<li><a href="#none" title="아이폰 Xs">아이폰 Xs</a></li>
+									<li><a href="#none" title="아이폰 XR">아이폰 XR</a></li>
+									<li><a href="#none" title="아이폰 X">아이폰 X</a></li>
+									<li><a href="#none" title="아이폰 8 플러스">아이폰 8 플러스</a></li>
+									<li><a href="#none" title="아이폰 8">아이폰 8</a></li>
+									<li><a href="#none" title="아이폰 7 플러스">아이폰 7 플러스</a></li>
+									<li><a href="#none" title="아이폰 7">아이폰 7</a></li>
+									<li><a href="#none" title="아이폰 6 플러스">아이폰 6 플러스</a></li>
+									<li><a href="#none" title="아이폰 6s">아이폰 6s</a></li>
+									<li><a href="#none" title="아이폰 6s 플러스">아이폰 6s 플러스</a></li>
+									<li><a href="#none" title="아이폰 6">아이폰 6</a></li>
+									<li><a href="#none" title="아이폰 SE">아이폰 SE</a></li>
+								</ul>
+									
+								<ul class="product_ul2">
+									<li><a class="tit" href="#none" title="iPad">iPad</a></li>
+									<li><a href="#none" title="프로 12.5형(USB-C)">프로 12.5형(USB-C)</a></li>
+									<li><a href="#none" title="프로 11형(USB-C)">프로 11형(USB-C)</a></li>
+									<li><a href="#none" title="프로 12.9형">프로 12.9형</a></li>
+									<li><a href="#none" title="프로 10.5형">프로 10.5형</a></li>
+									<li><a href="#none" title="프로 9.7형">프로 9.7형</a></li>
+									<li><a href="#none" title="9.7형">9.7형</a></li>
+									<li><a href="#none" title="에어 2">에어 2</a></li>
+									<li><a href="#none" title="에어">에어</a></li>
+									<li><a href="#none" title="미니 3">미니 3</a></li>
+									<li><a href="#none" title="미니 2">미니 2</a></li>
+									<li><a href="#none" title="미니">미니</a></li>
+								</ul>
+									
+								<ul class="product_ul2">
+									<li><a class="tit" href="#none" title="Camera">Camera</a></li>
+									<li><a href="#none" title="DSLR 카메라">DSLR 카메라</a></li>
+									<li><a href="#none" title="드론">드론</a></li>
+									<li><a href="#none" title="고프로">고프로</a></li>
+									<li><a href="#none" title="액션카메라">액션카메라</a></li>
+								</ul>
+								
+								<ul class="product_ul2">
+									<li><a class="tit" href="#none" title="Apple Watch">Apple Watch</a></li>
+									<li><a href="#none" title="42/44mm">42/44mm</a></li>
+								</ul>
+									
+								<ul class="product_ul2">
+									<li><a class="tit" href="#none" title="AirPods">AirPods</a></li>
+									<li><a href="#none" title="38mm">38mm</a></li>
+								</ul>
+							</div>
+						</li>
+					
+						<li class="gnb_menu_li gnb_menu_li2">
+							<a class="tit" href="../sub/sub2_collection.html" title="Collection"><strong>Collection</strong></a>
+							<div class="gnb_div gnb_div2">
+								<ul class="product_ul2 product_ul2_1">
+									<li><a class="tit" href="#none" title="신상품">신상품</a></li>
+									<li><a href="#none" title="온라인 독점 상품">온라인 독점 상품</a></li>
+									<li><a href="#none" title="콤파스">콤파스</a></li>
+									<li><a href="#none" title="가방">가방</a></li>
+									<li><a href="#none" title="슬리브/케이스">슬리브/케이스</a></li>
+								</ul>
+									
+								<ul class="product_ul2">
+									<li><a class="tit" href="#none" title="컬렉션">컬렉션</a></li>
+									<li><a href="#none" title="Case for Airpods">Case for Airpods</a></li>
+									<li><a href="#none" title="City Backpack">City Backpacks</a></li>
+									<li><a href="#none" title="Via Backpack">Via Backpack</a></li>
+									<li><a href="#none" title="EO Travel Backpack">EO Travel Backpack</a></li>
+									<li><a href="#none" title="Diamond Ripstop">Diamond Ripstop</a></li>
+									<li><a href="#none" title="Nylon Organizers">Nylon Organizers</a></li>
+									<li><a href="#none" title="Compact Sleeve">Compact Sleeve</a></li>
+								</ul>
+										
+								<ul class="product_ul2">
+									<li><a class="tit" href="#none" title="콜라보레이션">콜라보레이션</a></li>
+									<li><a href="#none" title="Incase x Carbon">Incase x Carbon</a></li>
+									<li><a href="#none" title="Kelly Slater">Kelly Slater</a></li>
+									<li><a href="#none" title="Ari Marcopoulos">Ari Marcopoulos</a></li>
+								</ul>
+										
+								<ul class="product_ul2">
+									<li><a class="tit" href="#none" title="혁신 기술">혁신 기술</a></li>
+									<li><a href="#none" title="Flight Nylon">Flight Nylon</a></li>
+									<li><a href="#none" title="Honeycomb Ripstop">Honeycomb Ripstop</a></li>
+									<li><a href="#none" title="Diamond Ripstop">Diamond Ripstop</a></li>
+									<li><a href="#none" title="Woolenex">Woolenex</a></li>
+									<li><a href="#none" title="Ecoya®">Ecoya®</a></li>
+									<li><a href="#none" title="Tensaerlite™">Tensaerlite™</a></li>
+									<li><a href="#none" title="Ariaprene™">Ariaprene™</a></li>
+								</ul>
+									
+								<ul class="product_ul2">
+									<li><a class="tit" href="#none" title="추천 상품">추천 상품</a></li>
+									<li><a href="#none" title="MEN">MEN</a></li>
+									<li><a href="#none" title="WOMEN">WOMEN</a></li>
+									<li><a href="#none" title="단기여행용 백">단기여행용 백</a></li>
+									<li><a href="#none" title="장기여행용 백">장기여행용 백</a></li>
+									<li><a href="#none" title="자전거/운동 백">자전거/운동 백</a></li>
+									<li><a href="#none" title="출사용 백">출사용 백</a></li>
+									<li><a href="#none" title="1인 미디어">1인 미디어</a></li>
+								</ul>
+							</div>
+						</li>
+
+						<li class="gnb_menu_li gnb_menu_li3">
+							<a href="../sub/sub3_brand.html" title="Brand"><strong>Brand</strong></a>
+						</li>
+
+						<li class="gnb_menu_li gnb_menu_li4">
+							<a href="../sub/sub4_CaseStudies.html" title="CaseStudies"><strong>CaseStudies</strong></a>
+						</li>
+
+						<li class="gnb_menu_li gnb_menu_li5">
+							<a href="../sub/sub7_The_Leaf.html" title="The LEAF"><strong>The LEAF</strong></a>
+							<div class="gnb_div gnb_div3">
+								<ul class="product_ul2 product_ul2_1">
+									<li class="ul2a_li0"><a href="#none" title="The LEAF">The LEAF</a></li>
+									<li class="ul2a_li0"><a href="#none" title="Smart Living">Smart Living</a></li>
+									<li class="ul2a_li0"><a href="#none" title="Photo Diary">Photo Diary</a></li>
+								</ul>
+							</div>
+						</li>
+
+						<li class="gnb_menu_li gnb_menu_li6">
+							<a href="../sub/sub6_Incase_Store.html" title="Store"><strong>Store</strong></a>
+							<div class="gnb_div gnb_div4">
+								<ul class="product_ul2 product_ul2_1">
+									<li class="ul2b_li1"><a href="#none" title="직영매장">직영매장</a></li>
+									<li class="ul2b_li1"><a href="#none" title="공식딜러">공식딜러</a></li>
+								</ul>
+							</div>
+						</li>
+
+						<li class="gnb_menu_li gnb_menu_li7">
+							<a href="../sub/sub8_outlet.html" title="Outlet"><strong>Outlet</strong></a>
+						</li>
+					</ul>
+				</nav>
+
+				<nav id="mo_inc_gnb">
+					<div class="menu">
+						<a class="ham1" href="#none" title="hamburger">
+							<span class="hamburger_box">
+								<span class="hamburger_inner inner1"></span>
+								<span class="hamburger_inner inner2"></span>
+								<span class="hamburger_inner inner3"></span>
+							</span>
+						</a>
+						<a class="ham2" href="#none" title="hamburger">
+							<span class="hamburger_box2">
+								<span class="hamburger_inner2">
+									<span class="hamburger_inner inner4"></span>
+									<span class="hamburger_inner inner5"></span>
+								</span>
+							</span>
+						</a>
+						<ul class="menu_active">
+							<li class="drop_down">
+								<a href="../sub/sub0_product.html" title="product">
+									<em>Product</em>
+									<span>+</span>
+								</a>
+							</li>
+							<li class="drop_down">
+								<a href="../sub/sub1_device.html" title="Device">
+									<em>Device</em>
+									<span>+</span>
+								</a>
+							</li>
+							<li class="drop_down">
+								<a href="../sub/sub2_collection.html" title="Collection">
+									<em>Collection</em>
+									<span>+</span>
+								</a>
+							</li>
+							<li class="drop_down level0">
+								<a href="../sub/sub3_brand.html" title="Brand">
+									<em>Brand</em>
+								</a>
+							</li>
+							<li class="drop_down level0">
+								<a href="../sub/sub4_CaseStudies.html" title="CaseStudies">
+									<em>CaseStudies</em>
+								</a>
+							</li>
+							<li class="drop_down">
+								<a href="../sub/sub7_The_Leaf.html" title="The LEAF">
+									<em>The LEAF</em>
+									<span>+</span>
+								</a>
+							</li>
+							<li class="drop_down">
+								<a href="../sub/sub6_Incase_Store.html" title="Store">
+									<em>Store</em>
+									<span>+</span>
+								</a>
+							</li>
+							<li class="drop_down level0">
+								<a href="../sub/sub8_outlet.html" title="Outlet">
+									<em>Outlet</em>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</header>
+		<div id="container">
+			<section class="item_top">
+				<h3>제품 상세보기 상단</h3>
+				<div class="item_info">
+					<div class="info_left">
+						<div class="img_slider">
+							<div class="img_slider_imgs0">
+								<img src="../img/itemPage/item0.jpg" alt="제품상세이미지0"/>
+							</div>
+							<div class="img_slider_imgs1">
+								<img src="../img/itemPage/item1.jpg" alt="제품상세이미지1"/>
+							</div>
+							<div class="img_slider_imgs2">
+								<img src="../img/itemPage/item2.jpg" alt="제품상세이미지2"/>
+							</div>
+							<div class="img_slider_imgs3">
+								<img src="../img/itemPage/item3.jpg" alt="제품상세이미지3"/>
+							</div>
+							<div class="img_slider_imgs4">
+								<img src="../img/itemPage/item4.jpg" alt="제품상세이미지4"/>
+							</div>
+							<div class="img_slider_imgs5">
+								<img src="../img/itemPage/item5.jpg" alt="제품상세이미지5"/>
+							</div>
+							<div class="img_slider_imgs6">
+								<img src="../img/itemPage/item6.jpg" alt="제품상세이미지6"/>
+							</div>
+							<ul class="slider_dots">
+								<li>
+									<button type="button"><span class="d_bt">1</span></button>
+								</li>
+								<li>
+									<button type="button"><span class="d_bt">2</span></button>
+								</li>
+								<li>
+									<button type="button"><span class="d_bt">3</span></button>
+								</li>
+								<li>
+									<button type="button"><span class="d_bt">4</span></button>
+								</li>
+								<li>
+									<button type="button"><span class="d_bt">5</span></button>
+								</li>
+								<li>
+									<button type="button"><span class="d_bt">6</span></button>
+								</li>
+								<li>
+									<button type="button"><span class="d_bt">7</span></button>
+								</li>
+							</ul>
+						</div>
+						<div class="review">
+							<div class="point_board">
+								<p>리뷰 평점</p>
+								<div class="star_point0">
+									<span>★★★★★</span>
+								</div>
+							</div>
+							<div class="review_more">
+								<a href="#none" title="">
+									<span style="color:green">REVIEW</span> <strong>1</strong><span>&gt;</span>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="info_right">
+						<p class="item_name">
+							VIA Slim Backpack - Black
+						</p>
+						<p class="iteam_desc">
+							마무리하기 아쉬운 당신의 여행에 1-2 일을 추가할 수 있도록 고안되어 최적화된 여행 솔루션을 제공하는 프리미엄 가방, VIA Backpack과 함께 더욱 간편한 여행을 즐기세요.
+						</p>
+						<div class="iteam_specs">
+							<h2>제품사양</h2>
+							<ul>
+								<li>
+									<strong>사이즈:</strong>32 x 47 x 14cm 
+								</li>
+								<li>
+									<strong>용량:</strong>15L (확장 후 24L) 
+								</li>
+								<li>
+									<strong>호환성:</strong>MacBook Pro 15" 
+								</li>
+								<li>
+									<strong>소재:</strong>플라이트 나일론 100% / 폴리에스테르 100%
+								</li>
+								<li>
+									<strong>스트랩:</strong>제품 상단과 사이드에 손잡이 구성 사이드 버클 압축 스트랩 구성 
+								</li>
+								<li>
+									<strong>수납:</strong>
+									메인 수납공간에 전면으로 접근하기 위한 캐리어형 오픈. 공항에서 보안 검사를 간단하게 통과하기 위해 전면 오픈되는 노트북 전용 수납부. 필수품에 빠른 접근을 위한 앞쪽 전면 포켓으로 구성. 캐리어 호환 가능한 웨빙 벨트, 수납용량 확장을 위한 지퍼 조절로 기존 메인 수납부에 약 8.5cm 추가 확장
+								</li>
+							</ul>
+						</div>
+						<div class="price_tag">
+							<span>195,000</span>원
+						</div>
+						<div class="order_count">
+							<p class="order_count_name">구매수량</p>
+							<div class="amount">
+								<a href="#none" title="마이너스"><span>-</span></a>
+								<span class="nob">1</span>
+								<a href="#none" title="플러스"><span>+</span></a>
+							</div>
+						</div>
+						<div class="value_amount">
+							<p class="value_title">상품금액 합계</p>
+							<p class="value">
+								<strong>195,000</strong>원
+							</p>
+						</div>
+						<div class="paymentArea">
+							<div class="payment_button">
+								<div class="payment_button_box">
+									<a class="btn_present" href="#none" title="선물하기">선물하기</a>
+									<a class="btn_cart" href="#none" title="장바구니">장바구니</a>
+									<a class="btn_pay" href="#none" title="바로구매">바로구매</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="item_main">
+				<h3>제품상세메인</h3>
+				<div class="main_tab">
+					<div class="main_tab_fixed">
+						<a href="#none" title="제품상세">제품상세</a>
+						<a href="#none" title="고객리뷰">
+							고객리뷰<em>1개</em>
+						</a>
+						<a href="#none" title="제품고시정보">제품고시정보</a>
+					</div>
+				</div>
+				<div class="main_box">
+					<div class="cate cate0">
+						<div class="cate_inner">
+							<p class="cate_text">
+								캐리어형 오픈 구조의 주 수납공간
+							</p>
+							<p class="cate_imgs">
+								<img src="../img/itemPage/it0.png" alt="아이템0"/>
+							</p>
+						</div>
+					</div>
+					<div class="cate cate1">
+						<div class="cate_inner">
+							<p class="cate_text">
+								가볍고 튼튼한 플라이트 나일론 소재
+							</p>
+							<p class="cate_imgs">
+								<img src="../img/itemPage/it1.png" alt="아이템1"/>
+							</p>
+						</div>
+					</div>
+					<div class="cate cate2">
+						<div class="cate_inner">
+							<p class="cate_text">
+								노트북 및 태블릿 전용 수납공간
+							</p>
+							<p class="cate_imgs">
+								<img src="../img/itemPage/it2.png" alt="아이템2"/>
+							</p>
+						</div>
+					</div>
+					<div class="cate cate3">
+						<div class="cate_inner">
+							<p class="cate_text">
+								상단 보조 수납공간
+							</p>
+							<p class="cate_imgs">
+								<img src="../img/itemPage/it3.png" alt="아이템3"/>
+							</p>
+						</div>
+					</div>
+					<div class="cate cate4">
+						<div class="cate_inner">
+							<p class="cate_text">
+								측면 수납공간
+							</p>
+							<p class="cate_imgs">
+								<img src="../img/itemPage/it4.png" alt="아이템4"/>
+							</p>
+						</div>
+					</div>
+					<div class="cate cate5">
+						<div class="cate_inner">
+							<p class="cate_text">
+								지퍼와 버클을 이용한 주 수납공간 확장
+							</p>
+							<p class="cate_imgs">
+								<img src="../img/itemPage/it5.png" alt="아이템5"/>
+							</p>
+						</div>
+					</div>
+					<div class="cate cate6">
+						<div class="cate_inner">
+							<p class="cate_imgs">
+								<img src="../img/itemPage/it6.png" alt="아이템6"/>
+							</p>
+						</div>
+					</div>
+					<div class="cate cate7">
+						<div class="cate_inner">
+							<p class="cate_imgs">
+								<img src="../img/itemPage/it7.png" alt="아이템7"/>
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="review_Area">
+				<h3>고객리뷰</h3>
+				<div class="review_bar">
+					<a href="#none" title="allreview">
+						<strong>전체리뷰</strong><em class="gray">1</em>
+					</a>
+				</div>
+				<div class="review_contents">
+					<div class="review_list">
+						<div class="review_box">
+							<div class="c1">
+								<div class="date">2020-04-13</div>
+								<div class="star_point">
+									<div>★★★★★</div>
+								</div>
+							</div>
+							<div class="c2">
+								<div class="name">
+									<em style="color:green">구매자</em>
+									<span>네이버**</span>
+								</div>
+								<div class="review_text">생각보다 작고 비싸지만 괜차나여</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="product_notice">
+				<div class="notice_box">
+					<h4>상품 정보제공 고시</h4>
+					<table>
+						<tbody>
+							<tr>
+								<th>제품 사양</th>
+								<td>종류, 소재, 색상은 상단 제품 사양 참조</td>
+							</tr>
+							<tr>
+								<th>제조자/수입자</th>
+								<td>인케이스 / (주)프리즘디스트리뷰션</td>
+							</tr>
+							<tr>
+								<th>제조국</th>
+								<td>China</td>
+							</tr>
+							<tr>
+								<th>취급시 주의사항</th>
+								<td>
+									<ul>
+										<li>"보관시에는 온도나 습도가 높은곳은 피해주세요."</li>
+										<li>"제품과 다른색의 원단과의 마찰로 인한 이염을 주의해주세요"</li>
+										<li>"직사광선의 노출은 변색의 위험이 있으니 주의해주세요."</li>
+										<li>"뜨거운 화기에 노출될 경우 제품의 형태나 재질이 변형될 수 있으니 주의해주세요."</li>
+										<li>"제품의 특성상 장시간의 마찰이나 무리하게 사용시 제품의 표면이 손상될 수 있습니다."</li>
+										<li>"전체적인 물세탁 및 드라이클리닝은 권장하지 않습니다."</li>
+										<li>"산소,염소계 표백제 사용은 삼가해주세요."</li>
+										<li>"등판이 메쉬소재로 된 가방 제품의 경우 소재 특성상 특정의류 (캐시미어,실크, 니트류등)와 마찰 시 의류 손상(필링, 보풀 등)이 있을 수 있으니 주의해주세요."</li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<th>품질 보증 기준</th>
+								<td>관련법 및 소비자분쟁해결기준에 따름</td>
+							</tr>
+							<tr>
+								<th>A/S 책임자와 전화</th>
+								<td>(주)프리즘디스트리뷰션 / 02-544-1015(4번)</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</section>
+		</div>
+
+		<footer id="inc_footerWrap">
+			<div id="goTop">
+				<p>
+					<a href="#" title="Btn_top">
+						<img src="../img/footer/BtnTop_.png" alt="BtnTop 이미지"/>
+					</a>
+				</p>
+			</div>
+			<div id="footer">
+				<div id="footer_main">
+					<div class="main_menu">
+						<ul class="main_ul">
+							<li class="menu">
+								<h4>
+									<a href="#none" title="about">
+										<span class="menu_tit">About</span>
+										<span class="ico">+</span>
+									</a>
+								</h4>
+								<ul class="menu_ul">
+									<li><a href="#none" title="소개">소개</a></li>
+									<li><a href="#none" title="타임라인">타임라인</a></li>
+									<li><a href="#none" title="사회공헌">사회공헌</a></li>
+									<li><a href="#none" title="인재채용">인재채용</a></li>
+									<li><a href="#none" title="프레스">프레스</a></li>
+									<li><a href="#none" title="제휴문의">제휴문의</a></li>
+								</ul>
+							</li>
+							<li class="menu">
+								<h4>
+									<a href="#none" title="brand">
+										<span class="menu_tit">Brand</span>
+										<span class="ico">+</span>
+									</a>
+								</h4>
+								<ul class="menu_ul">
+									<li><a href="#none" title="콜라보레이션">콜라보레이션</a></li>
+									<li><a href="#none" title="The LEAF">The LEAF</a></li>
+									<li><a href="#none" title="스마트리빙">스마트리빙</a></li>
+									<li><a href="#none" title="스마트리빙 모집">스마트리빙 모집</a></li>
+									<li><a href="#none" title="Photo Diary">Photo Diary</a></li>
+									<li><a href="#none" title="기업 대량주문">기업 대량주문</a></li>
+									<li><a href="#none" title="Brand Ambassadors">Brand Ambassadors</a></li>
+								</ul>
+							</li>
+							<li class="menu">
+								<h4>
+									<a href="#none" title="매장안내">
+										<span class="menu_tit">매장안내</span>
+										<span class="ico">+</span>
+									</a>
+								</h4>
+								<ul class="menu_ul">
+									<li><a href="#none" title="직영 매장">직영 매장</a></li>
+									<li><a href="#none" title="공식 딜러">공식 딜러</a></li>
+								</ul>
+							</li>
+							<li class="menu">
+								<h4>
+									<a href="#none" title="shop">
+										<span class="menu_tit">Shop</span>
+										<span class="ico">+</span>
+									</a>
+								</h4>
+								<ul class="menu_ul">
+									<li><a href="#none" title="가방">가방</a></li>
+									<li><a href="#none" title="여행">여행</a></li>
+									<li><a href="#none" title="보호">보호</a></li>
+									<li><a href="#none" title="카메라">카메라</a></li>
+									<li><a href="#none" title="악세사리">악세사리</a></li>
+									<li><a href="#none" title="아울렛">아울렛</a></li>
+									<li><a href="#none" title="보호">이벤트</a></li>
+								</ul>
+							</li>
+							<li class="menu">
+								<h4>
+									<a href="#none" title="support">
+										<span class="menu_tit">Support</span>
+										<span class="ico">+</span>
+									</a>
+								</h4>
+								<ul class="menu_ul">
+									<li><a href="#none" title="정품 등록">정품 등록</a></li>
+									<li><a href="#none" title="AS 접수">AS 접수</a></li>
+									<li><a href="#none" title="자주묻는질문">자주묻는질문</a></li>
+									<li><a href="#none" title="약관">약관</a></li>
+									<li><a href="#none" title="개인정보 취급방침">개인정보 취급방침</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<div class="main_contact">
+						<div class="main_div">
+							<div class="helpDesk">
+								<strong>HELP DESK</strong>
+								<p>02. 544. 1510( A/S 4번)</p>
+							</div>
+							<div class="time">
+								<p>평일 AM 10:00 ~ PM 06:00</p>
+								<p>점심 AM 12:00 ~ PM 01:00</p>
+								<p>휴무 토, 일, 공휴일</p>
+							</div>
+							<div class="newsLetter">
+								<p>
+									인케이스의 가장 최신 뉴스를 받아보세요.<br/>
+									처음 뉴스레터를 구독하시는 분들께 10% 할인 쿠폰을 드립니다.
+								</p>
+							</div>
+							<div class="emailArea">
+								<form action="#none" method="post">
+									<fieldset>
+										<legend>이메일</legend>
+										<p class="e">
+											<label for="email0">email</label><input id="email0" type="text" name="email0" title="이메일주소를 입력하세요"
+											placeholder="이메일 주소" autocomplete="off"/>
+											<input id="apply" type="submit" value="신청" title="신청하기 버튼"/>
+										</p>
+										<p class="agree">
+											<span>개인정보 취급방침에 동의합니다.</span>
+											<input id="chk0" type="checkbox" name="chk0"/><label for="chk0">동의</label>
+										</p>
+									</fieldset>
+								</form>
+							</div>
+
+							<div class="socialstyles">
+								<a href="#none" title="facebook_icon">
+									<img src="../img/footer/facebook.png" alt="facebook_icon"/>
+								</a>
+								<a href="#none" title="instagram_icon">
+									<img src="../img/footer/instagram.png" alt="instagram_icon"/>
+								</a>
+								<a href="#none" title="twitter_icon">
+									<img src="../img/footer/twitter.png" alt="twitter_icon"/>
+								</a>
+								<a href="#none" title="youtube_icon">
+									<img src="../img/footer/youtube.png" alt="youtube_icon"/>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="footer_comp">
+					<div class="comp_info">
+						<div class="company_info">
+							<span>인케이스코리아</span><br/>
+							<span>
+								개인정보취급방침 프리즘디스트리뷰션(주)<i>|</i>대표 양준무<i>|</i>서울시 강남구 논현동 111-37 N빌딩 5층<i>|</i>(우) 135-010
+							</span><br/>
+							<span>
+								사업자등록번호 <a href="#" title="사업자등록번호"><span class="numb">211-88-37764</span></a> <i>|</i> 통신판매업번호 제2010-서울강남-00658호 <i>|</i> 호스팅사업자 : 메이크샵 이메일 문의 : <a href="#" title=""><span class="numb">help@pr1zm.com</span></a>
+							</span>
+						</div>
+						<div class="escrow_mark">
+							<p>
+								<img src="../img/footer/escrow.png" alt="escrow 이미지"/>
+							</p>
+						</div>
+					</div>
+					<div class="comp_copyright">
+						<p>
+							<a href="#none" title="GJ_HONG">&copy; 2020 GJ_HONG</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<footer id="mob_inc_footerWrap">
+			<div id="mob_goTop">
+				<p>
+					<a href="#" title="Btn_top">
+						<img src="../img/footer/BtnTop_.png" alt="BtnTop 이미지"/>
+					</a>
+				</p>
+			</div>
+			<div id="mob_footer">
+				<div id="mob_footer_main">
+					<div class="main_menu">
+						<ul class="main_ul">
+							<li class="menu">
+								<h4>
+									<a href="#none" title="about">
+										<span class="menu_tit">About</span>
+										<span class="ico">+</span>
+									</a>
+								</h4>
+								<ul class="menu_ul">
+									<li><a href="#none" title="소개">소개</a></li>
+									<li><a href="#none" title="타임라인">타임라인</a></li>
+									<li><a href="#none" title="사회공헌">사회공헌</a></li>
+									<li><a href="#none" title="인재채용">인재채용</a></li>
+									<li><a href="#none" title="프레스">프레스</a></li>
+									<li><a href="#none" title="제휴문의">제휴문의</a></li>
+								</ul>
+							</li>
+							<li class="menu">
+								<h4>
+									<a href="#none" title="brand">
+										<span class="menu_tit">Brand</span>
+										<span class="ico">+</span>
+									</a>
+								</h4>
+								<ul class="menu_ul">
+									<li><a href="#none" title="콜라보레이션">콜라보레이션</a></li>
+									<li><a href="#none" title="The LEAF">The LEAF</a></li>
+									<li><a href="#none" title="스마트리빙">스마트리빙</a></li>
+									<li><a href="#none" title="스마트리빙 모집">스마트리빙 모집</a></li>
+									<li><a href="#none" title="Photo Diary">Photo Diary</a></li>
+									<li><a href="#none" title="기업 대량주문">기업 대량주문</a></li>
+									<li><a href="#none" title="Brand Ambassadors">Brand Ambassadors</a></li>
+								</ul>
+							</li>
+							<li class="menu">
+								<h4>
+									<a href="#none" title="매장안내">
+										<span class="menu_tit">매장안내</span>
+										<span class="ico">+</span>
+									</a>
+								</h4>
+								<ul class="menu_ul">
+									<li><a href="#none" title="직영 매장">직영 매장</a></li>
+									<li><a href="#none" title="공식 딜러">공식 딜러</a></li>
+								</ul>
+							</li>
+							<li class="menu">
+								<h4>
+									<a href="#none" title="shop">
+										<span class="menu_tit">Shop</span>
+										<span class="ico">+</span>
+									</a>
+								</h4>
+								<ul class="menu_ul">
+									<li><a href="#none" title="가방">가방</a></li>
+									<li><a href="#none" title="여행">여행</a></li>
+									<li><a href="#none" title="보호">보호</a></li>
+									<li><a href="#none" title="카메라">카메라</a></li>
+									<li><a href="#none" title="악세사리">악세사리</a></li>
+									<li><a href="#none" title="아울렛">아울렛</a></li>
+									<li><a href="#none" title="보호">이벤트</a></li>
+								</ul>
+							</li>
+							<li class="menu">
+								<h4>
+									<a href="#none" title="support">
+										<span class="menu_tit">Support</span>
+										<span class="ico">+</span>
+									</a>
+								</h4>
+								<ul class="menu_ul">
+									<li><a href="#none" title="정품 등록">정품 등록</a></li>
+									<li><a href="#none" title="AS 접수">AS 접수</a></li>
+									<li><a href="#none" title="자주묻는질문">자주묻는질문</a></li>
+									<li><a href="#none" title="약관">약관</a></li>
+									<li><a href="#none" title="개인정보 취급방침">개인정보 취급방침</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<div class="main_contact">
+						<div class="main_div">
+							<div class="helpDesk">
+								<strong>HELP DESK</strong>
+								<p>02. 544. 1510( A/S 4번)</p>
+							</div>
+							<div class="time">
+								<p>평일 AM 10:00 ~ PM 06:00</p>
+								<p>점심 AM 12:00 ~ PM 01:00</p>
+								<p>휴무 토, 일, 공휴일</p>
+							</div>
+							<div class="newsLetter">
+								<p>
+									인케이스의 가장 최신 뉴스를 받아보세요.<br/>
+									처음 뉴스레터를 구독하시는 분들께 10% 할인 쿠폰을 드립니다.
+								</p>
+							</div>
+							<div class="emailArea">
+								<form action="#none" method="post">
+									<fieldset>
+										<legend>이메일</legend>
+										<p class="e">
+											<label for="mo_email">email</label><input id="mo_email" type="text" name="mo_email" title="이메일주소를 입력하세요"
+											placeholder="이메일 주소" autocomplete="off"/>
+											<input id="mo_apply" type="submit" value="신청" title="신청하기 버튼"/>
+										</p>
+										<p class="agree">
+											<span>개인정보 취급방침에 동의합니다.</span>
+											<input id="mo_chk" type="checkbox" name="mo_chk"/><label for="mo_chk">동의</label>
+										</p>
+									</fieldset>
+								</form>
+							</div>
+							<div class="socialstyles">
+								<a href="#none" title="facebook_icon">
+									<img src="../img/footer/facebook.png" alt="facebook_icon"/>
+								</a>
+								<a href="#none" title="instagram_icon">
+									<img src="../img/footer/instagram.png" alt="instagram_icon"/>
+								</a>
+								<a href="#none" title="twitter_icon">
+									<img src="../img/footer/twitter.png" alt="twitter_icon"/>
+								</a>
+								<a href="#none" title="youtube_icon">
+									<img src="../img/footer/youtube.png" alt="youtube_icon"/>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="mob_footer_comp">
+					<div class="comp_info">
+						<div class="company_info">
+							<span>인케이스코리아</span><br/>
+							<span>
+								개인정보취급방침 프리즘디스트리뷰션(주)<i>|</i>대표 양준무<i>|</i>서울시 강남구 논현동 111-37 N빌딩 5층<i>|</i>(우) 135-010
+							</span><br/>
+							<span>
+								사업자등록번호 <a href="#none" title="사업자등록번호"><span class="numb">211-88-37764</span></a> <i>|</i> 통신판매업번호 제2010-서울강남-00658호 <i>|</i> 호스팅사업자 : 메이크샵 이메일 문의 : <a href="#" title=""><span class="numb">help@pr1zm.com</span></a>
+							</span>
+						</div>
+						<div class="escrow_mark">
+							<p>
+								<img src="img/footer/escrow.png" alt="escrow 이미지"/>
+							</p>
+						</div>
+					</div>
+					<div class="comp_copyright">
+						<p>
+							<a href="#none" title="GJ_HONG">&copy; 2020 GJ_HONG</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+ </body>
+</html>

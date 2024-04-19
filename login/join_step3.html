@@ -1,0 +1,1391 @@
+<!DOCTYPE html>
+<html lang="ko">
+ <head>
+  <meta charset="utf-8"/>
+  <title>join_step3</title>
+  <link rel="shortcut" href="../img/incase_leaf.png"/>
+  <link rel="icon" href="../img/incase_leaf.png"/>
+  <link rel="apple=touch-icon" href="../img/incase_leaf.png"/>
+   <link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+   <link rel="stylesheet" type="text/css" href="../css/header.css"/>
+   <link rel="stylesheet" type="text/css" href="../css/footer_01.css"/>
+   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"/>
+   <script src="../js/jquery-1.12.4.min.js"></script>
+  <style>
+		
+		
+		
+		/* ################# wrap ################### */
+			#wrap{max-width:1920px; width:100%; overflow:hidden; margin:0 auto;}
+
+		
+		/* ################# container ################### */
+			#container{width:100%; margin:100px auto 0; padding-top:100px;}
+
+		/* ########## container / .join_content (section) ########## */
+			#container .login_content{width:100%;
+			margin:0 auto;}
+
+		/* ########## container / .content (div) ########## */
+			#container .content{width:680px; overflow:hidden; margin:0 auto; }
+
+		/* ################ container / .tit_wrap (div) ################ */
+			#container .tit_wrap{width:100%; height:94px; position:relative;
+			border-bottom:1px solid #ccc;}
+
+		/* ########### container / .tit_box (div) ########### */
+			#container .tit_box{width:460px; height:80px; position:relative;}
+			
+			#container .tit_box h2{display:inline-block; width:322px; 
+			font-size:80px; line-height:80px; margin-right:18px;
+			letter-spacing:-1px;}
+			#container .tit_box .tit_join{font-size:30px; letter-spacing:-0.063em; font-weight:600;}
+
+			#container .tit_box h2:after{content:""; display:block; width:320px; height:3px;
+			background-color:#2a2a2a; position:absolute; left:0; bottom:-16px;
+			font-family:'Lato-Black';}
+			
+		/* ########### container / .location (ul) ########### */
+			#container .location{width:63px; height:58px;
+			position:absolute; right:0; bottom:14px; 
+			border-left:1px solid #ccc; padding-left:11px;}
+
+			#container .location li{font-size:15px;}
+			#container .location .s_location{margin-top:20px; font-weight:600; position:relative;}
+			#container .location .s_location:after{content:""; display:block; width:2px; height:100%;
+			background-color:#2a2a2a;
+			position:absolute; left:-12px; bottom:0;}
+
+		/* ########### container / .join_nav (ul) ########### */
+			#container .join_nav{width:100%; margin:45px 0 75px; color:#bdbdbd;}
+			#container .join_nav li{display:inline-block; margin-left:11px; color:#2a2a2a;}
+			/*#### li 개별설정 #### */
+			
+			#container .on2{font-weight:600; font-size:18px;}
+			#container .join_nav .on_step1{font-size:18px; padding-right:18px; position:relative; color:#bdbdbd;}
+			#container .on2 .on_step1{color:#2a2a2a;}
+			#container .join_nav .black{display:inline-block;}
+	
+			#container .join_nav .black:after{content:""; display:block; width:10px; height:10px;
+			transform: rotate(-45deg);
+			position:absolute; right:0; top:7px;
+			border-right:2px solid #ccc;
+			border-bottom:2px solid #ccc;}
+			
+			#container .join_nav .last:after{content:""; display:block; width:0; height:0; clear:both;
+			position:absolute; left:-9999px;}
+	
+		/* ########### container / form ########### */
+			#form_wrap{width:100%; }
+			#form_wrap fieldset{border:none;}
+			#form_wrap legend{display:none;}
+			#form_wrap .join_box{width:680px; /*height:1680px;*/ }
+
+		/* ############# 아이디 부분 ############# */
+			#form_wrap .input_area{width:680px; height:995px; margin-top:20px;}
+			#form_wrap .input_field{width:100%; height:78px; margin-bottom:20px;}
+			
+			/* #### label 영역 #### */
+			#form_wrap .input_field_label{display:inline-block; width:120px; float:left;
+			line-height:48px; font-size:15px; }
+
+			#form_wrap .input_wrap{display:inline-block; width:560px; height:78px; float:left; }
+			
+			/* ##### input ###### */
+			#form_wrap #userid{width:430px; height:46px; line-height:46px; 
+			margin-right:10px;
+			font-size:15px; text-indent:10px;
+			border:1px solid #ccc;}
+
+			#form_wrap #button0{width:112px; height:48px; line-height:48px;
+			font-size:15px; text-align:center; cursor:pointer;
+			border:1px solid #ccc; vertical-align:middle;}
+			
+			#form_wrap .message{display:inline-block; font-size:14px; padding:8px 0; color:#da452d;}
+
+		/* ############# 비밀번호 부분 ############# */
+			#form_wrap #userpw{width:526px; height:46px; line-height:46px;
+			font-size:15px; 
+			padding:0 15px;
+			border:1px solid #ccc;
+			color:#2a2a2a;}
+
+		/* ############# 비밀번호 확인 부분 ############# */
+			#form_wrap #userpwchk{width:526px; height:46px; line-height:46px;
+			font-size:15px; 
+			padding:0 15px;
+			border:1px solid #ccc;
+			color:#2a2a2a;}
+		
+		/* ############ 성별 선택 부분 ############### */
+			#form_wrap .radio_wrap{width:100%; height:48px; line-height:48px; 
+			margin-top:12px; margin-bottom:20px;}
+		
+			#form_wrap .input_tit{display:inline-block; width:120px; height:48px; float:left;}
+			#form_wrap .input_gender{display:inline-block; width:560px; height:48px; float:left;}
+			#form_wrap #female{width:15px; height:15px; margin:0 10px; vertical-align:middle;}
+			#form_wrap #male{width:15px; height:15px; margin:0 10px; vertical-align:middle;}
+		
+		/* ########### 이름 부분 ############# */
+			#form_wrap #username{width:526px; height:46px; line-height:46px;
+			font-size:15px; 
+			padding:0 15px;
+			border:1px solid #ccc;
+			color:#2a2a2a;}
+		
+		/* ########### 생년월일 부분 ############# */
+			#form_wrap #userbirthY{width:168px; height:46px; line-height:46px;
+			font-size:15px;
+			margin-right:10px; padding:0 50px 0 15px;
+			border:1px solid #ccc;
+			color:#2a2a2a;}
+			#form_wrap #userbirthM{width:168px; height:46px; line-height:46px;
+			font-size:15px;
+			margin-right:10px; padding:0 50px 0 15px;
+			border:1px solid #ccc;
+			color:#2a2a2a;}
+			#form_wrap #userbirthD{width:168px; height:46px; line-height:46px;
+			font-size:15px;
+			margin-right:10px; padding:0 50px 0 15px;
+			border:1px solid #ccc;
+			color:#2a2a2a;}
+		
+		/* ########### 휴대전화 부분 ############# */
+			#form_wrap #mobileFirstNo{width:168px; height:46px; line-height:46px;
+			font-size:15px;
+			margin-right:10px; padding:0 50px 0 15px;
+			border:1px solid #ccc;
+			color:#2a2a2a;}
+
+			#form_wrap #mobileSecondNo{width:168px; height:46px; line-height:46px;
+			font-size:15px; text-indent:10px;
+			margin-right:10px;
+			border:1px solid #ccc;
+			color:#2a2a2a;}
+
+			#form_wrap #mobileLastNo{width:168px; height:46px; line-height:46px;
+			font-size:15px; text-indent:10px;
+			margin-right:10px; 
+			border:1px solid #ccc;
+			color:#2a2a2a;}
+		
+		/* ########### 이메일 부분 ############# */
+			#form_wrap #email{width:526px; height:46px; line-height:46px;
+			font-size:15px;
+			padding:0 15px;
+			border:1px solid #ccc;
+			color:#2a2a2a;}
+
+		/* ########### 주소 부분 ############# */
+			#form_wrap .input_field_address{width:680px; height:212px;}
+			#form_wrap .input_address{width:680px; height:46px;}
+			#form_wrap #address{width:424px; height:46px;
+			text-indent:10px;
+			margin-right:10px;
+			font-size:15px;
+			border:1px solid #ccc;}
+
+			#form_wrap .add_btn{width:118px; height:46px; line-height:46px;
+			text-align:center; text-decoration:none;
+			cursor:pointer;
+			border:1px solid #ccc;}
+
+			#form_wrap .input_address1{width:560px; height:166px;
+			margin-left:120px; vertical-align:middle;}
+			#form_wrap #address1{width:527px; height:46px; line-height:46px;
+			font-size:15px;
+			padding:0 15px;
+			margin-top:20px;
+			border:1px solid #ccc;
+			color:#2a2a2a;
+			}
+			#form_wrap #address2{width:527px; height:46px; line-height:46px;
+			font-size:15px;
+			padding:0 15px;
+			margin-top:20px;
+			border:1px solid #ccc;
+			color:#2a2a2a;
+			}
+
+		/* ############ privacy_wrap ############ */	
+			#form_wrap .privacy_wrap{width:100%; height:123px;}
+			#form_wrap .radio_wrap{width:100%; height:48px; line-height:48px; margin-top:12px;}
+			#form_wrap .input_tit{ width:120px; height:48px; line-height:48px;
+			font-size:14px; }
+
+			#form_wrap .input_privacy{display:inline-block; font-size:14px; font-weight:600; }
+			#form_wrap #ra1{width:14px; height:14px; margin:0 10px; vertical-align:middle;}
+			#form_wrap #ra2{width:14px; height:14px; margin:0 10px; vertical-align:middle;}
+
+			#form_wrap .privacy_info{width:540px; height:75px; font-size:14px;
+			margin-left:120px; padding-bottom:25px; padding-left:10px;
+			color:#888;}
+
+		/* ############ join_ad_wrap ############ */
+			#form_wrap .join_ad_wrap{width:678px; height:289px; 
+			border-top:1px dashed #ccc;
+			padding-top:40px;}
+			
+			#form_wrap h5{width:100%; height:33px; font-size:16px;
+			padding-bottom:15px;}
+
+			#form_wrap .join_ad_box{width:619px; height:218px;
+			padding:5px 30px 18px;
+			background-color:#f7f7f7;}
+			
+			#form_wrap .radio_wrap_sms{display:inline-block; 
+			width:620px; height:48px; line-height:48px;
+			margin-top:12px; color:#2a2a2a;
+			}
+			#form_wrap .radio_sms{display:inline-block; width:500px; height:48px;}
+			#form_wrap #ra3{margin-right:10px;}
+			#form_wrap #ra4{margin-right:10px;}
+			
+			#form_wrap .radio_wrap_email{display:inline-block; 
+			width:620px; height:48px; line-height:48px;
+			margin-top:12px; color:#2a2a2a;
+			}
+			#form_wrap .radio_email{display:inline-block; width:500px; height:48px;}
+			#form_wrap #ra5{margin-right:10px;}
+			#form_wrap #ra6{margin-right:10px;}
+			#form_wrap .radi{padding-right:10px; font-weight:600;}
+		
+		/* ############## join_info_text ############ */
+			#form_wrap .join_info_text{width:620px; height:95px; 
+			padding-top:20px;
+			border-top:1px dashed #ccc; }
+			
+			#form_wrap .join_info_text p{width:620px;
+			color:#888; font-size:14px;}
+
+
+		/* ############ join_button ############ */
+
+			#form_wrap .join_button{width:100%; text-align:center;
+			margin:80px 0;}
+			#form_wrap #jo_button{width:348px; height:68px; background-color:#52438E;
+			font-size:18px; color:#fff;
+			text-align:center;
+			text-decoration:none;
+			border:1px solid transparent;
+			cursor:pointer;}
+		
+		/* 기능영역 */
+			#form_wrap #jo_button:hover{background-color:#364C65;}
+
+
+			#nextBtn{width:100%; font-size:30px; text-align:right;}
+			#nextBtn a{display:inline-block; width:21px; font-weight:600; color:#efefef; text-decoration:none;}
+
+		/* 목차숨기기 */
+			#container h3{position:absolute; left:-9999px; width:1px; height:1px; line-height:1px; font-size:1px; overflow:hidden;}
+
+  </style>
+  <script>
+		/* 두번째 문법 사용하기 */
+		/* 선택한 문서가 준비가 되면 기능 구현해주세요 */
+		jQuery(document).ready(function(){
+
+
+			jQuery("#mob_footer .menu_ul").hide();
+			
+			/*
+				대상 : #mob_footer .menu
+				이벤트 : 클릭
+				이벤트 대상 : 클릭했을때 menu_ul (class명) 슬라이드다운, 업
+			*/
+			jQuery("#mob_footer .menu").click(function(){
+				jQuery("#mob_footer .menu_ul").slideUp(500,"linear");
+				jQuery(this).children().next().slideDown(500,"linear");
+
+				//jQuery(".main_contact").css({"marginTop":$("menu_ul").height()});
+			});
+
+			/*
+				대상 :  #mo_inc_gnb
+				이벤트 : 클릭
+				이벤트 대상 : .menu_active (class명) 나타나기
+			*/
+			jQuery(".ham2").hide();
+
+			jQuery(".ham1").click(function(){
+				jQuery(".menu_active").show(500,"linear");
+				jQuery(".ham2").show();
+				jQuery(".ham1").hide();
+			});
+
+			jQuery(".ham2").click(function(){
+				jQuery(".menu_active").hide(500,"linear");
+				jQuery(".ham1").show();
+				jQuery(".ham2").hide();
+			});
+
+			
+			
+		/* #################### header 영역 ######################## */
+			
+			/* 자녀요소인 .gnb_div 먼저 숨기기*/
+			jQuery(".gnb_div").hide();
+			
+			/* 
+				[기능만들기]
+				gnb_menu_li 에 마우스올리면 gnb_div (div) 보여지기
+			*/
+			jQuery(".gnb_menu_li0").mouseover(function(){
+				jQuery(".gnb_div0").stop().show();
+			}).mouseout(function(){
+				jQuery(".gnb_div0").stop().hide();
+			});
+
+			jQuery(".gnb_menu_li1").mouseover(function(){
+				jQuery(".gnb_div1").stop().show();
+			}).mouseout(function(){
+				jQuery(".gnb_div1").stop().hide();
+			});
+
+			jQuery(".gnb_menu_li2").mouseover(function(){
+				jQuery(".gnb_div2").stop().show();
+			}).mouseout(function(){
+				jQuery(".gnb_div2").stop().hide();
+			});
+
+			jQuery(".gnb_menu_li5").mouseover(function(){
+				jQuery(".gnb_div3").stop().show();
+			}).mouseout(function(){
+				jQuery(".gnb_div3").stop().hide();
+			});
+
+			jQuery(".gnb_menu_li6").mouseover(function(){
+				jQuery(".gnb_div4").stop().show();
+			}).mouseout(function(){
+				jQuery(".gnb_div4").stop().hide();
+			});
+
+			jQuery(".product_ul2 li a").mouseover(function(){
+				$(this).css({"color":"#ccc"});
+			}).mouseout(function(){
+				jQuery(this).css({"color":"#fff"});
+			});
+		});
+	
+  </script>
+ </head>
+
+ <body>
+	<div id="wrap">
+		<header id="inc_header">
+			<h3>인케이스 헤더</h3>
+			<div id="header_inner">
+				<div id="inc_topbar">
+					<!--<div class="social">
+						<ul>
+							<li></li>
+						</ul>
+					</div>-->
+				</div>
+
+				<div id="inc_logo">
+					<div id="logo_area">
+						<h1>
+							<a href="../index.html" title="인케이스 사이트">
+								<img src="../img/header/incase_logo.png" alt="인케이스 로고"/>
+							</a>
+						</h1>
+					</div>
+					<div id="inc_extra">
+						<ul>
+							<li>
+								<div>
+									<a href="../login/login.html" title="profile">
+										<img src="../img/header/profile.png" alt="profile"/>
+									</a>
+								</div>
+							</li>
+							<li>
+								<div>
+									<a href="#" title="wishlist">
+										<img src="../img/header/wishlist.png" alt="wishlist" onclick="confirm('회원에게만 제공이 되는 서비스입니다. 우선 로그인을 하여 주시기 바랍니다.');"/>
+									</a>
+								</div>
+							</li>
+							<li>
+								<div>
+									<a href="#" title="cart">
+										<img src="../img/header/cart.png" alt="cart"/>
+									</a>
+								</div>
+							</li>
+							<li>
+								<div>
+									<a href="#" title="search">
+										<img src="../img/header/search.png" alt="search"/>
+									</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div id="mo_inc_extra">
+						<ul>
+							<li class="profile_li">
+								<div class="profile_div">
+									<a href="login/login.html" title="profile">
+										<img src="../img/header/profile.png" alt="profile"/>
+									</a>
+									<div class="account_container">
+										<p class="account_title">Log In</p>
+										<form action="#none" method="post">
+											<ul class="form_ul">
+												<li>
+													<label>아이디</label>
+													<input id="userid" type="text" name="userid"
+													maxlength="20" autocomplete="off"/>
+												</li>
+												<li>
+													<label>비밀번호</label>
+													<input id="userpw" type="password" name="userpw"
+													maxlength="20" autocomplete="off"/>
+												</li>
+												<li class="login_extras">
+													<a href="#none" title="아이디/비밀번호찾기">아이디/비밀번호 찾기</a>
+													<a href="#none" title="비회원 주문조회">비회원 주문조회</a>
+												</li>
+												<li>
+													<a class="login_btn" href="#none" title="로그인">로그인</a>
+												</li>
+												<li class="social_login">
+													<a class="so_facebook" href="#none" title="facebook">
+														<img src="../img/mobile/social_facebook.png" alt="페이스북 아이콘"/>
+													</a>
+													<a class="so_naver" href="#none" title="naver">
+														<img src="../img/mobile/social_naver.png" alt="네이버 아이콘"/>
+													</a>
+													<a class="so_kakao" href="#none" title="kakao">
+														<img src="../img/mobile/social_kakao.png" alt="카카오 아이콘"/>
+													</a>
+												</li>
+											</ul>
+											<div class="account_register">
+												<a href="login/login.html" title="회원가입">회원가입</a>
+											</div>
+										</form>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div>
+									<a href="#" title="search">
+										<img src="../img/header/search.png" alt="search"/>
+									</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<nav id="inc_gnb">
+					<ul id="gnb_menu">
+						<li class="gnb_menu_li gnb_menu_li0">
+							<a class="pro_a" href="../sub/sub0_product.html" title="Product"><strong>Product</strong></a>
+							<div class="gnb_div gnb_div0">
+								<ul class="product_ul2 product_ul2_1">
+									<li><a class="tit" href="#none" title="Bags">Bags</a></li>
+									<li><a href="#none" title="백팩">백팩</a></li>
+									<li><a href="#none" title="숄더백/메신저백">숄더백/메신저백</a></li>
+									<li><a href="#none" title="슬링백">슬링백</a></li>
+									<li><a href="#none" title="액티브백">액티브백</a></li>
+								</ul>
+							
+								<ul class="product_ul2">
+									<li><a class="tit" href="#" title="Travel">Travel</a></li>
+									<li><a href="#none" title="더플백">더플백</a></li>
+									<li><a href="#none" title="여행용 백팩">여행용 백팩</a></li>
+									<li><a href="#none" title="여행용 액세서리">여행용 액세서리</a></li>
+								</ul>
+									
+								<ul class="product_ul2">
+									<li><a class="tit" href="#none" title="Protection">Protection</a></li>
+									<li><a href="#none" title="맥북 슬리브">맥북 슬리브</a></li>
+									<li><a href="#none" title="맥북 브리프">맥북 브리프</a></li>
+									<li><a href="#none" title="아이폰 케이스">아이폰 케이스</a></li>
+									<li><a href="#none" title="아이패드 슬리브">아이패드 슬리브</a></li>
+									<li><a href="#none" title="아이패드 케이스">아이패드 케이스</a></li>
+								</ul>
+								
+								<ul class="product_ul2">
+									<li><a class="tit" href="#none" title="Camera">Camera</a></li>
+									<li><a href="#none" title="DSLR 카메라">DSLR 카메라</a></li>
+									<li><a href="#none" title="드론">드론</a></li>
+									<li><a href="#none" title="고프로">고프로</a></li>
+									<li><a href="#none" title="액션카메라">액션카메라</a></li>
+								</ul>
+							
+								<ul class="product_ul2">
+									<li><a class="tit" href="#none" title="Accessories">Accessories</a></li>
+									<li><a href="#none" title="충전기">충전기</a></li>
+									<li><a href="#none" title="애플워치">애플워치</a></li>
+									<li><a href="#none" title="에어팟">에어팟</a></li>
+								</ul>
+							</div>
+						</li>
+
+						<li class="gnb_menu_li gnb_menu_li1">
+							<a href="../sub/sub1_device.html" title="device"><strong>device</strong></a>
+							<div class="gnb_div gnb_div1">
+								<ul class="product_ul2 product_ul2_1">
+									<li><a class="tit" href="#none" title="MacBook">MacBook</a></li>
+									<li><a href="#none" title="맥북 프로 16형(USB-C)">맥북 프로 16형(USB-C)</a></li>
+									<li><a href="#none" title="맥북 프로 15형(USB-C)">맥북 프로 15형(USB-C)</a></li>
+									<li><a href="#none" title="맥북 프로 13형(USB-C)">맥북 프로 13형(USB-C)</a></li>
+									<li><a href="#none" title="맥북 에어 13형(USB-C)">맥북 에어 13형(USB-C)</a></li>
+									<li><a href="#none" title="맥북 12형(USB-C)">맥북 12형(USB-C)</a></li>
+									<li><a href="#none" title="맥북 프로 레티나 15형">맥북 프로 레티나 15형</a></li>
+									<li><a href="#none" title="맥북 프로 레티나 13형">맥북 프로 레티나 13형</a></li>
+									<li><a href="#none" title="맥북 프로 15형">맥북 프로 15형</a></li>
+									<li><a href="#none" title="맥북 프로 13형">맥북 프로 13형</a></li>
+									<li><a href="#none" title="맥북 에어 13형">맥북 에어 13형</a></li>
+									<li><a href="#none" title="맥북 에어 11형">맥북 에어 11형</a></li>
+								</ul>
+									
+								<ul class="product_ul2">
+									<li><a class="tit" href="#none" title="iPhone">iPhone</a></li>
+									<li><a href="#none" title="아이폰 Xs 맥스">아이폰 Xs 맥스</a></li>
+									<li><a href="#none" title="아이폰 Xs">아이폰 Xs</a></li>
+									<li><a href="#none" title="아이폰 XR">아이폰 XR</a></li>
+									<li><a href="#none" title="아이폰 X">아이폰 X</a></li>
+									<li><a href="#none" title="아이폰 8 플러스">아이폰 8 플러스</a></li>
+									<li><a href="#none" title="아이폰 8">아이폰 8</a></li>
+									<li><a href="#none" title="아이폰 7 플러스">아이폰 7 플러스</a></li>
+									<li><a href="#none" title="아이폰 7">아이폰 7</a></li>
+									<li><a href="#none" title="아이폰 6 플러스">아이폰 6 플러스</a></li>
+									<li><a href="#none" title="아이폰 6s">아이폰 6s</a></li>
+									<li><a href="#none" title="아이폰 6s 플러스">아이폰 6s 플러스</a></li>
+									<li><a href="#none" title="아이폰 6">아이폰 6</a></li>
+									<li><a href="#none" title="아이폰 SE">아이폰 SE</a></li>
+								</ul>
+									
+								<ul class="product_ul2">
+									<li><a class="tit" href="#none" title="iPad">iPad</a></li>
+									<li><a href="#none" title="프로 12.5형(USB-C)">프로 12.5형(USB-C)</a></li>
+									<li><a href="#none" title="프로 11형(USB-C)">프로 11형(USB-C)</a></li>
+									<li><a href="#none" title="프로 12.9형">프로 12.9형</a></li>
+									<li><a href="#none" title="프로 10.5형">프로 10.5형</a></li>
+									<li><a href="#none" title="프로 9.7형">프로 9.7형</a></li>
+									<li><a href="#none" title="9.7형">9.7형</a></li>
+									<li><a href="#none" title="에어 2">에어 2</a></li>
+									<li><a href="#none" title="에어">에어</a></li>
+									<li><a href="#none" title="미니 3">미니 3</a></li>
+									<li><a href="#none" title="미니 2">미니 2</a></li>
+									<li><a href="#none" title="미니">미니</a></li>
+								</ul>
+									
+								<ul class="product_ul2">
+									<li><a class="tit" href="#none" title="Camera">Camera</a></li>
+									<li><a href="#none" title="DSLR 카메라">DSLR 카메라</a></li>
+									<li><a href="#none" title="드론">드론</a></li>
+									<li><a href="#none" title="고프로">고프로</a></li>
+									<li><a href="#none" title="액션카메라">액션카메라</a></li>
+								</ul>
+								
+								<ul class="product_ul2">
+									<li><a class="tit" href="#none" title="Apple Watch">Apple Watch</a></li>
+									<li><a href="#none" title="42/44mm">42/44mm</a></li>
+								</ul>
+									
+								<ul class="product_ul2">
+									<li><a class="tit" href="#none" title="AirPods">AirPods</a></li>
+									<li><a href="#none" title="38mm">38mm</a></li>
+								</ul>
+							</div>
+						</li>
+					
+						<li class="gnb_menu_li gnb_menu_li2">
+							<a class="tit" href="../sub/sub2_collection.html" title="Collection"><strong>Collection</strong></a>
+							<div class="gnb_div gnb_div2">
+								<ul class="product_ul2 product_ul2_1">
+									<li><a class="tit" href="#none" title="신상품">신상품</a></li>
+									<li><a href="#none" title="온라인 독점 상품">온라인 독점 상품</a></li>
+									<li><a href="#none" title="콤파스">콤파스</a></li>
+									<li><a href="#none" title="가방">가방</a></li>
+									<li><a href="#none" title="슬리브/케이스">슬리브/케이스</a></li>
+								</ul>
+									
+								<ul class="product_ul2">
+									<li><a class="tit" href="#none" title="컬렉션">컬렉션</a></li>
+									<li><a href="#none" title="Case for Airpods">Case for Airpods</a></li>
+									<li><a href="#none" title="City Backpack">City Backpacks</a></li>
+									<li><a href="#none" title="Via Backpack">Via Backpack</a></li>
+									<li><a href="#none" title="EO Travel Backpack">EO Travel Backpack</a></li>
+									<li><a href="#none" title="Diamond Ripstop">Diamond Ripstop</a></li>
+									<li><a href="#none" title="Nylon Organizers">Nylon Organizers</a></li>
+									<li><a href="#none" title="Compact Sleeve">Compact Sleeve</a></li>
+								</ul>
+										
+								<ul class="product_ul2">
+									<li><a class="tit" href="#none" title="콜라보레이션">콜라보레이션</a></li>
+									<li><a href="#none" title="Incase x Carbon">Incase x Carbon</a></li>
+									<li><a href="#none" title="Kelly Slater">Kelly Slater</a></li>
+									<li><a href="#none" title="Ari Marcopoulos">Ari Marcopoulos</a></li>
+								</ul>
+										
+								<ul class="product_ul2">
+									<li><a class="tit" href="#none" title="혁신 기술">혁신 기술</a></li>
+									<li><a href="#none" title="Flight Nylon">Flight Nylon</a></li>
+									<li><a href="#none" title="Honeycomb Ripstop">Honeycomb Ripstop</a></li>
+									<li><a href="#none" title="Diamond Ripstop">Diamond Ripstop</a></li>
+									<li><a href="#none" title="Woolenex">Woolenex</a></li>
+									<li><a href="#none" title="Ecoya®">Ecoya®</a></li>
+									<li><a href="#none" title="Tensaerlite™">Tensaerlite™</a></li>
+									<li><a href="#none" title="Ariaprene™">Ariaprene™</a></li>
+								</ul>
+									
+								<ul class="product_ul2">
+									<li><a class="tit" href="#none" title="추천 상품">추천 상품</a></li>
+									<li><a href="#none" title="MEN">MEN</a></li>
+									<li><a href="#none" title="WOMEN">WOMEN</a></li>
+									<li><a href="#none" title="단기여행용 백">단기여행용 백</a></li>
+									<li><a href="#none" title="장기여행용 백">장기여행용 백</a></li>
+									<li><a href="#none" title="자전거/운동 백">자전거/운동 백</a></li>
+									<li><a href="#none" title="출사용 백">출사용 백</a></li>
+									<li><a href="#none" title="1인 미디어">1인 미디어</a></li>
+								</ul>
+							</div>
+						</li>
+
+						<li class="gnb_menu_li gnb_menu_li3">
+							<a href="../sub/sub3_brand.html" title="Brand"><strong>Brand</strong></a>
+						</li>
+
+						<li class="gnb_menu_li gnb_menu_li4">
+							<a href="../sub/sub4_CaseStudies.html" title="CaseStudies"><strong>CaseStudies</strong></a>
+						</li>
+
+						<li class="gnb_menu_li gnb_menu_li5">
+							<a href="../sub/sub7_The_Leaf.html" title="The LEAF"><strong>The LEAF</strong></a>
+							<div class="gnb_div gnb_div3">
+								<ul class="product_ul2 product_ul2_1">
+									<li class="ul2a_li0"><a href="#none" title="The LEAF">The LEAF</a></li>
+									<li class="ul2a_li0"><a href="#none" title="Smart Living">Smart Living</a></li>
+									<li class="ul2a_li0"><a href="#none" title="Photo Diary">Photo Diary</a></li>
+								</ul>
+							</div>
+						</li>
+
+						<li class="gnb_menu_li gnb_menu_li6">
+							<a href="../sub/sub6_Incase_Store.html" title="Store"><strong>Store</strong></a>
+							<div class="gnb_div gnb_div4">
+								<ul class="product_ul2 product_ul2_1">
+									<li class="ul2b_li1"><a href="#none" title="직영매장">직영매장</a></li>
+									<li class="ul2b_li1"><a href="#none" title="공식딜러">공식딜러</a></li>
+								</ul>
+							</div>
+						</li>
+
+						<li class="gnb_menu_li gnb_menu_li7">
+							<a href="../sub/sub8_outlet.html" title="Outlet"><strong>Outlet</strong></a>
+						</li>
+					</ul>
+				</nav>
+
+				<nav id="mo_inc_gnb">
+					<div class="menu">
+						<a class="ham1" href="#none" title="hamburger">
+							<span class="hamburger_box">
+								<span class="hamburger_inner inner1"></span>
+								<span class="hamburger_inner inner2"></span>
+								<span class="hamburger_inner inner3"></span>
+							</span>
+						</a>
+						<a class="ham2" href="#none" title="hamburger">
+							<span class="hamburger_box2">
+								<span class="hamburger_inner2">
+									<span class="hamburger_inner inner4"></span>
+									<span class="hamburger_inner inner5"></span>
+								</span>
+							</span>
+						</a>
+						<ul class="menu_active">
+							<li class="drop_down">
+								<a href="../sub/sub0_product.html" title="product">
+									<em>Product</em>
+									<span>+</span>
+								</a>
+							</li>
+							<li class="drop_down">
+								<a href="../sub/sub1_device.html" title="Device">
+									<em>Device</em>
+									<span>+</span>
+								</a>
+							</li>
+							<li class="drop_down">
+								<a href="../sub/sub2_collection.html" title="Collection">
+									<em>Collection</em>
+									<span>+</span>
+								</a>
+							</li>
+							<li class="drop_down level0">
+								<a href="../sub/sub3_brand.html" title="Brand">
+									<em>Brand</em>
+								</a>
+							</li>
+							<li class="drop_down level0">
+								<a href="../sub/sub4_CaseStudies.html" title="CaseStudies">
+									<em>CaseStudies</em>
+								</a>
+							</li>
+							<li class="drop_down">
+								<a href="../sub/sub7_The_Leaf.html" title="The LEAF">
+									<em>The LEAF</em>
+									<span>+</span>
+								</a>
+							</li>
+							<li class="drop_down">
+								<a href="../sub/sub6_Incase_Store.html" title="Store">
+									<em>Store</em>
+									<span>+</span>
+								</a>
+							</li>
+							<li class="drop_down level0">
+								<a href="../sub/sub8_outlet.html" title="Outlet">
+									<em>Outlet</em>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</header>
+		<div id="container">
+			<section class="join_content">
+				<h3>회원가입</h3>
+				<div class="content">
+					<div class="tit_wrap">
+						<div class="tit_box">
+							<h2>SIGN UP</h2>
+							<span class="tit_join">회원가입</span>
+						</div>
+						<ul class="location">
+							<li>로그인</li>
+							<li class="s_location">회원가입</li>
+						</ul>
+					</div>
+					<ul class="join_nav">
+						<li class="on">
+							<p class="on_step1">
+								<span class="black">01</span>
+								<span class="gray">본인인증</span>
+							</p>
+						</li>
+						<li class="on1">
+							<p class="on_step1">
+								<span class="black">02</span>
+								약관동의
+							</p>
+						</li>
+						<li class="on2">
+							<p class="on_step1">
+								<span class="black">03</span>
+								정보입력
+							</p>
+						</li>
+						<li class="on3">
+							<p class="on_step1">
+								<span class="black last">04</span>
+								가입완료
+							</p>
+						</li>
+					</ul>
+					<form id="form_wrap" action="#none" method="post">
+						<fieldset>
+							<legend>회원가입 정보입력 폼</legend>
+							<div class="join_box">
+								<div class="input_area">
+									<div class="input_field">
+										<label for="userid" class="input_field_label">아이디</label>
+										<div class="input_wrap">
+											<input id="userid" type="text" name="userid" required 
+											placeholder=" 아이디를 입력하세요" title="영문 8자 까지 입력" maxlength="8"
+											autocomplete="off" autofocus/>
+											<button id="button0" type="button" onclick="alert('사용가능한 아이디 입니다.')">중복 확인</button>
+											<span class="message">※ 아이디를 입력하세요.</span>
+										</div>
+									</div>
+									<div class="input_field">
+										<label for="userpw" class="input_field_label">비밀번호</label>
+										<div class="input_wrap">
+											<input id="userpw" type="password" name="userpw" required 
+											placeholder="10-16자 이내 영문자, 숫자의 조합으로 이루어져야 합니다." title="10-16자 이내 영문자, 숫자의 조합으로 이루어져야 합니다." maxlength="16" autocomplete="off"/>
+											<span class="message">※ 비밀번호를 입력하세요.</span>
+										</div>
+									</div>
+									<div class="input_field">
+										<label for="userpwchk" class="input_field_label">비밀번호 확인</label>
+										<div class="input_wrap">
+											<input id="userpwchk" type="password" name="userpwchk" required 
+											title="10-16자 이내 영문자, 숫자의 조합으로 이루어져야 합니다" maxlength="16" autocomplete="off"/>
+											<span class="message">※ 비밀번호를 입력하세요.</span>
+										</div>
+									</div>
+									<div class="radio_wrap">
+										<span class="input_tit">성별</span>
+										<span class="input_gender">
+											<input id="female" type="radio" name="radioChk" required checked/><label for="female">여자</label>
+											<input id="male" type="radio" name="radioChk" required/><label for="male">남자</label>
+										</span>
+									</div>
+									<div class="input_field">
+										<label for="username" class="input_field_label">이름</label>
+										<div class="input_wrap">
+											<input id="username" type="text" name="username" required 
+											placeholder="한글 이름 입력" title="8자 까지 입력." maxlength="8" autocomplete="off"/>
+											<span class="message">※ 이름을 입력하세요</span>
+										</div>
+									</div>
+									<div class="input_field">
+										<label for="userbirthY" class="input_field_label">생년월일</label>
+										<div class="input_wrap">
+											<select id="userbirthY" name="userbirth" title="년도선택">
+												<option value="2006">2006</option>
+												<option value="2005">2005</option>
+												<option value="2004">2004</option>
+												<option value="2003">2003</option>
+												<option value="2002">2002</option>
+												<option value="2001">2001</option>
+												<option value="2000">2000</option>
+												<option value="1999">1999</option>
+												<option value="1998">1998</option>
+												<option value="1997">1997</option>
+												<option value="1996">1996</option>
+												<option value="1995">1995</option>
+												<option value="1994">1994</option>
+												<option value="1993">1993</option>
+												<option value="1992">1992</option>
+												<option value="1991">1991</option>
+												<option value="1990">1990</option>
+												<option value="1990">1990</option>
+												<option value="1989">1989</option>
+												<option value="1988">1988</option>
+												<option value="1987">1987</option>
+												<option value="1990">1986</option>
+												<option value="1990">1985</option>
+												<option value="1990">1984</option>
+												<option value="1990">1983</option>
+												<option value="1990">1982</option>
+												<option value="1990">1981</option>
+												<option value="1990">1980</option>
+												<option value="1990">1979</option>
+												<option value="1990">1978</option>
+												<option value="1990">1977</option>
+												<option value="1990">1976</option>
+												<option value="1990">1975</option>
+												<option value="1990">1974</option>
+												<option value="1990">1973</option>
+												<option value="1990">1972</option>
+												<option value="1990">1971</option>
+												<option value="1990">1970</option>
+												<option value="1990">1969</option>
+												<option value="1990">1968</option>
+												<option value="1990">1967</option>
+												<option value="1990">1966</option>
+												<option value="1990">1965</option>
+												<option value="1990">1964</option>
+												<option value="1990">1963</option>
+												<option value="1990">1962</option>
+												<option value="1990">1961</option>
+												<option value="1990">1960</option>
+												<option value="1990">1959</option>
+												<option value="1990">1958</option>
+												<option value="1990">1957</option>
+												<option value="1990">1956</option>
+												<option value="1990">1955</option>
+												<option value="1990">1954</option>
+												<option value="1990">1953</option>
+												<option value="1990">1952</option>
+												<option value="1990">1951</option>
+												<option value="1990">1950</option>
+												<option value="1990">1949</option>
+												<option value="1990">1948</option>
+												<option value="1990">1947</option>
+												<option value="1990">1946</option>
+												<option value="1990">1945</option>
+												<option value="1990">1944</option>
+												<option value="1990">1943</option>
+												<option value="1990">1942</option>
+												<option value="1990">1941</option>
+												<option value="1990">1940</option>
+											</select>
+											<select id="userbirthM" name="userbirth" title="생년월 선택">
+												<option value="01">01</option>
+												<option value="01">02</option>
+												<option value="03">03</option>
+												<option value="04">04</option>
+												<option value="05">05</option>
+												<option value="06">06</option>
+												<option value="07">07</option>
+												<option value="08">08</option>
+												<option value="09">09</option>
+												<option value="10">10</option>
+												<option value="11">11</option>
+												<option value="12">12</option>
+											</select>
+											<select id="userbirthD" name="userbirth" title="생년일 선택">
+												<option value="01">01</option>
+												<option value="01">02</option>
+												<option value="03">03</option>
+												<option value="04">04</option>
+												<option value="05">05</option>
+												<option value="06">06</option>
+												<option value="07">07</option>
+												<option value="08">08</option>
+												<option value="09">09</option>
+												<option value="10">10</option>
+												<option value="11">11</option>
+												<option value="12">12</option>
+												<option value="13">13</option>
+												<option value="14">14</option>
+												<option value="15">15</option>
+												<option value="16">16</option>
+												<option value="17">17</option>
+												<option value="18">18</option>
+												<option value="19">19</option>
+												<option value="20">20</option>
+												<option value="21">21</option>
+												<option value="22">22</option>
+												<option value="23">23</option>
+												<option value="24">24</option>
+												<option value="25">25</option>
+												<option value="26">26</option>
+												<option value="27">27</option>
+												<option value="28">28</option>
+												<option value="29">29</option>
+												<option value="30">30</option>
+												<option value="31">31</option>
+											</select>
+										</div>
+									</div>
+									<div class="input_field">
+										<label for="mobileFirstNo" class="input_field_label">휴대전화</label>
+										<div class="input_wrap">
+											<select id="mobileFirstNo" name="mobileFirstNo" title="전화번호 앞자리 선택">
+												<option value="010">010</option>
+												<option value="011">011</option>
+												<option value="016">016</option>
+												<option value="016">017</option>
+												<option value="016">019</option>
+												<option value="help">문의</option>
+											</select>
+											<input id="mobileSecondNo" type="text" name="mobileSecondNo" title="전화번호 중간자리 입력"
+											required/>
+											<input id="mobileLastNo" type="text" name="mobileLastNo" title="전화번호 끝자리 입력"
+											required/>
+										</div>
+									</div>
+									<div class="input_field">
+										<label for="userid" class="input_field_label">이메일</label>
+										<div class="input_wrap">
+											<input id="email" type="email" name="email" required 
+											placeholder=" 1234 @ gmail.com" title="1234@gmail.com" maxlength="20"
+											autocomplete="off"/>
+											<span class="message">※ 이메일을 입력하세요.</span>
+										</div>
+									</div>
+									<div class="input_field_address">
+										<label for="address" class="input_field_label">주소</label>
+										<div class="input_address">
+											<input id="address" type="text" name="address" required/>
+											<button class="add_btn" type="button">우편번호검색</button>
+										</div>
+										<div class="input_address1">
+											<input id="address1" type="text" name="address1" required/>
+											<input id="address2" type="text" name="address2" required/>
+											<span class="message">※ 상세주소를 입력하세요</span>
+										</div>
+									</div>
+								</div>
+								<div class="privacy_wrap">
+									<div class="radio_wrap">
+										<span class="input_tit">개인정보 유효기간</span>
+										<span class="input_privacy">
+											<input id="ra1" type="radio" name="ra1" required/><label for="ra1">탈퇴 시 파기</label>
+											<input id="ra2" type="radio" name="ra1" required/><label for="ra2">1년</label>
+										</span>
+									</div>
+									<p class="privacy_info">
+										설정된 개인정보 유효기간 동안 로그인 등 이용이 없으면 휴면 회원으로 전환 되어 개인정보를 분리 저장/관리 또는 파기합니다.
+									</p>
+								</div>
+								<div class="join_ad_wrap">
+									<h5>광고성 정보, 이벤트 메일 수신</h5>
+									<div class="join_ad_box">
+										<div class="radio_wrap_sms">
+											<span class="input_tit">SMS 수신여부</span>
+											<span class="radio_sms">
+												<input id="ra3" type="radio" name="ra3" required/><label class="radi" for="ra3">예</label>
+												<input id="ra4" type="radio" name="ra3" required/><label class="radi" for="ra4">아니오</label>
+											</span>
+										</div>
+										<div class="radio_wrap_email">
+											<span class="input_tit">이메일 수신여부</span>
+											<span class="radio_email">
+												<input id="ra5" type="radio" name="ra5" required/><label class="radi" for="ra5">예</label>
+												<input id="ra6" type="radio" name="ra5" required/><label class="radi" for="ra6">아니오</label>
+											</span>
+										</div>
+										<div class="join_info_text">
+											<p>- 수신 동의 시 광고성 및 이벤트 정보를 SMS 또는 이메일을 통해 받아 보실 수 있습니다.</p>
+											<p>- 회원가입 및 주문배송 또는 공지 내용의 이메일은 수신 여부와 상관 없이 모든 회원에게 SMS와<br/>
+											&nbsp;&nbsp;이메일로 발송 될 수 있습니다.</p>
+										</div>
+									</div>
+								</div>
+								<div class="join_button">
+									<input id="jo_button" type="submit" value="가입하기" title="가입하기 버튼"/>
+								</div>
+								<div id="nextBtn">
+									<a href="../login/join_step4.html" title="로그인스텝4"><span>&gt;</span></a>
+								</div>
+							</div>
+						</fieldset>
+					</form>
+				</div>
+			</section>
+		</div>
+		<footer id="inc_footerWrap">
+			<div id="goTop">
+				<p>
+					<a href="#" title="Btn_top">
+						<img src="../img/footer/BtnTop_.png" alt="BtnTop 이미지"/>
+					</a>
+				</p>
+			</div>
+			<div id="footer">
+				<div id="footer_main">
+					<div class="main_menu">
+						<ul class="main_ul">
+							<li class="menu">
+								<h4>
+									<a href="#none" title="about">
+										<span class="menu_tit">About</span>
+										<span class="ico">+</span>
+									</a>
+								</h4>
+								<ul class="menu_ul">
+									<li><a href="#none" title="소개">소개</a></li>
+									<li><a href="#none" title="타임라인">타임라인</a></li>
+									<li><a href="#none" title="사회공헌">사회공헌</a></li>
+									<li><a href="#none" title="인재채용">인재채용</a></li>
+									<li><a href="#none" title="프레스">프레스</a></li>
+									<li><a href="#none" title="제휴문의">제휴문의</a></li>
+								</ul>
+							</li>
+							<li class="menu">
+								<h4>
+									<a href="#none" title="brand">
+										<span class="menu_tit">Brand</span>
+										<span class="ico">+</span>
+									</a>
+								</h4>
+								<ul class="menu_ul">
+									<li><a href="#none" title="콜라보레이션">콜라보레이션</a></li>
+									<li><a href="#none" title="The LEAF">The LEAF</a></li>
+									<li><a href="#none" title="스마트리빙">스마트리빙</a></li>
+									<li><a href="#none" title="스마트리빙 모집">스마트리빙 모집</a></li>
+									<li><a href="#none" title="Photo Diary">Photo Diary</a></li>
+									<li><a href="#none" title="기업 대량주문">기업 대량주문</a></li>
+									<li><a href="#none" title="Brand Ambassadors">Brand Ambassadors</a></li>
+								</ul>
+							</li>
+							<li class="menu">
+								<h4>
+									<a href="#none" title="매장안내">
+										<span class="menu_tit">매장안내</span>
+										<span class="ico">+</span>
+									</a>
+								</h4>
+								<ul class="menu_ul">
+									<li><a href="#none" title="직영 매장">직영 매장</a></li>
+									<li><a href="#none" title="공식 딜러">공식 딜러</a></li>
+								</ul>
+							</li>
+							<li class="menu">
+								<h4>
+									<a href="#none" title="shop">
+										<span class="menu_tit">Shop</span>
+										<span class="ico">+</span>
+									</a>
+								</h4>
+								<ul class="menu_ul">
+									<li><a href="#none" title="가방">가방</a></li>
+									<li><a href="#none" title="여행">여행</a></li>
+									<li><a href="#none" title="보호">보호</a></li>
+									<li><a href="#none" title="카메라">카메라</a></li>
+									<li><a href="#none" title="악세사리">악세사리</a></li>
+									<li><a href="#none" title="아울렛">아울렛</a></li>
+									<li><a href="#none" title="보호">이벤트</a></li>
+								</ul>
+							</li>
+							<li class="menu">
+								<h4>
+									<a href="#none" title="support">
+										<span class="menu_tit">Support</span>
+										<span class="ico">+</span>
+									</a>
+								</h4>
+								<ul class="menu_ul">
+									<li><a href="#none" title="정품 등록">정품 등록</a></li>
+									<li><a href="#none" title="AS 접수">AS 접수</a></li>
+									<li><a href="#none" title="자주묻는질문">자주묻는질문</a></li>
+									<li><a href="#none" title="약관">약관</a></li>
+									<li><a href="#none" title="개인정보 취급방침">개인정보 취급방침</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<div class="main_contact">
+						<div class="main_div">
+							<div class="helpDesk">
+								<strong>HELP DESK</strong>
+								<p>02. 544. 1510( A/S 4번)</p>
+							</div>
+							<div class="time">
+								<p>평일 AM 10:00 ~ PM 06:00</p>
+								<p>점심 AM 12:00 ~ PM 01:00</p>
+								<p>휴무 토, 일, 공휴일</p>
+							</div>
+							<div class="newsLetter">
+								<p>
+									인케이스의 가장 최신 뉴스를 받아보세요.<br/>
+									처음 뉴스레터를 구독하시는 분들께 10% 할인 쿠폰을 드립니다.
+								</p>
+							</div>
+							<div class="emailArea">
+								<form action="#none" method="post">
+									<fieldset>
+										<legend>이메일</legend>
+										<p class="e">
+											<label for="email0">email</label><input id="email0" type="text" name="email0" title="이메일주소를 입력하세요"
+											placeholder="이메일 주소" autocomplete="off"/>
+											<input id="apply" type="submit" value="신청" title="신청하기 버튼"/>
+										</p>
+										<p class="agree">
+											<span>개인정보 취급방침에 동의합니다.</span>
+											<input id="chk0" type="checkbox" name="chk0"/><label for="chk0">동의</label>
+										</p>
+									</fieldset>
+								</form>
+							</div>
+
+							<div class="socialstyles">
+								<a href="#none" title="facebook_icon">
+									<img src="../img/footer/facebook.png" alt="facebook_icon"/>
+								</a>
+								<a href="#none" title="instagram_icon">
+									<img src="../img/footer/instagram.png" alt="instagram_icon"/>
+								</a>
+								<a href="#none" title="twitter_icon">
+									<img src="../img/footer/twitter.png" alt="twitter_icon"/>
+								</a>
+								<a href="#none" title="youtube_icon">
+									<img src="../img/footer/youtube.png" alt="youtube_icon"/>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="footer_comp">
+					<div class="comp_info">
+						<div class="company_info">
+							<span>인케이스코리아</span><br/>
+							<span>
+								개인정보취급방침 프리즘디스트리뷰션(주)<i>|</i>대표 양준무<i>|</i>서울시 강남구 논현동 111-37 N빌딩 5층<i>|</i>(우) 135-010
+							</span><br/>
+							<span>
+								사업자등록번호 <a href="#" title="사업자등록번호"><span class="numb">211-88-37764</span></a> <i>|</i> 통신판매업번호 제2010-서울강남-00658호 <i>|</i> 호스팅사업자 : 메이크샵 이메일 문의 : <a href="#" title=""><span class="numb">help@pr1zm.com</span></a>
+							</span>
+						</div>
+						<div class="escrow_mark">
+							<p>
+								<img src="../img/footer/escrow.png" alt="escrow 이미지"/>
+							</p>
+						</div>
+					</div>
+					<div class="comp_copyright">
+						<p>
+							<a href="#none" title="GJ_HONG">&copy; 2020 GJ_HONG</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<footer id="mob_inc_footerWrap">
+			<div id="mob_goTop">
+				<p>
+					<a href="#" title="Btn_top">
+						<img src="../img/footer/BtnTop_.png" alt="BtnTop 이미지"/>
+					</a>
+				</p>
+			</div>
+			<div id="mob_footer">
+				<div id="mob_footer_main">
+					<div class="main_menu">
+						<ul class="main_ul">
+							<li class="menu">
+								<h4>
+									<a href="#none" title="about">
+										<span class="menu_tit">About</span>
+										<span class="ico">+</span>
+									</a>
+								</h4>
+								<ul class="menu_ul">
+									<li><a href="#none" title="소개">소개</a></li>
+									<li><a href="#none" title="타임라인">타임라인</a></li>
+									<li><a href="#none" title="사회공헌">사회공헌</a></li>
+									<li><a href="#none" title="인재채용">인재채용</a></li>
+									<li><a href="#none" title="프레스">프레스</a></li>
+									<li><a href="#none" title="제휴문의">제휴문의</a></li>
+								</ul>
+							</li>
+							<li class="menu">
+								<h4>
+									<a href="#none" title="brand">
+										<span class="menu_tit">Brand</span>
+										<span class="ico">+</span>
+									</a>
+								</h4>
+								<ul class="menu_ul">
+									<li><a href="#none" title="콜라보레이션">콜라보레이션</a></li>
+									<li><a href="#none" title="The LEAF">The LEAF</a></li>
+									<li><a href="#none" title="스마트리빙">스마트리빙</a></li>
+									<li><a href="#none" title="스마트리빙 모집">스마트리빙 모집</a></li>
+									<li><a href="#none" title="Photo Diary">Photo Diary</a></li>
+									<li><a href="#none" title="기업 대량주문">기업 대량주문</a></li>
+									<li><a href="#none" title="Brand Ambassadors">Brand Ambassadors</a></li>
+								</ul>
+							</li>
+							<li class="menu">
+								<h4>
+									<a href="#none" title="매장안내">
+										<span class="menu_tit">매장안내</span>
+										<span class="ico">+</span>
+									</a>
+								</h4>
+								<ul class="menu_ul">
+									<li><a href="#none" title="직영 매장">직영 매장</a></li>
+									<li><a href="#none" title="공식 딜러">공식 딜러</a></li>
+								</ul>
+							</li>
+							<li class="menu">
+								<h4>
+									<a href="#none" title="shop">
+										<span class="menu_tit">Shop</span>
+										<span class="ico">+</span>
+									</a>
+								</h4>
+								<ul class="menu_ul">
+									<li><a href="#none" title="가방">가방</a></li>
+									<li><a href="#none" title="여행">여행</a></li>
+									<li><a href="#none" title="보호">보호</a></li>
+									<li><a href="#none" title="카메라">카메라</a></li>
+									<li><a href="#none" title="악세사리">악세사리</a></li>
+									<li><a href="#none" title="아울렛">아울렛</a></li>
+									<li><a href="#none" title="보호">이벤트</a></li>
+								</ul>
+							</li>
+							<li class="menu">
+								<h4>
+									<a href="#none" title="support">
+										<span class="menu_tit">Support</span>
+										<span class="ico">+</span>
+									</a>
+								</h4>
+								<ul class="menu_ul">
+									<li><a href="#none" title="정품 등록">정품 등록</a></li>
+									<li><a href="#none" title="AS 접수">AS 접수</a></li>
+									<li><a href="#none" title="자주묻는질문">자주묻는질문</a></li>
+									<li><a href="#none" title="약관">약관</a></li>
+									<li><a href="#none" title="개인정보 취급방침">개인정보 취급방침</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<div class="main_contact">
+						<div class="main_div">
+							<div class="helpDesk">
+								<strong>HELP DESK</strong>
+								<p>02. 544. 1510( A/S 4번)</p>
+							</div>
+							<div class="time">
+								<p>평일 AM 10:00 ~ PM 06:00</p>
+								<p>점심 AM 12:00 ~ PM 01:00</p>
+								<p>휴무 토, 일, 공휴일</p>
+							</div>
+							<div class="newsLetter">
+								<p>
+									인케이스의 가장 최신 뉴스를 받아보세요.<br/>
+									처음 뉴스레터를 구독하시는 분들께 10% 할인 쿠폰을 드립니다.
+								</p>
+							</div>
+							<div class="emailArea">
+								<form action="#none" method="post">
+									<fieldset>
+										<legend>이메일</legend>
+										<p class="e">
+											<label for="mo_email">email</label><input id="mo_email" type="text" name="mo_email" title="이메일주소를 입력하세요"
+											placeholder="이메일 주소" autocomplete="off"/>
+											<input id="mo_apply" type="submit" value="신청" title="신청하기 버튼"/>
+										</p>
+										<p class="agree">
+											<span>개인정보 취급방침에 동의합니다.</span>
+											<input id="mo_chk" type="checkbox" name="mo_chk"/><label for="mo_chk">동의</label>
+										</p>
+									</fieldset>
+								</form>
+							</div>
+							<div class="socialstyles">
+								<a href="#none" title="facebook_icon">
+									<img src="../img/footer/facebook.png" alt="facebook_icon"/>
+								</a>
+								<a href="#none" title="instagram_icon">
+									<img src="../img/footer/instagram.png" alt="instagram_icon"/>
+								</a>
+								<a href="#none" title="twitter_icon">
+									<img src="../img/footer/twitter.png" alt="twitter_icon"/>
+								</a>
+								<a href="#none" title="youtube_icon">
+									<img src="../img/footer/youtube.png" alt="youtube_icon"/>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="mob_footer_comp">
+					<div class="comp_info">
+						<div class="company_info">
+							<span>인케이스코리아</span><br/>
+							<span>
+								개인정보취급방침 프리즘디스트리뷰션(주)<i>|</i>대표 양준무<i>|</i>서울시 강남구 논현동 111-37 N빌딩 5층<i>|</i>(우) 135-010
+							</span><br/>
+							<span>
+								사업자등록번호 <a href="#none" title="사업자등록번호"><span class="numb">211-88-37764</span></a> <i>|</i> 통신판매업번호 제2010-서울강남-00658호 <i>|</i> 호스팅사업자 : 메이크샵 이메일 문의 : <a href="#" title=""><span class="numb">help@pr1zm.com</span></a>
+							</span>
+						</div>
+						<div class="escrow_mark">
+							<p>
+								<img src="img/footer/escrow.png" alt="escrow 이미지"/>
+							</p>
+						</div>
+					</div>
+					<div class="comp_copyright">
+						<p>
+							<a href="#none" title="GJ_HONG">&copy; 2020 GJ_HONG</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+ </body>
+</html>
+

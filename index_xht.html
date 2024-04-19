@@ -1,0 +1,1401 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+ <head>
+  <title>incase</title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  <style type="text/css">
+		/*############ reset ###############*/
+			*{margin:0; padding:0;}
+			li{list-style-type:none;}
+			a:link, a:visited{text-decoration:none; color:#333;}
+			a:hover, a:focus
+			
+		
+		/*################# wrap 영역 ####################*/
+			#wrap{max-width:1920px; width:100%;  margin:0 auto;}
+		
+		
+		
+		/*############## inc_header 영역 ################*/
+			#inc_header{width:100%; height:100px; background-color:#fff; margin:0 auto; 
+			position:relative; z-index:1;}
+
+		/*############## header 영역 ###############*/
+			#header{width:100%; height:100%;  margin:0 auto; position:relative;}
+		
+		/*############### inc_topbar 영역 #################*/
+			#inc_topbar{width:100%; height:10px; background-color:#000;}
+
+		/*
+			1) logo_area 영역과 inc_extra  float:left 로 붙이기
+		*/
+		/*############# inc_logo 영역 ###############*/	
+			#inc_logo{width:100%; height:50px; margin:0 auto;
+			border-bottom:1px solid #ccc;
+			position:relative;}
+
+			#logo_area{width:100%; height:50px;}
+			#logo_area h1{width:200px; height:36px; padding:7px 0; margin:0 auto;}
+			#logo_area h1 a{display:block; width:100%; height:100%;}
+		
+			/* 로고 이미지 사이즈 : 246px * 44px */
+			#inc_logo h1 a img{width:100%; height:100%;}
+
+		/*############# inc_extra 영역 ###############*/
+			#inc_extra{width:200px; height:50px;
+			position:absolute; right:82px; top:0;}
+			#inc_extra ul{width:100%; height:100%;}
+			#inc_extra ul li{width:44px; height:100%; float:left;}
+
+			#inc_extra ul li div{width:36px; height:38px; 
+			margin-top:14px; margin-right:8px;}
+			#inc_extra ul li div a{display:block; width:100%;}
+			#inc_extra ul li div img{width:100%; height:100%;}
+
+
+		/*############# inc_gnb 영역 ###############*/
+			#inc_gnb{width:100%; height:39px; margin:0 auto; }
+
+		/*############# gnb_menu (ul) 영역 ###############*/
+			#gnb_menu{width:1440px; height:100%; margin:0 auto;}
+
+		/*############# gnb_menu (li) 영역 ###############*/
+			/*
+				전체너비 :1440px
+				li의 갯수 : 8개
+
+				960 / 8 == 180
+				li의 너비 : 180px * 33px 사용
+			*/
+			#gnb_menu li{width:165px; height:100%; float:left;}
+			
+			#gnb_menu li a{line-height:39px; padding:0 20px; color:#fff;}
+			#gnb_menu li a strong{font-weight:500; color:#333;}
+
+		/*########### li 개별설정 ##############*/
+		/*.store / .outlet 글자색상 바꾸기 */
+			#gnb_menu .store strong{color:orange;}
+			#gnb_menu .outlet strong{color:orange;}
+
+		/*############## #gnb_menu의  product_ul1 (ul) 영역 ###################*/
+			#gnb_menu li .product_ul1{width:1200px; height:700px; 
+			background-color:rgba(255 255 255 0.5);}
+
+		/*####### #gnb_menu 의 기능 영역 ########*/
+			#gnb_menu li .product_ul1{display:none; }
+			#gnb_menu li:hover .product_ul1{display:block; border-top:5px solid #f90;}
+
+		/*############## gnb_menu의 product_ul1 (ul)안의  product_ul2 (ul) 영역 ###########*/
+
+			#gnb_menu li .product_ul2 li{font-size:12px;}
+			#gnb_menu li .product_ul2 li a{color:#fff;}
+
+
+
+		/*############ inc_container 1차 영역 ###############*/
+			#inc_container{width:100%; margin:0 auto;}
+
+		/*################## visual 영역  ##################*/
+			#visual{width:100%; height:700px; margin:0 auto;}
+
+		/*################## visual / ul ##################*/
+			#visual ul{width:100%; height:100%; margin:0 auto;}
+
+		/*################## visual / li ##################*/
+			#visual li{width:100%; height:100%; 
+			background-image:url("img/main0.jpg");
+			background-size:100%;
+			background-repeat:no-repeat;
+			background-position:center center;}
+
+		/*############# a태그 영역 ################*/
+			#visual a{display:block; width:100%; height:100%; position:relative;}
+
+		/*############### a태그의 span(.textArea) 영역 #############*/
+			#visual a .textArea{display:block; width:618px; height:125px; color:#fff; 
+			position:absolute; left:350px; bottom:90px;
+			font-family:'Helvetica Neue', Helvetica,
+			'Noto Sans KR', 'Apple SD Gothic Neo', 
+			'Malgun Gothic', San-serif, Gulim
+			}
+
+		/*############### a태그의 button 영역 #############*/
+			#visual a .textArea button{width:80px; height:30px;
+			background-color:#222; color:#fff;
+			border:1px solid #222; margin:10px 0;}
+
+			#visual a .textArea strong{display:block; width:100%;
+			font-size:40px; font-weight:800;}
+			#visual a .textArea span{display:block; width:100%; 
+			font-size:14px;}
+
+
+		/*####################### collectionWrap ##########################*/
+		/*collectionWrap 1차영역*/
+			#collectionWrap{width:100%; height:520px; overflow:hidden;}
+		/*### 실제사용 영역*/
+			#collection{width:1260px; height:390px; margin:65px auto;}
+		
+		/*################# collection / h3 (titleArea) 영역 ###################*/
+			#collection .titleArea{width:100%;}
+			#collection h3{width:100%; font-size:30px; line-height:60px; text-align:center;}
+
+		/*################# collection / ul 영역 ####################*/
+			#collection ul{width:100%; height:300px; overflow:hidden;}
+			/*
+				li 영역 나누기
+				
+				전체너비 : 1260px
+				li 의 갯수 : 3개
+
+				1260 / 3 == 420px
+				li 사용크기 == 420px 사용
+			*/
+			/*li원래 크기 420px * 300px*/
+			#collection li{width:410px; height:300px; position:relative; float:left; margin-right:10px;}
+			#collection a{display:block; width:100%; height:100%;}
+			
+			#collection a .imgs{display:block; width:100%; height:100%;}
+			#collection a .imgs img{width:100%; height:100%;}
+
+			#collection a .text{display:block; width:100%; color:#fff; text-align:center;
+			right:0px; bottom:118px; position:absolute;}
+			#collection a .text strong{display:block; width:100%; font-size:24px;}
+			#collection a .text span.desc{display:block; width:100%;  font-size:14px;}
+
+
+
+		/*##################### newproductsWrap #######################*/
+		/* newproductsWrap 1차영역*/
+			#newproductsWrap{width:100%; height:530px; background-color:#a2bfa3; overflow:hidden; }
+		/*### 실제사용 영역*/
+			#newproducts{width:1360px; height:470px; background-color:#a2bfa3; margin:30px auto;}
+
+		/*################# newproducts / titleArea 영역 ###################*/
+			#newproducts .titleArea{width:300px; height:470px; font-size:30px; float:left; }
+			#newproducts .titleArea .tit{width:100%; height:46px;
+			text-align:center; margin-top:214px;}
+
+
+		/*################# newproducts / scrollArea 영역 ###################*/
+			#newproducts .scrollArea{width:1060px; height:100%; float:left; }
+			
+			#newproducts .scrollArea ul{width:1060px; height:280px; margin-top:95px;}
+
+		/*############# .scrollArea / li 작업하기 ###################*/
+			/*
+				ul의 전체너비 : 1060px
+				li의 갯수 : 5개 (++ 현재페이지는 5개이나 제품군이 더 늘어났을때
+											슬라이딩 윈도우로 표현하고 싶습니다.)
+
+				1060px / 5 == 212px
+				li하나당 212px * 445px 사용
+			*/
+			#newproducts .scrollArea ul li{width:212px; height:280px; float:left;}
+		
+		/*############# .scrollArea / div(.product)작업하기 ###################*/
+			#newproducts .product{width:212px; height:100%;}
+			#newproducts .product a{display:block; width:100%; height:100%;}
+		
+		/*########## div(.product) / span (.img) 영역 ############ */
+			#newproducts .product .img{display:block; width:100%;}
+			#newproducts .product .img img{width:100%;}
+
+		/*########## div(.product) / span (.text) 영역 ############ */
+			#newproducts .product .text{display:block; width:200px;}
+			#newproducts .product .text strong{display:block; width:100%;}
+			#newproducts .product .text em{font-style:normal;}
+
+
+		/*###################### The Latest Wrap #######################*/
+		/* thelatestWrap 1차영역*/
+			#thelatestWrap{width:100%; overflow:hidden; }
+		/*### 실제사용 영역*/
+			#thelatest{width:1485px; height:590px; margin:20px auto;}
+
+		/*################# thelatest / h3 (.titleArea) 영역 ###################*/
+			#thelatest .titleArea{width:100%;}
+			#thelatest h3{width:100%; font-size:30px; line-height:80px; text-align:center; }
+		
+		/*################# thelatest / div (.latestArea) 영역 ###################*/
+			#thelatest .latestArea{width:100%; height:490px;}
+
+		/*################# thelatest / ul 영역 ####################*/
+			#thelatest ul{width:100%; height:100%; }
+
+		/*############# div (.latestArea) /  li작업하기 ###################*/
+			/*
+				li 영역 나누기
+				
+				전체너비 : 1470px
+				li 의 갯수 : 3개
+
+				1470 / 3 == 490px
+				li 사용크기 == 490px 사용
+			*/
+			/*li원래 크기 490px * 490px*/
+			#thelatest li{width:490px; height:490px; margin-right:5px;  float:left; position:relative; }
+
+			#thelatest li a{display:block; width:100%; height:100%;}
+
+			#thelatest li a span.img{display:block; width:100%; height:100%;}
+			#thelatest li a span.img img{width:100%; height:100%;}
+
+			#thelatest li a span.text{display:block; width:100%; height:22px; line-height:22px; 
+			font-size:20px; color:#fff; text-align:center;
+			left:0px; top:234px; position:absolute;}
+
+		/*############### div(.latestArea ) / lastArea_ul (ul) 영역 ############## */
+			#thelatest .latestArea .lastArea_ul{width:490px; height:490px;}
+
+		/*################### lastArea_ul (ul) / li영역 ################### */
+			/*
+				ul 전체너비 : 490px
+
+				li의 갯수:4개
+
+				li 하나당 240px * 240px 사용
+			*/
+			#thelatest .lastArea_ul li{width:240px; height:242px; margin-bottom:5px; position:relative;}
+			#thelatest .lastArea_ul li a{display:block; width:100%;}
+
+			#thelatest .lastArea_ul .img{}
+			#thelatest .lastArea_ul .text{display:block; width:100%; height:44px; font-size:18px;
+			left:0; top:110px; position:absolute;}
+			#thelatest .lastArea_ul .text strong{display:block; width:100%;}
+
+
+		/*####################### categoriesWrap ##########################*/
+		/* categoriesWrap 1차영역*/
+			#categoriesWrap{width:100%; overflow:hidden;}
+		/*### 실제사용 영역*/
+			#categories{width:1204px; margin:20px auto;}
+
+		/*################# categories / h3 (.titleArea) 영역 ###################*/
+			#categories .titleArea{width:100%;}
+			#categories h3{width:100%; font-size:30px; line-height:80px; text-align:center; }
+
+		/*################# categories / cate_main 이미지 영역 ####################*/
+			#categories .cate_main{width:1204px; height:677px; margin-bottom:20px;}
+			#categories .cate_main img{width:100%; height:100%;}
+		
+		/*################# categories / cate_menu ( ul )영역 ####################*/
+			#categories ul.cate_menu{width:1224px; overflow:hidden;}
+		
+		/*################# categories / cate_menu li영역 ####################*/
+			/*
+				ul 전체너비 : 1224px
+				li 갯수 : 4개
+
+				1204 / 4 == 306px * 306px 사용
+			*/
+			/*li 원래 사이즈 306 * 306 */
+			#categories .cate_menu li{width:286px; height:286px;
+			margin:0 20px 20px 0; float:left; position:relative;}
+		
+		/*################# categories / cate_img (div) 영역 ####################*/
+			#categories .cate_img{width:286px; height:286px;}
+			#categories .cate_img img{width:100%; height:100%;}
+		
+		/*################# categories / cate_title (div) 영역 ####################*/
+			#categories .cate_title{ width:140px; height:20px; 
+			left:10px; top:10px; position:absolute; text-indent:10px;}
+
+		/*################# cate_title / h4 영역 ####################*/
+			#categories .cate_title h4{font-size:15px;}
+			#categories .cate_title h4 i{font-style:normal;}
+		
+
+		/*################# cate_title / ul (.cate_sub) 영역 ####################*/
+			#categories .cate_title ul{width:100%; height:168px; font-size:13px;display:none;}
+		
+		/*################# cate_title / ul li 영역 ####################*/
+			#categories .cate_title .cate_sub li{width:100%; height:24px;  line-height:26px; margin:0;}
+			#categories .cate_title .cate_sub a{color:#666;}
+
+		/*############ 기능영역 ###############*/
+			#categories .cate_title:hover .cate_sub{display:block; background-color:rgba(255,255,255,0.8);}
+
+			#categories .cate_title:hover h4 i{color:red;}
+
+		/*########################## rakingWrap #############################*/
+		/* rakingWrap 1차영역*/
+			#rakingWrap{width:100%; height:800px;
+			background-image:url("img/ranking/background.jpg");
+			background-repeat:no-repeat;
+			background-size:100%;
+			overflow:hidden;}
+		/*### 실제사용 영역*/
+			#ranking{width:1020px;  margin:54px auto 0;}
+
+		/*################# ranking / h3 (.titleArea) 영역 ###################*/
+			#ranking .titleArea{width:100%; padding-bottom:10px;}
+			#ranking h3{width:100%; font-size:30px; line-height:100px; 
+			color:#fff; text-align:center; }
+
+		/*################# ranking / ul 영역 ###################*/
+			#ranking ul{width:1020px; height:495px; margin:0 auto;}
+		
+		/*################# ranking / ul li영역 ###################*/
+			/*
+				ul 전체 너비 : 1020px
+				li의 갯수 : 3개
+
+				1020 / 3 == 340px
+
+				li 크기 : 340px *520px
+			*/
+			#ranking ul li{width:320px; height:100%; background-color:#fff;
+			float:left; margin-right:20px;}
+
+		/*############# ranking / ul li a영역 ################*/
+			#ranking ul li a{display:block; width:300px; height:100%; margin:0 auto;}
+
+		/* ############# span(.crown1) ################# */
+			#ranking ul li a .crown{display:block; width:50px; height:38px; 
+			margin:0 auto; padding:30px 0 5px;}
+			#ranking ul li a .crown img{width:100%; height:100%;}
+		
+		/* ############# span(.rank_img) ################# */
+			#ranking ul li a .rank_img{display:block; width:300px; height:280px; }
+			#ranking ul li a .rank_img img{width:100%; height:100%;}
+		
+		/* ############# span(.rank_desc) ################# */
+			#ranking ul li a .rank_desc{display:block; width:195px; margin:10px auto 0;}
+			#ranking ul li a .rank_desc strong{display:block; width:100%; padding:10px 0;}
+			#ranking ul li a .rank_desc em{font-style:normal;}
+			
+
+		
+		/*#################### footer_history 영역 ######################*/
+		/* footer_history 1차영역*/
+			#footer_history{width:100%; height:530px; overflow:hidden;
+			border-top:1px solid #ccc;}
+		/*### history 영역*/
+			#history{width:1140px; height:330px; margin:100px auto;}
+
+		/*################# footer_history / h3 (.titleArea) 영역 ###################*/
+			#footer_history .titleArea{width:1100px;}
+			#footer_history h3{font-size:30px; line-height:50px; text-align:center; }
+
+		/*############### history / ul 영역 ####################*/
+			#history ul{width:1100px; height:230px; margin-top:50px;}
+
+		/*
+			li의 사이즈 : 220px * 230px
+		*/
+			#history ul li{width:220px; height:230px; float:left;}
+
+			#history ul li div{width:200px; height:230px; padding:0 10px;}
+			#history ul li div a{display:block; width:100%; height:100%;}
+			
+			#history ul li div .imgs{display:block; width:200px; height:200px; height:200px;}
+			#history ul li div .imgs img{width:100%; height:100%;}
+
+
+			#history span.desc{font-weight:600;}
+
+
+		/*#################### inc_footerWrap 영역 ######################*/
+		/* inc_footer 1차영역*/
+			#inc_footerWrap{width:100%; overflow:hidden; background-color: #727171;
+			position:relative;}
+			
+		/*### 실제사용 영역*/
+			#footer{width:1120px; margin:30px auto;}
+			
+		/*########## goTop 영역 ############*/
+			#goTop{width:44px; height:40px; position:absolute; right:20px; top:0;}
+			#goTop p{width:100%; height:100%;}
+			#goTop p img{width:100%; height:100%;}
+
+		/*########## footer_main ############*/
+			#footer_main{width:100%; height:380px; }
+		
+		/*########## footer_main / main_menu ############*/
+			#footer_main .main_menu{width:650px; height:100%; float:left;}
+			
+			#footer_main .main_menu .main_ul{width:100%; height:300px;  padding-top:10px; }
+			/* 
+				li의 크기 정하기 
+				전체너비 : 650px
+
+				650px / 5 == 130px
+				li 하나당 130px 사용	
+			*/
+			#footer_main .main_menu .menu{width:130px; float:left;}
+			#footer_main .main_menu ul li h4{line-height:30px; font-size:15px; color:#fff;}
+			
+			
+		/*############### footer_main 의 ul li 속의 ul (.menu) ############*/
+			#footer_main .menu ul{width:100%;}
+			#footer_main .menu li{width:100%; height:26px; line-height:26px;
+			font-size:13px; color:#999;}
+			#footer_main .menu li a{color:#d5d5d5;}
+
+		/*########## footer_main / .main_contact ############*/
+			#footer_main .main_contact{width:470px; height:380px; float:left;}
+
+			#footer_main .main_contact .main_div{width:435px; height:370px;
+			padding-top:10px; padding-left:35px;}
+
+		/*########## main_contact 의 .helpDesk (div) ############*/
+			#footer_main .helpDesk{width:100%;color:#fff; margin-bottom:10px;}
+			#footer_main .helpDesk strong{font-size:30px;}
+			#footer_main .helpDesk p{font-size:20px;}
+
+		/*########## main_contact 의 .time (div) ############*/
+			#footer_main .time{width:100%;color:#d5d5d5;
+			margin-bottom:15px;}
+		
+		/*########## main_contact 의 .newsLetter (div) ############*/
+			#footer_main .newsLetter{width:100%; font-size:13px; color:#fff;}
+			#footer_main .newsLetter p{width:100%; height:36px;}
+
+		/*########## main_contact 의 .emailArea (div) ############*/
+			#footer_main .emailArea{width:100%; height:71px; margin-top:10px;}
+
+			#footer_main .emailArea form{width:500px;}
+			#footer_main .emailArea fieldset{border:none;}
+			#footer_main .emailArea legend{display:none;}
+
+			#footer_main .emailArea p{width:100%; height:50px; font-size:13px; color:#efefef;}
+			#footer_main .emailArea .agree{width:100%; height:21px;}
+
+			/*######### p태그안의 input (#email) ###########*/
+			#email{border:3px solid #333;
+			width:300px; height:40px; text-indent:10px;}
+
+			/*############### button 영역 #############*/
+			#footer_main .emailArea a button{width:80px; height:45px;
+			background-color:#222; color:#fff;
+			border:1px solid #222;}
+
+			
+			/*######### p태그안의 label ###########*/
+			#footer_main .emailArea p label{display:none;}
+
+
+
+			/*########## main_contact 의 .socialstyles (div) ############*/
+			#footer_main .socialstyles{width:240px; height:50px; padding:26px 0;}
+			#footer_main .socialstyles a{display:block; width:40px; height:40px; float:left;
+			padding:5px 10px;}
+			#footer_main .socialstyles a img{width:100%; height:100%;}
+			
+		/*################# footer_comp 영역  #####################*/
+			#footer_comp{width:100%; height:107px;}
+
+		/* ############## footer_comp 의 div (company_info) #################*/
+			#footer_comp .comp_info{width:820px; font-size:14px; float:left; }
+
+
+			#footer_comp .comp_info span{font-size:13px; color:#fff; line-height:20px; }
+			#footer_comp .comp_info span i{font-style:normal;}
+			#footer_comp .comp_info .numb{text-decoration:underline; font-weight:600;}
+
+		/* ############## footer_comp 의 div (escrow_mark) #################*/
+			#footer_comp .escrow_mark{width:874px; height:37px; margin-top:10px;}
+			#footer_comp .escrow_mark p{width:37px; height:37px;}
+			#footer_comp .escrow_mark img{width:100%; height:100%;}
+			
+	
+
+		/*########## comp_copyright  ############*/
+			#footer_comp .comp_copyright{width:300px; height:100%; font-size:14px; float:left;}
+			#footer_comp .comp_copyright p{width:100%; height:20px; color:#fff;
+			margin-top:42px;}
+  </style>
+ </head>
+
+ <body>
+	<div id="wrap">
+		<div id="inc_header">
+			<div id="header">
+				<div id="inc_topbar">
+					<!--<div class="social">
+						<ul>
+							<li></li>
+						</ul>
+					</div>-->
+				</div>
+
+				<div id="inc_logo">
+					<div id="logo_area">
+						<h1>
+							<a href="http://www.incase.kr/" title="인케이스 사이트">
+								<img src="img/header/incase_logo.png" alt="인케이스 로고"/>
+							</a>
+						</h1>
+					</div>
+					<div id="inc_extra">
+						<ul>
+							<li>
+								<div>
+									<a href="#" title="profile">
+										<img src="img/header/profile.png" alt="profile"/>
+									</a>
+								</div>
+							</li>
+							<li>
+								<div>
+									<a href="#" title="wishlist">
+										<img src="img/header/wishlist.png" alt="wishlist"/>
+									</a>
+								</div>
+							</li>
+							<li>
+								<div>
+									<a href="#" title="cart">
+										<img src="img/header/cart.png" alt="cart"/>
+									</a>
+								</div>
+							</li>
+							<li>
+								<div>
+									<a href="#" title="search">
+										<img src="img/header/search.png" alt="search"/>
+									</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div id="inc_gnb">
+					<ul id="gnb_menu">
+						<li class="product">
+							<a href="#" title="Product"><strong>Product</strong></a>
+							<ul class="product_ul1">
+								<li class="Bags">
+									<a href="#" title="Bags">Bags</a>
+									<ul class="product_ul2">
+										<li><a href="#" title="백팩">백팩</a></li>
+										<li><a href="#" title="숄더백/메신저백">숄더백/메신저백</a></li>
+										<li><a href="#" title="슬링백">슬링백</a></li>
+										<li><a href="#" title="액티브백">액티브백</a></li>
+									</ul>
+								</li>	
+								<li>
+									<a href="#" title="Travel">Travel</a>
+									<ul class="product_ul2">
+										<li><a href="#" title="더플백">더플백</a></li>
+										<li><a href="#" title="여행용 백팩">여행용 백팩</a></li>
+										<li><a href="#" title="여행용 액세서리">여행용 액세서리</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#" title="Protection">Protection</a>
+									<ul class="product_ul2">
+										<li><a href="#" title="맥북 슬리브">맥북 슬리브</a></li>
+										<li><a href="#" title="맥북 브리프">맥북 브리프</a></li>
+										<li><a href="#" title="아이폰 케이스">아이폰 케이스</a></li>
+										<li><a href="#" title="아이패드 슬리브">아이패드 슬리브</a></li>
+										<li><a href="#" title="아이패드 케이스">아이패드 케이스</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#" title="Camera">Camera</a>
+									<ul class="product_ul2">
+										<li><a href="#" title="DSLR 카메라">DSLR 카메라</a></li>
+										<li><a href="#" title="드론">드론</a></li>
+										<li><a href="#" title="고프로">고프로</a></li>
+										<li><a href="#" title="액션카메라">액션카메라</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#" title="Accessories">Accessories</a>
+									<ul class="product_ul2">
+										<li><a href="#" title="충전기">충전기</a></li>
+										<li><a href="#" title="애플워치">애플워치</a></li>
+										<li><a href="#" title="에어팟">에어팟</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+
+						<li class="device">
+							<a href="#" title="device"><strong>device</strong></a>
+							<ul class="product_ul1">
+								<li>
+									<a href="#" title="MacBook">MacBook</a>
+									<ul class="product_ul2">
+										<li><a href="#" title="맥북 프로 16형(USB-C)">맥북 프로 16형(USB-C)</a></li>
+										<li><a href="#" title="맥북 프로 15형(USB-C)">맥북 프로 15형(USB-C)</a></li>
+										<li><a href="#" title="맥북 프로 13형(USB-C)">맥북 프로 13형(USB-C)</a></li>
+										<li><a href="#" title="맥북 에어 13형(USB-C)">맥북 에어 13형(USB-C)</a></li>
+										<li><a href="#" title="맥북 12형(USB-C)">맥북 12형(USB-C)</a></li>
+										<li><a href="#" title="맥북 프로 레티나 15형">맥북 프로 레티나 15형</a></li>
+										<li><a href="#" title="맥북 프로 레티나 13형">맥북 프로 레티나 13형</a></li>
+										<li><a href="#" title="맥북 프로 15형">맥북 프로 15형</a></li>
+										<li><a href="#" title="맥북 프로 13형">맥북 프로 13형</a></li>
+										<li><a href="#" title="맥북 에어 13형">맥북 에어 13형</a></li>
+										<li><a href="#" title="맥북 에어 11형">맥북 에어 11형</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#" title="iPhone">iPhone</a>
+									<ul class="product_ul2">
+										<li><a href="#" title="아이폰 Xs 맥스">아이폰 Xs 맥스</a></li>
+										<li><a href="#" title="아이폰 Xs">아이폰 Xs</a></li>
+										<li><a href="#" title="아이폰 XR">아이폰 XR</a></li>
+										<li><a href="#" title="아이폰 X">아이폰 X</a></li>
+										<li><a href="#" title="아이폰 8 플러스">아이폰 8 플러스</a></li>
+										<li><a href="#" title="아이폰 8">아이폰 8</a></li>
+										<li><a href="#" title="아이폰 7 플러스">아이폰 7 플러스</a></li>
+										<li><a href="#" title="아이폰 7">아이폰 7</a></li>
+										<li><a href="#" title="아이폰 6 플러스">아이폰 6 플러스</a></li>
+										<li><a href="#" title="아이폰 6s">아이폰 6s</a></li>
+										<li><a href="#" title="아이폰 6s 플러스">아이폰 6s 플러스</a></li>
+										<li><a href="#" title="아이폰 6">아이폰 6</a></li>
+										<li><a href="#" title="아이폰 SE">아이폰 SE</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#" title="iPad">iPad</a>
+									<ul class="product_ul2">
+										<li><a href="#" title="프로 12.5형(USB-C)">프로 12.5형(USB-C)</a></li>
+										<li><a href="#" title="프로 11형(USB-C)">프로 11형(USB-C)</a></li>
+										<li><a href="#" title="프로 12.9형">프로 12.9형</a></li>
+										<li><a href="#" title="프로 10.5형">프로 10.5형</a></li>
+										<li><a href="#" title="프로 9.7형">프로 9.7형</a></li>
+										<li><a href="#" title="9.7형">9.7형</a></li>
+										<li><a href="#" title="에어 2">에어 2</a></li>
+										<li><a href="#" title="에어">에어</a></li>
+										<li><a href="#" title="미니 3">미니 3</a></li>
+										<li><a href="#" title="미니 2">미니 2</a></li>
+										<li><a href="#" title="미니">미니</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#" title="Camera">Camera</a>
+									<ul class="product_ul2">
+										<li><a href="#" title="DSLR 카메라">DSLR 카메라</a></li>
+										<li><a href="#" title="드론">드론</a></li>
+										<li><a href="#" title="고프로">고프로</a></li>
+										<li><a href="#" title="액션카메라">액션카메라</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#" title="Apple Watch">Apple Watch</a>
+									<ul class="product_ul2">
+										<li><a href="#" title="42/44mm">42/44mm</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#" title="AirPods">AirPods</a>
+									<ul class="product_ul2">
+										<li><a href="#" title="38mm">38mm</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					
+						<li class="Collection">
+							<a href="#" title="Collection"><strong>Collection</strong></a>
+							<ul class="product_ul1">
+								<li>
+									<a href="#" title="신상품">신상품</a>
+									<ul class="product_ul2">
+										<li><a href="#" title="온라인 독점 상품">온라인 독점 상품</a></li>
+										<li><a href="#" title="콤파스">콤파스</a></li>
+										<li><a href="#" title="가방">가방</a></li>
+										<li><a href="#" title="슬리브/케이스">슬리브/케이스</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#" title="컬렉션">컬렉션</a>
+									<ul class="product_ul2">
+										<li><a href="#" title="Case for Airpods">Case for Airpods</a></li>
+										<li><a href="#" title="City Backpack">City Backpacks</a></li>
+										<li><a href="#" title="Via Backpack">Via Backpack</a></li>
+										<li><a href="#" title="EO Travel Backpack">EO Travel Backpack</a></li>
+										<li><a href="#" title="Diamond Ripstop">Diamond Ripstop</a></li>
+										<li><a href="#" title="Nylon Organizers">Nylon Organizers</a></li>
+										<li><a href="#" title="Compact Sleeve">Compact Sleeve</a></li>
+										<li><a href="#" title="Hardshell">Hardshell</a></li>
+										<li><a href="#" title="Beautiful Utillity">Beautiful Utillity</a></li>
+										<li><a href="#" title="Dot">Dot</a></li>
+										<li><a href="#" title="ProConnected">ProConnected</a></li>
+										<li><a href="#" title="Diamond Wire">Diamond Wire</a></li>
+										<li><a href="#" title="Camera Pro Pack">Camera Pro Pack</a></li>
+										<li><a href="#" title="EO Travel">EO Travel</a></li>
+										<li><a href="#" title="ICON">ICON</a></li>
+										<li><a href="#" title="City">City</a></li>
+										<li><a href="#" title="Via">Via</a></li>
+										<li><a href="#" title="Compass">Compass</a></li>
+										<li><a href="#" title="Tracto">Tracto</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#" title="콜라보레이션">콜라보레이션</a>
+									<ul class="product_ul2">
+										<li><a href="#" title="Incase x Carbon">Incase x Carbon</a></li>
+										<li><a href="#" title="Kelly Slater">Kelly Slater</a></li>
+										<li><a href="#" title="Ari Marcopoulos">Ari Marcopoulos</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#" title="혁신 기술">혁신 기술</a>
+									<ul class="product_ul2">
+										<li><a href="#" title="Flight Nylon">Flight Nylon</a></li>
+										<li><a href="#" title="Honeycomb Ripstop">Honeycomb Ripstop</a></li>
+										<li><a href="#" title="Diamond Ripstop">Diamond Ripstop</a></li>
+										<li><a href="#" title="Woolenex">Woolenex</a></li>
+										<li><a href="#" title="Ecoya®">Ecoya®</a></li>
+										<li><a href="#" title="Tensaerlite™">Tensaerlite™</a></li>
+										<li><a href="#" title="Ariaprene™">Ariaprene™</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#" title="추천 상품">추천 상품</a>
+									<ul class="product_ul2">
+										<li><a href="#" title="MEN">MEN</a></li>
+										<li><a href="#" title="WOMEN">WOMEN</a></li>
+										<li><a href="#" title="단기여행용 백">단기여행용 백</a></li>
+										<li><a href="#" title="장기여행용 백">장기여행용 백</a></li>
+										<li><a href="#" title="자전거/운동 백">자전거/운동 백</a></li>
+										<li><a href="#" title="출사용 백">출사용 백</a></li>
+										<li><a href="#" title="1인 미디어">1인 미디어</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+
+						<li class="brand">
+							<a href="#" title="Brand"><strong>Brand</strong></a>
+						</li>
+
+						<li class="caseStudies">
+							<a href="#" title="CaseStudies"><strong>CaseStudies</strong></a>
+						</li>
+
+						<li class="theLeaf">
+							<a href="#" title="The LEAF"><strong>The LEAF</strong></a>
+							<ul class="product_ul1">
+								<li>
+									<ul class="product_ul2">
+										<li><a href="#" title="The LEAF">The LEAF</a></li>
+										<li><a href="#" title="Smart Living">Smart Living</a></li>
+										<li><a href="#" title="Photo Diary">Photo Diary</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+
+						<li class="store">
+							<a href="#" title="Store"><strong>Store</strong></a>
+							<ul class="product_ul1">
+								<li>
+									<ul class="product_ul2">
+										<li><a href="#" title="직영매장">직영매장</a></li>
+										<li><a href="#" title="공식딜러">공식딜러</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+
+						<li class="outlet">
+							<a href="#" title="Outlet"><strong>Outlet</strong></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+		<div id="inc_container">
+			<div id="visual">
+				<ul>
+					<li>
+						<a href="#" title="VIA Lite Backpack">
+							<span class="textArea">
+								<button>Shop now</button>
+								<span>심플한 디자인과 기본에 충실한 비아 라이트 백팩.</span>
+								<strong>VIA Lite Backpack.</strong>
+							</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+			
+			<div id="collectionWrap">
+				<div id="collection">
+					<div class="titleArea">
+						<h3>collections</h3>
+					</div>
+					<ul>
+						<li>
+							<a href="#" title="Flight Nylon">
+								<span class="imgs">
+									<img src="img/collections/flightnylon.jpg" alt="Flight Nylon"/>
+								</span>
+								<span class="text">
+									<strong>Flight Nylon</strong>
+									<span class="desc">비교할 수 없는 뛰어난 내구성을 자랑하는 컬렉션.</span>
+								</span>
+							</a>
+						</li>
+						<li>
+							<a href="#" title="diamond">
+								<span class="imgs">
+									<img src="img/collections/diamond.jpg" alt="diamond"/>
+								</span>
+								<span class="text">
+									<strong>Diamond Ripstop</strong>
+									<span class="desc">플라스틱 자원의 절약과 재활용을 통한 환경을 위한 컬렉션</span>
+								</span>
+							</a>
+						</li>
+						<li>
+							<a href="#" title="Woolenex">
+								<span class="imgs">
+									<img src="img/collections/Woolenex.jpg" alt="Woolenex"/>
+								</span>
+								<span class="text">
+									<strong>Woolenex</strong>
+									<span class="desc">뛰어난 방수성과 정교한 내구성을 지닌 컬렉션</span>
+								</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div id="newproductsWrap">
+				<div id="newproducts">
+					<div class="titleArea">
+						<div class="tit">
+							<h3>New Products</h3>
+						</div>
+					</div>
+					
+					<div class="scrollArea">
+						<ul>
+							<li>
+								<div class="product">
+									<a href="#" title="new0">
+										<span class="img">
+											<img src="img/newproduct/newpoduct0.jpg" alt="new0"/>
+										</span>
+										<span class="text">
+											<strong>VIA Slim Backpack - Black</strong>
+											<em class="price">195,000원</em>
+										</span>
+									</a>
+								</div>
+							</li>
+							<li>
+								<div class="product">
+									<a href="#" title="new1">
+										<span class="img">
+											<img src="img/newproduct/newpoduct1.jpg" alt="new1"/>
+										</span>
+										<span class="text">
+											<strong>VIA Lite Backpack - Black</strong>
+											<em class="price">165,000원</em>
+										</span>
+									</a>
+								</div>
+							</li>
+							<li>
+								<div class="product">
+									<a href="#" title="new2">
+										<span class="img">
+											<img src="img/newproduct/newpoduct2.jpg" alt="new2"/>
+										</span>
+										<span class="text">
+											<strong>Compass Backpack with Flight Nylon - Black</strong>
+											<em class="price">99,000원</em>
+										</span>
+									</a>
+								</div>
+							</li>
+							<li>
+								<div class="product">
+									<a href="#" title="new3">
+										<span class="img">
+											<img src="img/newproduct/newpoduct3.jpg" alt="new3"/>
+										</span>
+										<span class="text">
+											<strong>Compass Tote With Flight Nylon - Olive</strong>
+											<em class="price">Soldout</em>
+										</span>
+									</a>
+								</div>
+							</li>
+							<li>
+								<div class="product">
+									<a href="#" title="new4">
+										<span class="img">
+											<img src="img/newproduct/newpoduct4.jpg" alt="new4"/>
+										</span>
+										<span class="text">
+											<strong>Compass Tote With Flight Nylon - Navy</strong>
+											<em class="price">Soldout</em>
+										</span>
+									</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+			<div id="thelatestWrap">
+				<div id="thelatest">
+					<div class="titleArea">
+						<h3>The Latest</h3>
+					</div>
+					<div class="latestArea">
+						<ul>
+							<!--슬라이딩 윈도우 부분-->
+							<li>
+								<!--li1 슬라이딩 윈도우 부분-->
+								<a href="#" title="late이미지0">
+									<span class="img">
+										<img src="img/thelatest/late0.jpg" alt="late이미지0"/>
+									</span>
+									<span class="text">
+										<strong>포토그래퍼를 위한 완벽한 수납의 DSLR 프로팩</strong>
+									</span>
+								</a>
+							</li>
+							<li>
+								<!--li2 슬라이딩 윈도우 부분-->
+								<a href="#" title="late이미지5">
+									<span class="img">
+										<img src="img/thelatest/late5.jpg" alt="late이미지5"/>
+									</span>
+									<span class="text">
+										<strong>쑥쑥 자라난 무선 이어폰 시장</strong>
+									</span>
+								</a>
+							</li>
+							<li>
+								<ul class="lastArea_ul">
+									<li>
+										<a href="#" title="late이미지10">
+											<span class="img">
+												<img src="img/thelatest/late10.jpg" alt="late이미지10"/>
+											</span>
+											<span class="text">
+												<strong>한국컴패션과 함께하는 가방 기부 프로그램, 릴리프드</strong>
+											</span>
+										</a>
+									</li>
+									<li>
+										<a href="#" title="late이미지11">
+											<span class="img">
+												<img src="img/thelatest/late11.jpg" alt="late이미지11"/>
+											</span>
+											<span class="text">
+												<strong>인기상품</strong>
+											</span>
+										</a>
+									</li>
+									<li>
+										<a href="#" title="late이미지12">
+											<span class="img">
+												<img src="img/thelatest/late12.jpg" alt="late이미지12"/>
+											</span>
+											<span class="text">
+												<strong>아울렛</strong>
+											</span>
+										</a>
+									</li>
+									<li>
+										<a href="#" title="late이미지13">
+											<span class="img">
+												<img src="img/thelatest/late13.jpg" alt="late이미지13"/>
+											</span>
+											<span class="text">
+												<strong>그래픽 디자이너 Alex가 13년 회사를 그만둔 이유</strong>
+											</span>
+										</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div id="categoriesWrap">
+				<div id="categories">
+					<div class="titleArea">
+						<h3>Categories</h3>
+					</div>
+					<div class="cate_main">
+						<img src="img/categories/categories.jpg" alt="categories이미지"/>
+					</div>
+					<ul class="cate_menu">
+						<li>
+							<div class="cate_img">
+								<img src="img/categories/bags.jpg" alt="bags이미지"/>
+							</div>
+							<div class="cate_title">
+								<div>
+									<h4><a href="#" title="bags">Bags <i>▼</i></a></h4>
+									<ul class="cate_sub">
+										<li><a href="#" title="백팩">백팩</a></li>
+										<li><a href="#" title="숄더백/메신저백">숄더백/메신저백</a></li>
+										<li><a href="#" title="슬링백">슬링백</a></li>
+										<li><a href="#" title="엑티브백">엑티브백</a></li>
+									</ul>
+								</div>
+							</div>
+						</li>
+
+						<li>
+							<div class="cate_img">
+								<img src="img/categories/travel.jpg" alt="travel이미지"/>
+							</div>
+							<div class="cate_title">
+								<h4><a href="#" title="travel">Travel <i>▼</i></a></h4>
+								<ul class="cate_sub">
+									<li><a href="#" title="스마트 캐리어">스마트 캐리어</a></li>
+									<li><a href="#" title="하드/소프트 캐리어">하드/소프트 캐리어</a></li>
+									<li><a href="#" title="더플백">더플백</a></li>
+									<li><a href="#" title="여행용 백팩">여행용 백팩</a></li>
+									<li><a href="#" title="여행용 액세서리">여행용 액세서리</a></li>
+								</ul>
+							</div>
+						</li>
+
+						<li>
+							<div class="cate_img">
+								<img src="img/categories/camera.jpg" alt="camera이미지"/>
+							</div>
+							<div class="cate_title">
+								<h4><a href="#" title="camera">Camera <i>▼</i></a></h4>
+								<ul class="cate_sub">
+									<li><a href="#" title="DSLR_카메라">DSLR 카메라</a></li>
+									<li><a href="#" title="드론">드론</a></li>
+									<li><a href="#" title="고프로">고프로</a></li>
+									<li><a href="#" title="액션카메라">액션카메라</a></li>
+								</ul>
+							</div>
+						</li>
+						
+						<li>
+							<div class="cate_img">
+								<img src="img/categories/outlet.jpg" alt="outlet이미지"/>
+							</div>
+							<div class="cate_title">
+								<h4><a href="#" title="outlet">Outlet <i>▼</i></a></h4>
+								<ul class="cate_sub">
+									<li><a href="#" title="가방">가방</a></li>
+									<li><a href="#" title="슬리브">슬리브</a></li>
+									<li><a href="#" title="케이스">케이스</a></li>
+									<li><a href="#" title="카메라">카메라</a></li>
+									<li><a href="#" title="액세서리">액세서리</a></li>
+									<li><a href="#" title="기간한정특가 ">기간한정특가</a> </li>
+								</ul>
+							</div>
+						</li>
+
+						<li>
+							<div class="cate_img">
+								<img src="img/categories/acc.jpg" alt="Accessories이미지"/>
+							</div>
+							<div class="cate_title">
+								<h4><a href="#" title="accessories">Accessories <i>▼</i></a></h4>
+								<ul class="cate_sub">
+									<li><a href="#" title="애플워치">애플워치</a></li>
+									<li><a href="#" title="암밴드">암밴드</a></li>
+									<li><a href="#" title="충전기">충전기</a></li>
+								</ul>
+							</div>
+						</li>
+
+						<li>
+							<div class="cate_img">
+								<img src="img/categories/mac.jpg" alt="MacBook이미지"/>
+							</div>
+							<div class="cate_title">
+								<h4><a href="#" title="MacBook">MacBook <i>▼</i></a></h4>
+								<ul class="cate_sub">
+									<li><a href="#" title="뉴_맥북_프로">뉴 맥북 프로</a></li>
+									<li><a href="#" title="프로_레티나_15">프로 레티나 15</a></li>
+									<li><a href="#" title="프로_레티나_13">프로 레티나 13</a></li>
+									<li><a href="#" title="프로_15">프로 15</a></li>
+									<li><a href="#" title="프로_13">프로 13</a></li>
+									<li><a href="#" title="에어_13">에어 13</a></li>
+								</ul>
+							</div>
+						</li>
+
+						<li>
+							<div class="cate_img">
+								<img src="img/categories/iphone.jpg" alt="iPhone"/>
+							</div>
+							<div class="cate_title">
+								<h4><a href="#" title="iPhone">iPhone <i>▼</i></a></h4>
+								<ul class="cate_sub">
+									<li><a href="#" title="아이폰_XS_맥스">아이폰 XS 맥스</a></li>
+									<li><a href="#" title="아이폰_XS">아이폰 XS</a></li>
+									<li><a href="#" title="아이폰_XR">아이폰 XR</a></li>
+									<li><a href="#" title="아이폰_X">아이폰 X</a></li>
+									<li><a href="#" title="아이폰_8_플러스">아이폰 8 플러스</a></li>
+									<li><a href="#" title="아이폰_8">아이폰 8</a></li>
+									<li><a href="#" title="기타">기타</a></li>
+								</ul>
+							</div>
+						</li>
+
+						<li>
+							<div class="cate_img">
+								<img src="img/categories/ipad.jpg" alt="iPad"/>
+							</div>
+							<div class="cate_title">
+								<h4><a href="#" title="iPad">iPad <i>▼</i></a></h4>
+								<ul class="cate_sub">
+									<li><a href="#" title="프로_12.9">프로 12.9</a></li>
+									<li><a href="#" title="프로_10.5">프로 10.5</a></li>
+									<li><a href="#" title="프로_9.7">프로 9.7</a></li>
+									<li><a href="#" title="뉴_9.7">뉴 9.7</a></li>
+									<li><a href="#" title="에어">에어</a></li>
+									<li><a href="#" title="미니">미니</a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div id="rakingWrap">
+				<div id="ranking">
+					<div class="titleArea">
+						<h3>Ranking</h3>
+					</div>
+					<ul>
+						<li class="rank1">
+							<a href="#" title="ranking0">
+								<span class="crown">
+									<img src="img/ranking/rank01.png" alt="rank01 이미지"/>
+								</span>
+								<span class="rank_img">
+									<img src="img/ranking/ranking0.jpg" alt="ranking0 이미지"/>
+								</span>
+								<span class="rank_desc">
+									<strong>VIA Lite Backpack - Black</strong>
+									<em>VIA Travel Collection</em>
+									<span class="prc">165,000원</span>
+								</span>
+							</a>
+						</li>
+
+						<li class="rank2">
+							<a href="#" title="ranking2">
+								<span class="crown">
+									<img src="img/ranking/rank02.png" alt="rank02 이미지"/>
+								</span>
+								<span class="rank_img">
+									<img src="img/ranking/ranking2.jpg" alt="ranking2 이미지"/>
+								</span>
+								<span class="rank_desc">
+									<strong>ICON Lite Pack - Black</strong>
+									<em>15" Notebook Backpack</em>
+									<span>125,000원</span>
+								</span>
+							</a>
+						</li>
+
+						<li class="rank3">
+							<a href="#" title="ranking3">
+								<span class="crown">
+									<img src="img/ranking/rank03.png" alt="rank03 이미지"/>
+								</span>
+								<span class="rank_img">
+									<img src="img/ranking/ranking4.jpg" alt="ranking4 이미지"/>
+								</span>
+								<span class="rank_desc">
+									<strong>City Compact Backpack - Heather Black</strong>
+									<em>15" Notebook Backpack</em>
+									<span>125,000원</span>
+								</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div id="footer_history">
+			<div id="history">
+				<div class="titleArea">
+					<h3>Your Recently Viewed Items</h3>
+				</div>
+				<ul>
+					<li>
+						<div>
+							<a href="#" title="히스토리이미지">
+								<span class="imgs">
+									<img src="img/footerhistory/his0.jpg" alt="히스토리이미지"/>
+								</span>
+								<span class="desc">
+									VIA Lite Backpack - Black
+								</span>
+							</a>
+						</div>
+					</li>
+					<li>
+						<div>
+							<a href="#" title="히스토리이미지">
+								<span class="imgs">
+									<img src="img/footerhistory/his1.jpg" alt="히스토리이미지"/>
+								</span>
+								<span class="desc">
+									City Backpack - Black
+								</span>
+							</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+		<div id="inc_footerWrap">
+			<div id="goTop">
+				<p>
+					<img src="img/footer/BtnTop_.png" alt="BtnTop 이미지"/>
+				</p>
+			</div>
+			<div id="footer">
+				<div id="footer_main">
+					<div class="main_menu">
+						<ul class="main_ul">
+							<li class="menu">
+								<h4>About</h4>
+								<ul>
+									<li><a href="#" title="소개">소개</a></li>
+									<li><a href="#" title="타임라인">타임라인</a></li>
+									<li><a href="#" title="사회공헌">사회공헌</a></li>
+									<li><a href="#" title="인재채용">인재채용</a></li>
+									<li><a href="#" title="프레스">프레스</a></li>
+									<li><a href="#" title="제휴문의">제휴문의</a></li>
+								</ul>
+							</li>
+							<li class="menu">
+								<h4>Brand</h4>
+								<ul class="menu">
+									<li><a href="#" title="콜라보레이션">콜라보레이션</a></li>
+									<li><a href="#" title="The LEAF">The LEAF</a></li>
+									<li><a href="#" title="스마트리빙">스마트리빙</a></li>
+									<li><a href="#" title="스마트리빙 모집">스마트리빙 모집</a></li>
+									<li><a href="#" title="Photo Diary">Photo Diary</a></li>
+									<li><a href="#" title="기업 대량주문">기업 대량주문</a></li>
+									<li><a href="#" title="Brand Ambassadors">Brand Ambassadors</a></li>
+								</ul>
+							</li>
+							<li class="menu">
+								<h4>매장안내</h4>
+								<ul class="menu">
+									<li><a href="#" title="소개">소개</a></li>
+									<li><a href="#" title="직영 매장">직영 매장</a></li>
+									<li><a href="#" title="공식 딜러">공식 딜러</a></li>
+								</ul>
+							</li>
+							<li class="menu">
+								<h4>Shop</h4>
+								<ul class="menu">
+									<li><a href="#" title="가방">가방</a></li>
+									<li><a href="#" title="여행">여행</a></li>
+									<li><a href="#" title="보호">보호</a></li>
+									<li><a href="#" title="카메라">카메라</a></li>
+									<li><a href="#" title="악세사리">악세사리</a></li>
+									<li><a href="#" title="아울렛">아울렛</a></li>
+									<li><a href="#" title="보호">이벤트</a></li>
+								</ul>
+							</li>
+							<li class="menu">
+								<h4>Support</h4>
+								<ul class="menu">
+									<li><a href="#" title="정품 등록">정품 등록</a></li>
+									<li><a href="#" title="AS 접수">AS 접수</a></li>
+									<li><a href="#" title="자주묻는질문">자주묻는질문</a></li>
+									<li><a href="#" title="약관">약관</a></li>
+									<li><a href="#" title="개인정보 취급방침">개인정보 취급방침</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<div class="main_contact">
+						<div class="main_div">
+							<div class="helpDesk">
+								<strong>HELP DESK</strong>
+								<p>02. 544. 1510( A/S 4번)</p>
+							</div>
+							<div class="time">
+								<p>평일 AM 10:00 ~ PM 06:00</p>
+								<p>점심 AM 12:00 ~ PM 01:00</p>
+								<p>휴무 토, 일, 공휴일</p>
+							</div>
+							<div class="newsLetter">
+								<p>
+									인케이스의 가장 최신 뉴스를 받아보세요.<br/>
+									처음 뉴스레터를 구독하시는 분들께 10% 할인 쿠폰을 드립니다.
+								</p>
+							</div>
+							<div class="emailArea">
+								<form action="#" method="post">
+									<fieldset>
+										<legend>이메일</legend>
+										<p class="e">
+											<label for="email">email</label><input id="email" type="text" name="email" title="이메일주소받기"/>
+											<a href="#" title="신청"><button>신청</button></a>
+										</p>
+										<p class="agree">
+											<span>개인정보 취급방침에 동의합니다.</span>
+											<input id="chk" type="checkbox" name="chk"/><label for="chk">동의</label>
+										</p>
+									</fieldset>
+								</form>
+							</div>
+
+							<div class="socialstyles">
+								<a href="#" title="facebook_icon">
+									<img src="img/footer/facebook.png" alt="facebook_icon"/>
+								</a>
+								<a href="#" title="instagram_icon">
+									<img src="img/footer/instagram.png" alt="instagram_icon"/>
+								</a>
+								<a href="#" title="twitter_icon">
+									<img src="img/footer/twitter.png" alt="twitter_icon"/>
+								</a>
+								<a href="#" title="youtube_icon">
+									<img src="img/footer/youtube.png" alt="youtube_icon"/>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="footer_comp">
+					<div class="comp_info">
+						<div class="company_info">
+							<span>인케이스코리아</span><br/>
+							<span>
+								개인정보취급방침 프리즘디스트리뷰션(주)<i>|</i>대표 양준무<i>|</i>서울시 강남구 논현동 111-37 N빌딩 5층<i>|</i>(우) 135-010
+							</span><br/>
+							<span>
+								사업자등록번호 <a href="#" title="사업자등록번호"><span class="numb">211-88-37764</span></a> <i>|</i> 통신판매업번호 제2010-서울강남-00658호 <i>|</i> 호스팅사업자 : 메이크샵 이메일 문의 : <a href="#" title=""><span class="numb">help@pr1zm.com</span></a>
+							</span>
+						</div>
+						<div class="escrow_mark">
+							<p>
+								<img src="img/footer/escrow.png" alt="escrow 이미지"/>
+							</p>
+						</div>
+					</div>
+					<div class="comp_copyright">
+						<p>
+							&copy; 2020 GJ_HONG
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+ </body>
+</html>

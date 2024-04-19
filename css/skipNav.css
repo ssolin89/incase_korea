@@ -1,0 +1,17 @@
+/* ################ 스킵네비게이션 ################## */
+		/* ######### 중요도가 높은 태그 a ########### */
+		/*
+			위치 : 브라우저의 가장 상단에 위치함 !
+
+			주의 : position:absolute로 상대와 겹치도록 만들기
+			margin이나 position:relative를 사용하여
+			공간을 비워두면 상대를 밀수 있음!
+		*/
+			#skipNav{width:100%; position:absolute; left:0; top:-30px;}
+			#skipNav p a{display:block; width:100%; text-align:center; 
+			line-height:30px; color:#fff;
+			background-color:#000; position:absolute;}
+
+			#skipNav p a:focus{top:30px; color:#ff0;}
+
+		/* ############################################### */

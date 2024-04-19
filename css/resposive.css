@@ -1,0 +1,794 @@
+/* ################## 스마트폰 세로 버전 영역 ##################### */
+@media all and (min-width:320px) and (max-width:480px) {
+
+	/*################## inc_header 영역 ####################*/
+	#inc_header {
+		width: 100%;
+		height: 100px;
+		background-color: #fff;
+		margin: 0 auto;
+		position: fixed;
+		z-index: 9999;
+	}
+	/*############## header 영역 ###############*/
+	#header_inner {
+		width: 100%;
+		height: 100%;
+		margin: 0 auto;
+		position: relative;
+	}
+
+	/*############### inc_topbar 영역 #################*/
+	#inc_topbar {
+		width: 100%;
+		height: 10px;
+		background-color: #000;
+	}
+
+	/*############# inc_logo 영역 ###############*/
+	#logo_area {
+		height: 50px;
+	}
+
+	#logo_area h1 {
+		width: 140px;
+		height: 50px;
+		padding: 0;
+	}
+
+	#logo_area h1 a {
+		width: 140px;
+		height: 28px;
+		padding: 5px 0;
+	}
+
+	/*############# inc_extra 영역 ###############*/
+	#inc_extra {
+		display: none;
+	}
+
+	/* ############ mo_inc_extra (모바일 영역) ############## */
+	#mo_inc_extra {
+		display: block;
+		width: 76px;
+		height: 38px;
+		position: absolute;
+		right: 0;
+		top: 52px;
+	}
+
+	#mo_inc_extra ul li {
+		width: 38px;
+		height: 100%;
+		float: left;
+	}
+
+	#mo_inc_extra ul li div {
+		margin-top: 0;
+		margin-right: 0;
+	}
+
+	#mo_inc_extra ul li div a {
+		display: block;
+		width: 100%;
+		height: 38px;
+	}
+
+	#mo_inc_extra ul li div a img {
+		width: 100%;
+		height: 100%;
+	}
+
+
+	/* ############ mo_inc_extra의 / .account_container 영역(모바일 영역) ############ */
+	#mo_inc_extra .account_container {
+		width: 298px;
+		height: 446px;
+		display: none;
+		position: fixed;
+		right: 0;
+		top: 100px;
+		background-color: #fff;
+		border: 1px solid rgba(20, 20, 20, 0.05);
+	}
+
+	#mo_inc_extra .account_title {
+		font-size: 18px;
+		font-weight: 900;
+		padding: 16px 15px 0;
+		margin-bottom: 10px;
+	}
+
+	#mo_inc_extra .account_container form {
+		width: 298px;
+		height: 333px;
+	}
+
+	#mo_inc_extra .form_ul {
+		width: 268px;
+		height: 264px;
+		padding: 0 15px 15px;
+	}
+
+	#mo_inc_extra .form_ul li {
+		width: 268px;
+		height: 64px;
+	}
+
+	#mo_inc_extra .form_ul li label {
+		display: block;
+		width: 100%;
+		font-size: 11px;
+		font-weight: 500;
+		margin-bottom: 5px;
+		color: #555;
+	}
+
+	#mo_inc_extra .form_ul li input {
+		width: 246px;
+		height: 32px;
+		background-color: #fff;
+		border-radius: 2px;
+		font-size: 13px;
+		padding: 0 10px;
+		margin-bottom: 10px;
+		border: 1px solid rgba(0, 0, 0, .15);
+	}
+
+	#mo_inc_extra .form_ul .login_extras {
+		width: 268px;
+		height: 20px;
+		margin-bottom: 20px;
+		text-align: center;
+	}
+
+	#mo_inc_extra .form_ul .login_extras a {
+		display: inline-block;
+		width: 108px;
+		height: 20px;
+		text-decoration: none;
+		font-size: 11px;
+		font-weight: 500;
+		color: #555;
+		margin: 0 5px;
+	}
+
+	#mo_inc_extra .login_btn {
+		display: block;
+		width: 100%;
+		height: 36px;
+		line-height: 36px;
+		font-size: 12px;
+		font-weight: 500;
+		background-color: #000;
+		color: #fff;
+		text-align: center;
+		letter-spacing: 0.5px;
+	}
+
+	#mo_inc_extra .social_login {
+		height: 32px;
+	}
+
+	#mo_inc_extra .social_login a {
+		display: inline-block;
+		width: 67px;
+		height: 14px;
+		padding: 9px;
+		color: #787878;
+		text-align: center;
+	}
+
+	#mo_inc_extra .social_login .so_facebook {
+		background-color: #3b5998;
+	}
+
+	#mo_inc_extra .social_login .so_naver {
+		background-color: #1dc800;
+	}
+
+	#mo_inc_extra .social_login .so_kakao {
+		background-color: #ffeb00;
+	}
+
+	#mo_inc_extra .social_login a img {
+		width: 14px;
+		vertical-align: top;
+	}
+
+	/*########## 회원가입 영역 ############## */
+	#mo_inc_extra .account_register {
+		width: 268px;
+		height: 36px;
+		padding: 15px;
+		border-top: 1px solid rgba(20, 20, 20, 0.05);
+	}
+
+	#mo_inc_extra .account_register a {
+		display: block;
+		width: 100%;
+		height: 36px;
+		line-height: 36px;
+		font-weight: 500;
+		font-size: 12px;
+		letter-spacing: 0.5px;
+		text-align: center;
+		background-color: #c1c1c1;
+		color: #fff;
+	}
+
+	/* ++++ 기능영역 +++++ */
+	/*어카운트 창 숨겼다가 아이콘에 마우스 오버했을때 나타나게 하기 */
+	#mo_inc_extra .profile_li:hover .account_container {
+		display: block;
+	}
+
+	/*############# inc_gnb 영역 ###############*/
+	#inc_gnb {
+		display: none;
+	}
+
+	/* ############## mo_inc_gnb (모바일) ##############*/
+	#mo_inc_gnb {
+		display: block;
+		width: 38px;
+		height: 38px;
+	}
+
+	#mo_inc_gnb .menu {
+		width: 100%;
+		height: 100%;
+		position: relative;
+	}
+
+	/* ##### ham1 #### */
+	#mo_inc_gnb .ham1 {
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+
+	#mo_inc_gnb .hamburger_box {
+		width: 22px;
+		height: 14px;
+		display: inline-block;
+		position: relative;
+		margin: 12px 8px;
+	}
+
+	#mo_inc_gnb .hamburger_inner {
+		display: block;
+		width: 22px;
+		height: 2px;
+		background-color: #c0bfbf;
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+
+	#mo_inc_gnb .inner2 {
+		position: absolute;
+		left: 0;
+		top: 6px;
+	}
+
+	#mo_inc_gnb .inner3 {
+		position: absolute;
+		left: 0;
+		top: 12px;
+	}
+
+	/* ###### ham2 ###### */
+	#mo_inc_gnb .ham2 {
+		display: block;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+
+	#mo_inc_gnb .hamburger_box2 {
+		width: 22px;
+		height: 22px;
+		display: inline-block;
+		position: relative;
+		margin: 8px 8px;
+	}
+
+	#mo_inc_gnb .hamburger_inner2 {
+		display: block;
+		width: 22px;
+		height: 22px;
+	}
+
+	#mo_inc_gnb .ham2 .inner4 {
+		display: block;
+		width: 22px;
+		height: 2px;
+		background-color: #c0bfbf;
+		position: absolute;
+		left: 0;
+		top: 10px;
+		transform: rotate(45deg);
+	}
+
+	#mo_inc_gnb .ham2 .inner5 {
+		display: block;
+		width: 22px;
+		height: 2px;
+		background-color: #c0bfbf;
+		position: absolute;
+		left: 0;
+		top: 10px;
+		transform: rotate(-45deg);
+	}
+
+	/* ########## menu_active ############ */
+	#mo_inc_gnb .menu_active {
+		display: none;
+		width: 320px;
+		height: 478px;
+		background-color: #fff;
+		position: absolute;
+		left: 0;
+		top: 39px;
+	}
+
+	#mo_inc_gnb .menu_active .drop_down {
+		width: 320px;
+		height: 60px;
+		line-height: 60px;
+		display: inline-block;
+		letter-spacing: 0.5px;
+	}
+
+	#mo_inc_gnb .menu_active .drop_down a {
+		display: block;
+		width: 280px;
+		height: 60px;
+		line-height: 60px;
+		color: #333;
+		padding: 0 20px;
+		font-size: 20px;
+		font-weight: 500;
+	}
+
+	#mo_inc_gnb .menu_active .drop_down em {
+		display: inline-block;
+		width: 226px;
+		font-style: normal;
+	}
+
+	#mo_inc_gnb .menu_active .drop_down span {
+		display: inline-block;
+		margin-left: 30px;
+	}
+
+	/*#################### footer_history 영역 ######################*/
+	/* footer_history 1차영역*/
+	#footer_history {
+		display: none;
+	}
+
+	/*#################### inc_footerWrap 영역 ######################*/
+
+	/* ++++ pc용에서 숨김 +++++*/
+	#inc_footerWrap {
+		display: none;
+		width: 300px;
+		margin: 30px auto;
+	}
+
+
+	#mob_inc_footerWrap {
+		display: block;
+		width: 100%;
+		overflow: hidden;
+		background-color: #727171;
+		position: relative;
+	}
+
+
+	/*########## goTop 영역 ############*/
+	#mob_goTop {
+		display: none;
+	}
+
+
+	/* ######### 모바일 푸터 ########## */
+	#mob_footer {
+		display: block;
+		width: 100%;
+	}
+
+	/*########## footer_main / main_menu ############*/
+	#mob_footer_main {
+		width: 300px;
+		margin: 0 auto;
+	}
+
+	#mob_footer_main .main_menu {
+		width: 300px;
+		margin-bottom: 10px;
+	}
+
+	#mob_footer_main .main_menu .main_ul {
+		width: 280px;
+		padding: 10px;
+	}
+
+	#mob_footer_main .main_menu .menu {
+		width: 100%;
+		float: none;
+	}
+
+	#mob_footer_main .main_menu ul li h4 {
+		width: 100%;
+		height: 100%;
+		line-height: 29px;
+		font-size: 14px;
+		font-weight: 400;
+	}
+
+	#mob_footer_main .main_menu ul li h4 a {
+		display: block;
+		color: #fff;
+		font-weight: 600;
+	}
+
+	#mob_footer_main .main_menu .menu_tit {
+		display: inline-block;
+		width: 265px;
+	}
+
+	#mob_footer_main .main_menu .ico {
+		display: inline-block;
+		font-size: 14px;
+	}
+
+	#mob_footer_main:after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+
+	/*############### footer_main 의 ul li 속의 ul (.menu_ul) ############*/
+	#mob_footer_main .menu .menu_ul {
+		width: 260px;
+		padding: 0 10px;
+	}
+
+	#mob_footer_main .menu .menu_ul li {
+		font-size: 13px;
+	}
+
+	#mob_footer_main .menu .menu_ul li a {
+		color: #ccc;
+	}
+
+	/* ++++ 기능영역 ++++ */
+	#mob_footer_main .menu_ul li:hover a {
+		color: #333;
+	}
+
+	/*########## footer_main / .main_contact ############*/
+	#mob_footer_main .main_contact {
+		width: 100%;
+		height: 250px;
+	}
+
+	#mob_footer_main .main_contact .main_div {
+		width: 100%;
+		padding: 0;
+	}
+
+	/*########## main_contact 의 .helpDesk (div) ############*/
+	#mob_footer_main .helpDesk {
+		width: 50%;
+		margin-left: 5px;
+		margin-bottom: 10px;
+		float: left;
+	}
+
+	#mob_footer_main .helpDesk strong {
+		font-size: 20px;
+	}
+
+	#mob_footer_main .helpDesk p {
+		font-size: 14px;
+	}
+
+	/*########## main_contact 의 .time (div) ############*/
+	#mob_footer_main .time {
+		width: 46%;
+		font-size: 11px;
+		margin-top: 1px;
+		margin-left: 5px;
+	}
+
+	/*########## main_contact 의 .newsLetter (div) ############*/
+	#mob_footer_main .newsLetter {
+		width: 100%;
+		height: 61px;
+		font-size: 12px;
+	}
+
+	#mob_footer_main .newsLetter p {
+		width: 290px;
+		height: 51px;
+		padding: 5px;
+	}
+
+	/*########## main_contact 의 .emailArea (div) ############*/
+	#mob_footer_main .emailArea {
+		width: 100%;
+		height: 71px;
+		margin-top: 8px;
+	}
+
+	#mob_footer_main .emailArea form {
+		width: 290px;
+		padding: 0 5px;
+	}
+
+	#mob_footer_main .emailArea legend {
+		display: none;
+	}
+
+	#mob_footer_main .emailArea fieldset {
+		width: 290px;
+		border: none;
+	}
+
+	#mob_footer_main .emailArea p {
+		width: 290px;
+		height: 50px;
+		font-size: 13px;
+	}
+
+	#mob_footer_main .emailArea .agree {
+		width: 290px;
+		padding: 0 5px;
+	}
+
+	#mob_footer_main .emailArea .agree #mo_chk {
+		vertical-align: middle;
+	}
+
+	/*######### p태그안의 input (#mo_email) ###########*/
+	#mob_footer_main #mo_email {
+		border: 3px solid #333;
+		width: 199px;
+		height: 34px;
+		text-indent: 10px;
+	}
+
+	/*############### .apply 신청버튼 영역 #############*/
+	#mob_footer_main .emailArea #mo_apply {
+		width: 80px;
+		height: 40px;
+		line-height: 40px;
+		vertical-align: top;
+		background-color: #222;
+		color: #fff;
+		border: 1px solid #222;
+		cursor: pointer;
+	}
+
+	/*########## main_contact 의 .socialstyles (div) ############*/
+	#mob_footer_main .socialstyles {
+		width: 200px;
+		height: 18px;
+		margin-top: 10px;
+		padding-left: 10px;
+	}
+
+	/*################# footer_comp 영역  #####################*/
+	#mob_footer_comp {
+		width: 300px;
+		height: 40px;
+		margin: 0 auto;
+	}
+
+	/* ############## footer_comp 의 div (company_info) #################*/
+	#mob_footer_comp .comp_info {
+		display: none;
+		width: 280px;
+		padding: 0 10px;
+	}
+
+	#mob_footer_comp .comp_info span {
+		display: inline-block;
+		font-size: 12px;
+	}
+
+	/* ############## footer_comp 의 div (escrow_mark) #################*/
+	#mob_footer_comp .escrow_mark {
+		display: none;
+	}
+
+	/*########## comp_copyright  ############*/
+	#mob_footer_comp .comp_copyright {
+		display: block;
+		width: 280px;
+		height: 40px;
+		padding: 0 10px;
+		font-size: 12px;
+	}
+
+	#mob_footer_comp .comp_copyright p {
+		width: 100%;
+		height: 20px;
+		margin-top: 0;
+		padding-top: 20px;
+	}
+
+	#mob_footer_comp .comp_copyright p a {
+		color: #fff;
+	}
+
+	#mob_footer_comp:after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+
+
+	/* ++++++++ login.html css ++++++++ */
+
+	#container{
+		width: unset;
+		padding:100px 20px;
+	}
+	#container .login_content{
+		width: 100%;
+	}
+	#container .content {
+		width: 100%;
+		padding: 0;
+		box-sizing: border-box;
+	}
+
+	#container .tit_wrap{
+		margin: 0 auto;
+		height: 82px;
+	}
+
+	#container .tit_box{
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	#container .tit_box h2.tit0{
+		width: auto;
+		font-size: 36px;
+		line-height: 84px;
+	}
+
+	#container .tit_box span.tit1{
+		font-size: 22px;
+	}
+
+	#container .tit_box h2.tit0:after{
+		display: none;
+	}
+
+	#container .login_wrap{
+		width: 100%;
+		height: auto;
+	}
+	#container .login_box{
+		width: 100%;
+		height: auto;
+		float: unset;
+		padding-right: 0;
+		border: none;
+	}
+	#container .login_tab{
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	#container fieldset{
+		width: 100%;
+		box-sizing: border-box;
+	}
+	#container form{
+		width: 100%;
+		height: auto;
+	}
+
+	#form_wrap .input_item{
+		width: 100%;
+		height: auto;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+	}
+
+	#form_wrap p.input_area{
+		width: 100%;
+		margin-bottom: 0;
+		margin-top: 10px;
+	}
+	
+	#form_wrap p.input_area:first-child{
+		margin-top: 0;
+	}
+
+	input#userid{
+		width: 100%;
+		height: 100%;
+		box-sizing: border-box;
+	}
+
+	input#userpw{
+		width: 100%;
+		height: 100%;
+		box-sizing: border-box;
+	}
+
+	#form_wrap ul.find_box{
+		width: 100%;
+	}
+
+	#form_wrap p.logBtn_area{
+		width: 100%;
+	}
+
+	#logBtn{
+		width: 100%;
+	}
+
+	#logBtn{
+		height: auto;
+	}
+
+	#form_wrap .sns_box{
+		width: 100%;
+	}
+	#form_wrap .sns_box ul{
+		width: 100%;
+		display: flex;
+		justify-content:center;
+	}
+
+	#form_wrap .sns_box ul li{
+		float: unset;
+		margin-right: 10px;
+	}
+
+
+
+
+
+	#container .signup_text{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	#container .signup_box{
+		width: 100%;
+		float: unset;
+		padding-left: 0;
+	}
+
+	#container a.join{
+		width: 100%;
+	}
+
+	
+
+
+
+
+
+
+
+
+}
